@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "tires",
-    name: "New & Used Tire Supply",
+    name: "New & Used Tires",
     shortName: "Tires",
     tagline: "The right tire for your car, sourced and installed at your location.",
     summary:
