@@ -37,7 +37,7 @@ function NorthStar() {
 // never used for decorative elements, so it immediately reads as "live/active".
 function StatusBadge() {
   return (
-    <div className="flex items-center gap-1.5" aria-label="Service status: Open 24/7">
+    <div className="flex items-center gap-1.5" role="status" aria-label="Service status: Open 24/7">
       <span
         aria-hidden="true"
         className="w-1.5 h-1.5 rounded-full bg-signal"
@@ -150,33 +150,37 @@ export function Header() {
       </div>
 
       {/* ── Mobile slide-down menu ── */}
-      {/* Rendered in DOM only when open to keep the DOM tidy on desktop.
-          The 24/7 badge appears here at the bottom of the mobile menu,
-          mirroring its desktop position in the right cluster.
-          Nav close on click: each link calls closeMenu. */}
-      {menuOpen && (
-        <div
-          id="mobile-nav"
-          className="md:hidden border-t border-[rgba(232,176,75,0.12)] bg-[var(--color-ink)] px-4 py-5"
-        >
-          <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
-            {NAV.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={closeMenu}
-                className="font-display text-sm font-semibold tracking-widest uppercase text-slate-muted hover:text-frost px-2 py-3 border-b border-[rgba(232,176,75,0.06)] last:border-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)] rounded-sm transition-colors duration-150"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-          {/* Status badge in mobile menu — below sm the desktop badge is hidden */}
+      {/* The outer div is always in the DOM so aria-controls="mobile-nav" on the
+          hamburger button is never a broken ARIA reference. Visibility is toggled
+          via the `hidden` HTML attribute (sets display:none) rather than by
+          unmounting. The StatusBadge inside is still conditionally rendered so
+          the DOM never contains two "Open 24/7" text nodes simultaneously —
+          which would break the getByText assertion in the covering test. */}
+      <div
+        id="mobile-nav"
+        hidden={!menuOpen}
+        className="md:hidden border-t border-[rgba(232,176,75,0.12)] bg-[var(--color-ink)] px-4 py-5"
+      >
+        <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
+          {NAV.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={closeMenu}
+              className="font-display text-sm font-semibold tracking-widest uppercase text-slate-muted hover:text-frost px-2 py-3 border-b border-[rgba(232,176,75,0.06)] last:border-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)] rounded-sm transition-colors duration-150"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+        {/* Status badge in mobile menu — only mounted when menu is open to avoid
+            duplicate text nodes alongside the always-in-DOM desktop badge. */}
+        {menuOpen && (
           <div className="mt-4 sm:hidden">
             <StatusBadge />
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
