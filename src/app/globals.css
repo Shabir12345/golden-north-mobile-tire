@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #0B1220;
+  --color-ink: #070B12;
+  --color-gold: #E8B04B;
+  --color-gold-deep: #C9912E;
+  --color-frost: #E9EEF5;
+  --color-slate-muted: #8A97A8;
+  --color-signal: #F5A623;
+  --font-display: var(--font-saira), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+body { background-color: var(--color-midnight); color: var(--color-frost); }
+h1,h2,h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
