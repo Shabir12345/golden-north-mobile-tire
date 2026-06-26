@@ -36,6 +36,9 @@ future.
 4. **Visual direction:** "Midnight & Gold" — deep navy-black canvas, warm gold accents,
    headlight-glow gradients, condensed industrial headlines. Premium, distinctive, fits a
    24/7 mobile service and the brand name.
+5. **Call-first CTAs:** The phone call is the primary conversion action across the entire
+   site. Every page leads with a prominent **Call (416) 558-5915** action; the contact
+   form is explicitly secondary (a fallback for users who can't call right now).
 
 ## 1. Brand & Visual System
 
@@ -80,9 +83,12 @@ future.
 ```
 
 - Persistent sticky header: logo, nav, "Open 24/7" badge, primary **Call (416) 558-5915**
-  button.
-- Persistent mobile sticky bottom bar with a "Call Now" action (primary mobile conversion
-  path).
+  button (gold, always visible).
+- Persistent mobile sticky bottom bar with a full-width "Call Now" action (primary mobile
+  conversion path).
+- **Call-first hierarchy everywhere:** the gold "Call" button is the dominant CTA on every
+  page (hero, service cards, CTA bands, service pages). Any "Contact" / form link is styled
+  as a secondary/ghost action so it never competes with the call action.
 - Footer: contact info, hours, service area, nav, social links, copyright.
 
 ## 3. Page-by-Page
@@ -112,10 +118,14 @@ future.
 - Responsive masonry of real photos with cohesive duotone treatment + lightbox.
 
 ### Contact (`/contact`)
-- Contact form, click-to-call, email, hours (24/7), service-area map, social links.
+- **Call is the headline action:** large click-to-call phone number + "Open 24/7" front
+  and center. Email and social links nearby.
+- Contact form is presented as the secondary option ("Prefer to message us?") below the
+  call action — not the focal point of the page.
 - Form posts to a Next.js API route. Email delivery via a provider (Resend recommended)
   with the integration isolated so the provider is swappable; until configured, the route
   degrades gracefully (logs / mailto fallback).
+- Hours (24/7), service-area map.
 
 ## 4. SEO Foundation
 - Per-page `<title>` / meta description / OpenGraph via the Next.js Metadata API.
