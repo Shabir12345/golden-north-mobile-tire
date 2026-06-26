@@ -84,13 +84,13 @@ export function Button({
     // context issues and because they don't benefit from client-side nav.
     if (/^(tel:|mailto:|https?:)/.test(href)) {
       return (
-        <a href={href} className={classes} aria-label={ariaLabel}>
+        <a href={href} onClick={onClick} className={classes} aria-label={ariaLabel}>
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={classes} aria-label={ariaLabel}>
+      <Link href={href} onClick={onClick} className={classes} aria-label={ariaLabel}>
         {children}
       </Link>
     );

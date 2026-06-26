@@ -13,12 +13,21 @@
 //   - gap x=19…24          → the groove between blocks (transparent)
 //
 // The entire SVG is aria-hidden: it is purely decorative.
+//
+// useId() generates a stable unique id per instance so that multiple
+// TreadDividers on the same page don't share an SVG <pattern> id and
+// clobber each other (SVG pattern ids are document-scoped).
+
+import { useId } from "react";
 
 interface TreadDividerProps {
   className?: string;
 }
 
 export function TreadDivider({ className = "" }: TreadDividerProps) {
+  const uid = useId();
+  const patternId = `tread-${uid}`;
+
   return (
     <svg
       aria-hidden="true"
@@ -31,7 +40,7 @@ export function TreadDivider({ className = "" }: TreadDividerProps) {
     >
       <defs>
         <pattern
-          id="golden-north-tread"
+          id={patternId}
           patternUnits="userSpaceOnUse"
           width="24"
           height="10"
@@ -61,7 +70,7 @@ export function TreadDivider({ className = "" }: TreadDividerProps) {
       </defs>
 
       {/* Full-width fill using the repeating tread pattern */}
-      <rect width="100%" height="10" fill="url(#golden-north-tread)" />
+      <rect width="100%" height="10" fill={`url(#${patternId})`} />
     </svg>
   );
 }

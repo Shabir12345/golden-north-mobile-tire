@@ -39,14 +39,16 @@ export function StatStrip({ items, className = "" }: StatStripProps) {
           )}
 
           <div className="flex flex-col items-start">
-            {/* Value: the number/fact — dominant, gold, condensed */}
-            <dd className="font-display text-2xl font-bold leading-none text-[var(--color-gold)] tabular-nums">
-              {item.value}
-            </dd>
+            {/* dt before dd for correct HTML5 dl semantics; order-* restores
+                the visual layout so value (gold, large) stays on top. */}
             {/* Label: the descriptor — subordinate, slate-muted */}
-            <dt className="mt-0.5 font-sans text-xs uppercase tracking-wider text-[var(--color-slate-muted)]">
+            <dt className="order-2 mt-0.5 font-sans text-xs uppercase tracking-wider text-[var(--color-slate-muted)]">
               {item.label}
             </dt>
+            {/* Value: the number/fact — dominant, gold, condensed */}
+            <dd className="order-1 font-display text-2xl font-bold leading-none text-[var(--color-gold)] tabular-nums">
+              {item.value}
+            </dd>
           </div>
         </div>
       ))}
