@@ -1,7 +1,7 @@
 // ─── StatStrip ────────────────────────────────────────────────────────────────
 // A row of headline facts. Each stat is a white cell topped by a short accent
-// tick, big value, quiet label. dt-before-dd keeps valid <dl> semantics;
-// order is handled by the markup order.
+// tick, big value, quiet label. The value <dd> is rendered before the label <dt>
+// for visual order — this is valid <dl> semantics.
 
 export interface StatItem {
   label: string;

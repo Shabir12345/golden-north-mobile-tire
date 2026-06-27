@@ -49,8 +49,8 @@ export function Footer() {
                   {BUSINESS.email}
                 </a>
               </p>
-              <p className="text-white/60">{BUSINESS.areaServed}</p>
-              <AvailabilityBadge />
+              <p className="text-white/70">{BUSINESS.areaServed}</p>
+              <AvailabilityBadge onDark />
             </div>
             <blockquote className="max-w-xs pt-1">
               <p className="text-white/60 text-sm italic leading-relaxed">&ldquo;{BUSINESS.tagline}&rdquo;</p>
@@ -94,7 +94,7 @@ export function Footer() {
             </a>
           </div>
 
-          <p className="text-white/55 text-xs">&copy; {year} {BUSINESS.name}</p>
+          <p className="text-white/70 text-xs">&copy; {year} {BUSINESS.name}</p>
         </div>
       </div>
     </footer>

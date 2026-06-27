@@ -4,6 +4,7 @@ description: Clean & Trustworthy — a white canvas, one trust-blue accent, Inte
 colors:
   page: "#FFFFFF"
   surface: "#F4F6F9"
+  card: "#FFFFFF"
   border: "#E2E8F0"
   heading: "#16202E"
   body: "#475467"
@@ -12,6 +13,7 @@ colors:
   accent-deep: "#1657B0"
   accent-soft: "#EAF2FD"
   footer: "#10243F"
+  footer-fg: "#D6E2F0"
 typography:
   display:
     fontFamily: "Inter, system-ui, sans-serif"

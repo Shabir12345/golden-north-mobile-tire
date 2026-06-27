@@ -9,7 +9,7 @@ import { useState } from "react";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const field =
-  "w-full rounded-lg border border-[var(--color-border)] bg-white px-4 py-3 text-base text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus-visible:border-[var(--color-accent)] focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]";
+  "w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-4 py-3 text-base text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus-visible:border-[var(--color-accent)] focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]";
 const labelCls = "mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-body)]";
 
 export function ContactForm() {

@@ -50,7 +50,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
         <div className="mx-auto max-w-7xl px-6 py-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
           <div>
             <AvailabilityBadge variant="line" className="mb-5" />
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)]">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent-deep)]">
               Mobile service · GTA-wide
             </p>
             <h1
