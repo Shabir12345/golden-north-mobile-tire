@@ -1,28 +1,113 @@
 @import "tailwindcss";
 
+/* ════════════════════════════════════════════════════════════════════════════
+   GOLDEN NORTH — "High-Vis Rescue" design system
+   ----------------------------------------------------------------------------
+   The brand's real-world identity is a bright-yellow rescue van with black
+   tread graphics, a hi-vis-vested tech, working day and night across the GTA.
+   The palette is built around that: a near-black night canvas, a single
+   high-vis amber that carries every action, and a black-on-amber hazard motif
+   borrowed from the van's own livery. Bold and urgent — never the cheap
+   red/yellow of a discount tire shop.
+   ════════════════════════════════════════════════════════════════════════════ */
+
 @theme {
-  --color-midnight: #0B1220;
-  --color-ink: #070B12;
-  --color-gold: #E8B04B;
-  --color-gold-deep: #C9912E;
-  --color-frost: #E9EEF5;
-  --color-slate-muted: #8A97A8;
-  --color-signal: #F5A623;
-  --font-display: var(--font-saira), system-ui, sans-serif;
+  /* ── Surfaces: three levels of night, for sectional rhythm ── */
+  --color-ink: #05080E;        /* deepest — footer, CTA wells, photo mattes      */
+  --color-midnight: #0B1220;   /* base page background                            */
+  --color-steel: #131C2B;      /* raised surface — cards, alternating bands       */
+
+  /* ── The one voice: high-vis amber (the van) ── */
+  --color-gold: #F5A81C;       /* primary accent — every CTA, every emphasis      */
+  --color-gold-deep: #C2820F;  /* bevels, hover, pressed states                   */
+  --color-signal: #FF8A1E;     /* LIVE cue only — the "Open now" pulse, urgency   */
+
+  /* ── Text on night ── */
+  --color-frost: #EEF2F8;      /* primary text / headlines                        */
+  --color-frost-dim: #C3CDDB;  /* secondary body copy (AA on midnight)            */
+  --color-slate-muted: #93A1B4;/* tertiary — labels, captions (AA on midnight)    */
+
+  /* ── Type ── */
+  --font-display: var(--font-saira), "Arial Narrow", system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
-body { background-color: var(--color-midnight); color: var(--color-frost); }
-h1,h2,h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+/* ── Semantic, non-color tokens (kept out of @theme; referenced via var()) ── */
+:root {
+  /* Easing — exponential ease-out only. No bounce, no elastic. */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 
-/* ── goldPulse: slow twinkle for the NorthStar mark ─────────────────────────
-   Opacity fades and a faint gold glow pulses over 4 s. Automatically suppressed
-   by the prefers-reduced-motion block below — do NOT remove that block. */
+  /* Semantic z-index scale — never arbitrary 999/9999. */
+  --z-base: 0;
+  --z-sticky: 50;        /* header                  */
+  --z-mobilebar: 40;     /* fixed mobile call bar   */
+  --z-overlay: 60;       /* lightbox / menu scrim   */
+  --z-modal: 70;         /* dialog content          */
+  --z-toast: 80;         /* transient notices       */
+}
+
+/* ── Base ── */
+body {
+  background-color: var(--color-midnight);
+  color: var(--color-frost);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────────────
+   goldPulse: slow twinkle for the NorthStar mark.
+   beamSweep: a headlight cone sweeping across the dark — the signature ambient
+   motion, used behind the hero. fadeUp: the only reveal animation; it enhances
+   content that is already visible (opacity starts near-1 is NOT used — instead
+   the Reveal component only ADDS this class once in view, so content without JS
+   stays put). All are suppressed under prefers-reduced-motion below. */
+
 @keyframes goldPulse {
-  0%, 100% { opacity: 1;   text-shadow: 0 0 0px transparent; }
-  50%       { opacity: 0.6; text-shadow: 0 0 8px #E8B04B;    }
+  0%, 100% { opacity: 1;   filter: drop-shadow(0 0 0 transparent); }
+  50%      { opacity: 0.6; filter: drop-shadow(0 0 6px var(--color-gold)); }
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.82); }
+}
+
+@keyframes beamSweep {
+  0%   { transform: translateX(-12%) skewX(-8deg); opacity: 0.5; }
+  50%  { transform: translateX(10%)  skewX(-8deg); opacity: 0.9; }
+  100% { transform: translateX(-12%) skewX(-8deg); opacity: 0.5; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal-on-scroll: the element is fully visible by default. The "is-in"
+   class (added by the Reveal client component once intersecting) plays the
+   entrance. If JS never runs, or the element never intersects, it simply
+   stays visible — never blank. */
+.reveal { opacity: 1; }
+.reveal.is-armed { opacity: 0; }
+.reveal.is-armed.is-in {
+  animation: fadeUp 0.7s var(--ease-out-expo) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal, .reveal.is-armed { opacity: 1 !important; transform: none !important; }
 }

@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Golden North Mobile Tire Services — Website
 
-## Getting Started
+Marketing site for Golden North, a 24/7 mobile tire & roadside service in the
+Greater Toronto Area. Next.js (App Router) + TypeScript + Tailwind CSS v4,
+statically generated, call-first, SEO-ready. Visual direction: **High-Vis
+Rescue** — a night canvas, high-vis amber drawn from the real yellow van, and a
+black-on-amber hazard motif. See `PRODUCT.md` (strategy) and `DESIGN.md`
+(visual system).
 
-First, run the development server:
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run test     # Vitest + React Testing Library
+npm run build    # production build (static)
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node 20+. Package manager: npm.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where content lives
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Business NAP** (name, phone, email, hours, socials): `src/lib/business.ts` —
+  single source of truth, used everywhere.
+- **Services** (copy, inclusions, FAQs, SEO keywords): `src/lib/services.ts`.
+  To add a service, add an entry here; the overview page, the `/services/[slug]`
+  detail page, JSON-LD, and the sitemap all pick it up automatically.
+- **Photos**: `src/lib/photos.ts` maps files in `public/photos/` to where they
+  appear. See `public/README-assets.md`.
+- **Design tokens**: `src/app/globals.css` (`@theme` block).
 
-## Learn More
+## SEO
 
-To learn more about Next.js, take a look at the following resources:
+Per-page metadata via `src/lib/seo.ts`; LocalBusiness / Service / FAQ JSON-LD via
+`src/lib/jsonld.tsx`; `sitemap.xml` and `robots.txt` generated from the route
+list and `SERVICE_SLUGS`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`POST /api/contact` validates and delivers via `src/lib/email.ts`. Set
+`RESEND_API_KEY` (and optional `CONTACT_TO_EMAIL`) to enable email delivery via
+Resend; without a key it logs submissions and still returns success (graceful
+degradation). Copy `.env.example` → `.env.local`.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy on Vercel (zero-config for Next.js). Set `RESEND_API_KEY` and
+`CONTACT_TO_EMAIL` as environment variables in the Vercel project to enable the
+contact form email path.

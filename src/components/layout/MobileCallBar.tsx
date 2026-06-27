@@ -1,25 +1,25 @@
 // MobileCallBar — fixed bottom strip, mobile only (<md).
 //
-// This is the call-first law made physical: the only chrome element on mobile
-// that overlaps page content is the one element that generates the most value
-// for the business. It never competes with anything because it's the only
-// element in the bar.
-//
-// Safe-area padding (env(safe-area-inset-bottom)) handles notched iPhones so
-// the button doesn't clip behind the home-indicator bar.
-//
-// No "use client" needed — this component has no interactive state.
+// The call-first law made physical: the only chrome that overlaps content on
+// mobile is the one element that drives the most value. A thin hazard hairline
+// on top ties it to the van livery. Safe-area padding clears notched iPhones.
 
 import { CallButton } from "@/components/ui/Button";
+import { HazardStripe } from "@/components/ui/HazardStripe";
 
 export function MobileCallBar() {
   return (
     <div
-      className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t border-[rgba(232,176,75,0.15)] bg-[var(--color-ink)]"
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      className="md:hidden fixed bottom-0 inset-x-0 bg-[var(--color-ink)]"
+      style={{
+        zIndex: "var(--z-mobilebar)",
+        paddingBottom: "env(safe-area-inset-bottom)",
+        boxShadow: "0 -12px 30px -10px rgba(0,0,0,0.7)",
+      }}
     >
+      <HazardStripe height={6} />
       <div className="px-4 py-3">
-        <CallButton className="w-full justify-center" />
+        <CallButton className="w-full" />
       </div>
     </div>
   );
