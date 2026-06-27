@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Saira_Condensed } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -7,7 +7,6 @@ import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { LocalBusinessJsonLd } from "@/lib/jsonld";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const saira = Saira_Condensed({ subsets: ["latin"], weight: ["500","600","700"], variable: "--font-saira" });
 
 export const metadata: Metadata = {
   title: "Golden North Mobile Tire Services",
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${saira.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
         {/* Structured data — rendered once, in the document body. */}
         <LocalBusinessJsonLd />
