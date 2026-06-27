@@ -1,11 +1,9 @@
-// Footer — server component. Sits one shade below the page (bg-ink) with a
-// hazard hairline marking the boundary. The phone number is treated as the
-// loudest text element here too: the footer is a last-chance conversion point.
+// Footer — the one grounded dark anchor at the bottom of a light page. The phone
+// number is the loudest element here too; the footer is a last-chance CTA.
 
 import Link from "next/link";
 import { BUSINESS, telHref, mailHref } from "@/lib/business";
-import { HazardStripe } from "@/components/ui/HazardStripe";
-import { LiveStatus } from "@/components/ui/LiveStatus";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -34,45 +32,38 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--color-ink)]" aria-label="Site footer">
-      <HazardStripe height={8} />
+    <footer className="bg-[var(--color-footer)] text-[var(--color-footer-fg)]" aria-label="Site footer">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
-        {/* Row 1: identity + big call */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between pb-10 border-b border-[rgba(245,168,28,0.12)]">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between pb-10 border-b border-white/15">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <span aria-hidden="true" className="text-[var(--color-gold)] text-lg">✦</span>
-              <p className="font-display font-bold tracking-[0.14em] uppercase text-[var(--color-frost)] text-sm">
-                {BUSINESS.name}
-              </p>
+              <span aria-hidden="true" className="text-[var(--color-accent)] text-lg">✦</span>
+              <p className="font-bold tracking-tight text-white text-base">{BUSINESS.name}</p>
             </div>
-            <div className="space-y-2 text-sm text-[var(--color-frost-dim)]">
+            <div className="space-y-2 text-sm text-[var(--color-footer-fg)]">
               <p>
                 <a
                   href={mailHref}
-                  className="hover:text-[var(--color-gold)] rounded-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)]"
+                  className="hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
                 >
                   {BUSINESS.email}
                 </a>
               </p>
-              <p className="text-[var(--color-slate-muted)]">{BUSINESS.areaServed}</p>
-              <LiveStatus />
+              <p className="text-white/60">{BUSINESS.areaServed}</p>
+              <AvailabilityBadge />
             </div>
             <blockquote className="max-w-xs pt-1">
-              <p className="text-[var(--color-slate-muted)] text-sm italic leading-relaxed">
-                &ldquo;{BUSINESS.tagline}&rdquo;
-              </p>
+              <p className="text-white/60 text-sm italic leading-relaxed">&ldquo;{BUSINESS.tagline}&rdquo;</p>
             </blockquote>
           </div>
 
-          {/* Big click-to-call */}
           <div className="lg:text-right">
-            <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-slate-muted)] mb-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/55 mb-2">
               One call. We come to you.
             </p>
             <a
               href={telHref}
-              className="inline-block font-display font-bold tracking-tight text-[var(--color-gold)] leading-none rounded-sm transition-colors duration-150 hover:text-[#FFB733] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-ink)]"
+              className="inline-block font-bold tracking-tight text-white leading-none rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-footer)]"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
               aria-label={`Call Golden North at ${BUSINESS.phoneDisplay}`}
             >
@@ -81,14 +72,13 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Row 2: nav · social · copyright */}
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="font-display text-xs font-semibold tracking-[0.16em] uppercase text-[var(--color-slate-muted)] hover:text-[var(--color-frost)] rounded-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)]"
+                className="text-sm font-medium text-white/70 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
               >
                 {label}
               </Link>
@@ -96,29 +86,15 @@ export function Footer() {
           </nav>
 
           <div className="flex items-center gap-5">
-            <a
-              href={BUSINESS.socials.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Golden North on TikTok (opens in new tab)"
-              className="text-[var(--color-slate-muted)] hover:text-[var(--color-gold)] rounded-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)]"
-            >
+            <a href={BUSINESS.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Golden North on TikTok (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <TikTokIcon />
             </a>
-            <a
-              href={BUSINESS.socials.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Golden North on Instagram (opens in new tab)"
-              className="text-[var(--color-slate-muted)] hover:text-[var(--color-gold)] rounded-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-ink)]"
-            >
+            <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Golden North on Instagram (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <InstagramIcon />
             </a>
           </div>
 
-          <p className="text-[var(--color-slate-muted)] text-xs font-sans">
-            &copy; {year} {BUSINESS.name}
-          </p>
+          <p className="text-white/55 text-xs">&copy; {year} {BUSINESS.name}</p>
         </div>
       </div>
     </footer>
