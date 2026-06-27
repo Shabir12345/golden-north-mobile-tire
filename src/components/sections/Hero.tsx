@@ -1,14 +1,10 @@
 // ─── Hero ─────────────────────────────────────────────────────────────────────
-// High-Vis Rescue hero. One uncommon promise — "We come to you." — at display
-// scale, a live dispatch status that makes 24/7 feel active, and the real
-// night photo of the hi-vis tech working out of the lit yellow van. A headlight
-// beam sweeps behind the type; a hazard hairline edges the top like a reflective
-// stripe. No placeholder void: the photograph carries the right half.
+// Clean, friendly hero on white. One clear promise — "We come to you." — a calm
+// availability badge, simple at-a-glance chips, the call-first CTA, and the real
+// photo of the van and tech. No glow, no hazard stripes, no alarm.
 
-import { Glow } from "@/components/ui/Glow";
-import { HazardStripe } from "@/components/ui/HazardStripe";
 import { Photo } from "@/components/ui/Photo";
-import { LiveStatus } from "@/components/ui/LiveStatus";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CallButton, Button } from "@/components/ui/Button";
 import { BUSINESS } from "@/lib/business";
 
@@ -16,45 +12,35 @@ const CHIPS = ["24/7", "GTA-wide", "No tow needed"] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-midnight" aria-label="Hero — Golden North Mobile Tire Services">
-      {/* Reflective hazard edge at the very top */}
-      <HazardStripe height={6} className="absolute inset-x-0 top-0 z-10" />
-
-      {/* Headlight beam sweeping from upper-right, as if the van just turned in */}
-      <Glow intensity="high" sweep className="top-0 right-0 h-[680px] w-[760px] translate-x-1/4 -translate-y-1/4" />
-      {/* Low ambient pool from below */}
-      <Glow intensity="low" className="bottom-0 left-0 h-[300px] w-[500px] -translate-x-1/4 translate-y-1/3" />
-
-      <div className="relative z-[1] mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid min-h-[88vh] items-center gap-10 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-28">
-          {/* ── Text column ── */}
+    <section className="relative overflow-hidden bg-[var(--color-page)]" aria-label="Hero — Golden North Mobile Tire Services">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-24">
+          {/* Text column */}
           <div>
-            <LiveStatus variant="line" className="mb-7" />
+            <AvailabilityBadge variant="line" className="mb-7" />
 
             <h1
-              className="font-display font-bold leading-[0.88] text-[var(--color-frost)]"
-              style={{ fontSize: "clamp(2.9rem, 8.5vw, 5.75rem)", letterSpacing: "-0.03em" }}
+              className="font-bold leading-[1.04] text-[var(--color-heading)]"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.02em" }}
             >
-              We come
-              <br />
-              <span className="text-[var(--color-gold)]">to you.</span>
+              We come <span className="text-[var(--color-accent)]">to you.</span>
             </h1>
 
-            <p className="mt-6 max-w-md font-sans text-lg leading-relaxed text-[var(--color-frost-dim)]">
-              Mobile tire change, new &amp; used tires, battery and roadside rescue — at your
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
+              Mobile tire change, new &amp; used tires, battery and roadside help — at your
               driveway, lot, or roadside, anywhere in the GTA. {BUSINESS.tagline}
             </p>
 
-            {/* Blocky high-vis chips */}
+            {/* At-a-glance chips */}
             <ul className="mt-7 flex flex-wrap gap-2.5" aria-label="At a glance">
               {CHIPS.map((chip, i) => (
                 <li
                   key={chip}
                   className={
-                    "font-display text-xs font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-[3px] " +
+                    "text-xs font-semibold px-3 py-1.5 rounded-full " +
                     (i === 0
-                      ? "bg-[var(--color-gold)] text-[var(--color-ink)]"
-                      : "text-[var(--color-frost)] border border-[rgba(245,168,28,0.45)]")
+                      ? "bg-[var(--color-accent)] text-white"
+                      : "text-[var(--color-body)] bg-[var(--color-accent-soft)]")
                   }
                 >
                   {chip}
@@ -69,36 +55,33 @@ export function Hero() {
               </Button>
             </div>
 
-            <p className="mt-7 font-sans text-xs uppercase tracking-[0.14em] text-[var(--color-slate-muted)]">
+            <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-muted)]">
               {BUSINESS.areaServed}
             </p>
           </div>
 
-          {/* ── Image column ── */}
+          {/* Image column */}
           <div className="relative">
             <Photo
               src="/photos/hero-night-tech.webp"
-              alt="A Golden North technician in a hi-vis vest balancing a wheel inside the lit yellow service van at night"
+              alt="A Golden North technician in a hi-vis vest balancing a wheel beside the yellow service van"
               ratio="3 / 4"
               priority
               overlay
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)]"
+              className="shadow-[0_20px_50px_-20px_rgba(16,32,63,0.35)]"
             />
-            {/* Dispatched tag over the photo */}
             <div className="absolute left-4 bottom-4 right-4 flex items-center justify-between gap-3">
-              <span className="inline-flex items-center gap-2 rounded-[3px] border border-[rgba(245,168,28,0.25)] bg-[rgba(5,8,14,0.82)] px-3 py-2 backdrop-blur-sm">
-                <LiveStatus label="On a job · tonight" />
+              <span className="inline-flex items-center gap-2 rounded-lg bg-white/90 px-3 py-2 backdrop-blur-sm shadow-sm">
+                <AvailabilityBadge label="Serving the GTA" />
               </span>
-              <span className="hidden rounded-[3px] bg-[rgba(5,8,14,0.82)] px-3 py-2 font-display text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-frost)] backdrop-blur-sm sm:inline">
-                Real Golden North van
+              <span className="hidden rounded-lg bg-white/90 px-3 py-2 text-xs font-semibold text-[var(--color-body)] backdrop-blur-sm shadow-sm sm:inline">
+                The real Golden North van
               </span>
             </div>
           </div>
         </div>
       </div>
-
-      <HazardStripe height={8} className="relative z-[1]" />
     </section>
   );
 }
