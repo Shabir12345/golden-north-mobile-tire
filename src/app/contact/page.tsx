@@ -1,14 +1,12 @@
 // ─── Contact (/contact) ───────────────────────────────────────────────────────
-// Call-first: the headline action is the phone call. The message form is
-// explicitly the secondary option ("Prefer to message us?"). Service-area map
-// at the bottom. No CTA band here — the whole page IS the CTA.
+// Call-first: the headline action is the phone call. The message form is the
+// secondary option. Service-area map at the bottom. No CTA band — the page IS
+// the CTA. Light theme, no emergency motifs.
 
 import { buildMetadata } from "@/lib/seo";
 import { BUSINESS, mailHref } from "@/lib/business";
 import { CallButton } from "@/components/ui/Button";
-import { Glow } from "@/components/ui/Glow";
-import { HazardStripe } from "@/components/ui/HazardStripe";
-import { LiveStatus } from "@/components/ui/LiveStatus";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 
@@ -21,21 +19,18 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
-      {/* Call-first hero */}
-      <section className="relative overflow-hidden bg-midnight" aria-labelledby="contact-heading">
-        <HazardStripe height={6} className="absolute inset-x-0 top-0 z-10" />
-        <Glow intensity="high" className="top-0 right-0 h-[480px] w-[600px] translate-x-1/4 -translate-y-1/4" />
-
-        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <LiveStatus variant="line" className="mb-6" />
+      {/* Call-first header */}
+      <section className="bg-[var(--color-surface)] border-b border-[var(--color-border)]" aria-labelledby="contact-heading">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+          <AvailabilityBadge variant="line" className="mb-6" label="Available · We come to you" />
           <h1
             id="contact-heading"
-            className="max-w-3xl font-display font-bold leading-[0.95] text-[var(--color-frost)]"
-            style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)", letterSpacing: "-0.03em" }}
+            className="max-w-3xl font-bold leading-[1.05] text-[var(--color-heading)]"
+            style={{ fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)", letterSpacing: "-0.02em" }}
           >
-            We pick up. <span className="text-[var(--color-gold)]">Day or night.</span>
+            We pick up. <span className="text-[var(--color-accent)]">Day or night.</span>
           </h1>
-          <p className="mt-6 max-w-xl font-sans text-lg leading-relaxed text-[var(--color-frost-dim)]">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-body)]">
             The fastest way to get help moving is to call. One number, a real person, no queue —
             then we&rsquo;re on our way to you.
           </p>
@@ -44,43 +39,40 @@ export default function ContactPage() {
             <CallButton size="lg" />
           </div>
 
-          {/* Contact facts */}
-          <dl className="mt-12 grid gap-px overflow-hidden rounded-[4px] bg-[rgba(245,168,28,0.14)] sm:grid-cols-3">
-            <div className="bg-[var(--color-steel)] px-6 py-6">
-              <dt className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-slate-muted)]">Hours</dt>
-              <dd className="mt-2 font-display text-xl font-bold text-[var(--color-frost)]">{BUSINESS.hours}</dd>
-              <p className="mt-1 font-sans text-sm text-[var(--color-frost-dim)]">Day, night, weekends, holidays.</p>
+          <dl className="mt-12 grid gap-px overflow-hidden rounded-xl bg-[var(--color-border)] sm:grid-cols-3">
+            <div className="bg-[var(--color-card)] px-6 py-6">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-muted)]">Hours</dt>
+              <dd className="mt-2 text-xl font-bold text-[var(--color-heading)]">{BUSINESS.hours}</dd>
+              <p className="mt-1 text-sm text-[var(--color-body)]">Day, night, weekends, holidays.</p>
             </div>
-            <div className="bg-[var(--color-steel)] px-6 py-6">
-              <dt className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-slate-muted)]">Email</dt>
+            <div className="bg-[var(--color-card)] px-6 py-6">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-muted)]">Email</dt>
               <dd className="mt-2">
                 <a
                   href={mailHref}
-                  className="font-display text-lg font-bold text-[var(--color-gold)] hover:text-[#FFB733] rounded-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-steel)]"
+                  className="text-lg font-bold text-[var(--color-accent)] hover:text-[var(--color-accent-deep)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-card)]"
                   aria-label={`Email Golden North at ${BUSINESS.email}`}
                 >
                   {BUSINESS.email}
                 </a>
               </dd>
             </div>
-            <div className="bg-[var(--color-steel)] px-6 py-6">
-              <dt className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-slate-muted)]">Service area</dt>
-              <dd className="mt-2 font-display text-lg font-bold text-[var(--color-frost)]">{BUSINESS.areaServed}</dd>
+            <div className="bg-[var(--color-card)] px-6 py-6">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-muted)]">Service area</dt>
+              <dd className="mt-2 text-lg font-bold text-[var(--color-heading)]">{BUSINESS.areaServed}</dd>
             </div>
           </dl>
         </div>
-
-        <HazardStripe height={8} />
       </section>
 
       {/* Secondary: message form */}
-      <section className="bg-[var(--color-ink)] py-20 lg:py-28" aria-labelledby="message-heading">
+      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="message-heading">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <h2 id="message-heading" className="font-display font-bold text-3xl text-[var(--color-frost)] lg:text-4xl">
+          <h2 id="message-heading" className="font-bold text-3xl text-[var(--color-heading)] lg:text-4xl">
             Prefer to message us?
           </h2>
-          <p className="mt-4 font-sans text-base leading-relaxed text-[var(--color-frost-dim)]">
-            Not an emergency? Send the details and we&rsquo;ll get back to you. For anything urgent,
+          <p className="mt-4 text-base leading-relaxed text-[var(--color-body)]">
+            Not urgent? Send the details and we&rsquo;ll get back to you. For anything time-sensitive,
             calling is always faster.
           </p>
           <div className="mt-10">

@@ -1,17 +1,16 @@
 "use client";
 
 // ─── ContactForm ──────────────────────────────────────────────────────────────
-// The secondary contact path (the phone call is primary). Labeled fields,
-// POST to /api/contact, and loading / success / error states announced via
-// aria-live. Deliberately understated styling so it never outranks the call.
+// The secondary contact path (the phone call is primary). Labeled fields, POST
+// to /api/contact, and loading / success / error states announced via aria-live.
 
 import { useState } from "react";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const field =
-  "w-full rounded-[4px] border border-[rgba(245,168,28,0.22)] bg-[var(--color-steel)] px-4 py-3 font-sans text-base text-[var(--color-frost)] placeholder:text-[var(--color-slate-muted)] focus:outline-none focus-visible:border-[var(--color-gold)] focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]";
-const labelCls = "mb-1.5 block font-display text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-frost-dim)]";
+  "w-full rounded-lg border border-[var(--color-border)] bg-white px-4 py-3 text-base text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus-visible:border-[var(--color-accent)] focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]";
+const labelCls = "mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-body)]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -41,12 +40,9 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div
-        role="status"
-        className="rounded-[4px] border border-[rgba(245,168,28,0.3)] bg-[var(--color-steel)] p-6 text-center"
-      >
-        <p className="font-display text-xl font-bold text-[var(--color-gold)]">Thanks — message received.</p>
-        <p className="mt-2 font-sans text-sm text-[var(--color-frost-dim)]">
+      <div role="status" className="rounded-lg border border-[var(--color-border)] bg-[var(--color-accent-soft)] p-6 text-center">
+        <p className="text-xl font-bold text-[var(--color-accent)]">Thanks — message received.</p>
+        <p className="mt-2 text-sm text-[var(--color-body)]">
           We&rsquo;ll reply shortly. Need help right now? Calling is always fastest.
         </p>
       </div>
@@ -67,7 +63,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="cf-email" className={labelCls}>Email <span className="text-[var(--color-slate-muted)] normal-case tracking-normal">(optional)</span></label>
+        <label htmlFor="cf-email" className={labelCls}>Email <span className="text-[var(--color-muted)] normal-case tracking-normal">(optional)</span></label>
         <input id="cf-email" name="email" type="email" autoComplete="email" className={field} placeholder="you@example.com" />
       </div>
 
@@ -77,7 +73,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p role="alert" className="font-sans text-sm text-[var(--color-signal)]">
+        <p role="alert" className="text-sm text-[#D92D20]">
           Something went wrong. Please try again — or just call us at (416) 558-5915.
         </p>
       )}
@@ -85,7 +81,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="group/btn inline-flex items-center justify-center gap-2.5 rounded-[3px] bg-[var(--color-gold)] px-7 py-3.5 font-display text-sm font-bold uppercase tracking-[0.12em] text-[var(--color-ink)] shadow-[inset_0_-3px_0_0_var(--color-gold-deep)] transition-[transform,box-shadow,background-color] duration-200 [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-0.5 hover:bg-[#FFB733] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-midnight)]"
+        className="group/btn inline-flex items-center justify-center gap-2.5 rounded-lg bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[transform,box-shadow,background-color] duration-200 [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-0.5 hover:bg-[var(--color-accent-deep)] hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>
