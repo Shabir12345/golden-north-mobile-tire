@@ -1,23 +1,18 @@
 import Image from "next/image";
 
 // ─── Photo ────────────────────────────────────────────────────────────────────
-// One cohesive treatment for the real (mixed-quality, mixed-lighting) brand
-// photo set so the whole site reads as one brand: object-cover into a fixed
-// aspect box, a thin amber hairline ring, an ink gradient at the base for text
-// legibility, and a subtle desaturate→full-color + zoom on hover. next/image
-// gives us responsive sizing + lazy loading for Core Web Vitals.
+// One cohesive treatment for the real brand photo set: object-cover into a fixed
+// aspect box, a thin neutral ring, an optional navy gradient at the base for
+// overlaid text, and a gentle zoom on hover. Full color (light theme).
 
 interface PhotoProps {
   src: string;
   alt: string;
-  /** CSS aspect-ratio, e.g. "4 / 3", "3 / 4", "16 / 9", "1 / 1". */
   ratio?: string;
   className?: string;
   sizes?: string;
   priority?: boolean;
-  /** Add a bottom ink gradient (for overlaid captions/text). */
   overlay?: boolean;
-  /** Disable the hover zoom/saturate (e.g. inside a static row). */
   static?: boolean;
 }
 
@@ -33,7 +28,7 @@ export function Photo({
 }: PhotoProps) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-[4px] bg-ink ring-1 ring-[rgba(245,168,28,0.18)] ${className}`}
+      className={`group relative overflow-hidden rounded-xl bg-[var(--color-surface)] ring-1 ring-[var(--color-border)] ${className}`}
       style={{ aspectRatio: ratio }}
     >
       <Image
@@ -43,16 +38,14 @@ export function Photo({
         sizes={sizes}
         priority={priority}
         className={
-          "object-cover transition-[transform,filter] duration-700 [transition-timing-function:var(--ease-out-expo)] " +
-          (isStatic
-            ? "saturate-[0.92]"
-            : "saturate-[0.85] group-hover:saturate-100 group-hover:scale-[1.04]")
+          "object-cover transition-transform duration-700 [transition-timing-function:var(--ease-out-expo)] " +
+          (isStatic ? "" : "group-hover:scale-[1.04]")
         }
       />
       {overlay && (
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)] via-[rgba(5,8,14,0.15)] to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-[rgba(16,32,63,0.75)] via-[rgba(16,32,63,0.1)] to-transparent"
         />
       )}
     </div>

@@ -1,8 +1,7 @@
 // ─── StatStrip ────────────────────────────────────────────────────────────────
-// A row of headline facts (24/7, GTA-wide, one call, your spot). High-vis
-// treatment: each stat is a block topped by a short amber tick, big condensed
-// value, quiet label below. Reads like a dispatch readout, not a SaaS metric
-// grid. dt-before-dd keeps valid <dl> semantics; order-* fixes the visual stack.
+// A row of headline facts. Each stat is a white cell topped by a short accent
+// tick, big value, quiet label. dt-before-dd keeps valid <dl> semantics;
+// order is handled by the markup order.
 
 export interface StatItem {
   label: string;
@@ -16,14 +15,14 @@ interface StatStripProps {
 
 export function StatStrip({ items, className = "" }: StatStripProps) {
   return (
-    <dl className={`grid grid-cols-2 gap-px overflow-hidden rounded-[4px] bg-[rgba(245,168,28,0.14)] md:grid-cols-4 ${className}`}>
+    <dl className={`grid grid-cols-2 gap-px overflow-hidden rounded-xl bg-[var(--color-border)] md:grid-cols-4 ${className}`}>
       {items.map((item, i) => (
-        <div key={i} className="bg-[var(--color-steel)] px-5 py-6 sm:px-7 sm:py-8">
-          <span aria-hidden="true" className="mb-3 block h-1 w-8 bg-[var(--color-gold)]" />
-          <dd className="font-display text-3xl font-bold leading-none text-[var(--color-frost)] tabular-nums sm:text-4xl">
+        <div key={i} className="bg-[var(--color-card)] px-5 py-6 sm:px-7 sm:py-8">
+          <span aria-hidden="true" className="mb-3 block h-1 w-8 rounded-full bg-[var(--color-accent)]" />
+          <dd className="text-3xl font-bold leading-none text-[var(--color-heading)] tabular-nums sm:text-4xl">
             {item.value}
           </dd>
-          <dt className="mt-2 font-sans text-xs uppercase tracking-[0.16em] text-[var(--color-slate-muted)]">
+          <dt className="mt-2 text-xs uppercase tracking-[0.08em] text-[var(--color-muted)]">
             {item.label}
           </dt>
         </div>
