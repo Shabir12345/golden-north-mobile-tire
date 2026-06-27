@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { BUSINESS } from "@/lib/business";
 import { SERVICES, SERVICE_SLUGS, getService } from "@/lib/services";
 import { SERVICE_PHOTO } from "@/lib/photos";
 import { ServiceJsonLd, FaqJsonLd } from "@/lib/jsonld";

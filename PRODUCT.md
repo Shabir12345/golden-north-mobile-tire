@@ -30,15 +30,12 @@ one screen that Golden North will come to them now, and taps **Call (416) 558-59
 
 ## Brand Personality
 
-**Urgent · rescue · bold.** This is a help-is-coming brand, not a tire retailer. The
-voice is direct, declarative, and operational — dispatch language, not marketing
-superlatives ("We come to you," not "Your trusted tire partner"). Urgency is conveyed
-through contrast, decisive motion, and copy — never through promo clutter or
-price-screaming. The identity is the committed **Midnight & Gold** system (deep
-navy-black canvas, warm gold accents, headlight-glow gradients, condensed industrial
-headlines): premium and confident enough that "bold" reads as capable, not cheap.
+**Friendly · dependable · clear.** A helpful local service brand. Direct, plain
+language ("We come to you"), calm and reassuring. The identity is the
+**Clean & Trustworthy** system (white canvas, one trust-blue accent, Inter type):
+approachable and easy to navigate.
 
-Emotional goal: relief and confidence — *someone is already on the way.*
+Emotional goal: calm confidence — *help is on the way, and it's easy to reach.*
 
 ## Anti-references
 
