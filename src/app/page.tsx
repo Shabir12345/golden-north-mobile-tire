@@ -1,7 +1,7 @@
 // ─── Home page ────────────────────────────────────────────────────────────────
-// Assembly with deliberate sectional rhythm (midnight → steel trust bar →
-// midnight service rows → ink process → midnight coverage → ink gallery teaser
-// → amber drenched CTA). The root layout renders Header/Footer/MobileCallBar.
+// Assembly with deliberate sectional rhythm (page → surface trust bar →
+// page service rows → surface process → page coverage → surface gallery teaser
+// → soft-blue CTA). The root layout renders Header/Footer/MobileCallBar.
 
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
@@ -32,7 +32,7 @@ export default function Home() {
       <Hero />
 
       {/* Trust bar */}
-      <section className="bg-midnight py-14" aria-label="Why drivers call Golden North">
+      <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call Golden North">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <StatStrip
             items={[
@@ -46,13 +46,13 @@ export default function Home() {
       </section>
 
       {/* Services — numbered editorial rows */}
-      <section className="bg-midnight py-20 lg:py-28" aria-labelledby="services-heading">
+      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="services-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 max-w-2xl">
-            <h2 id="services-heading" className="font-display font-bold text-4xl leading-[1.02] text-[var(--color-frost)] lg:text-5xl">
-              Four ways we get you <span className="text-[var(--color-gold)]">rolling.</span>
+            <h2 id="services-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
+              Four ways we get you <span className="text-[var(--color-accent)]">rolling.</span>
             </h2>
-            <p className="mt-5 font-sans text-lg leading-relaxed text-[var(--color-frost-dim)]">
+            <p className="mt-5 text-lg leading-relaxed text-[var(--color-body)]">
               Whatever stopped you — a seasonal swap, a worn tire, a dead battery, a flat on
               the shoulder — we bring the shop to your location and handle it on the spot.
             </p>
@@ -71,11 +71,11 @@ export default function Home() {
       <CoverageMap />
 
       {/* Gallery teaser — real photos */}
-      <section className="bg-[var(--color-ink)] py-24 lg:py-32" aria-labelledby="gallery-teaser-heading">
+      <section className="bg-[var(--color-surface)] py-24 lg:py-32" aria-labelledby="gallery-teaser-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-            <h2 id="gallery-teaser-heading" className="font-display font-bold text-3xl leading-tight text-[var(--color-frost)] lg:text-4xl">
-              On the job, <span className="text-[var(--color-gold)]">GTA-wide.</span>
+            <h2 id="gallery-teaser-heading" className="font-bold text-3xl leading-tight text-[var(--color-heading)] lg:text-4xl">
+              On the job, <span className="text-[var(--color-accent)]">GTA-wide.</span>
             </h2>
             <Button variant="ghost" href="/gallery" aria-label="View the full photo gallery">
               View gallery
@@ -87,7 +87,7 @@ export default function Home() {
               <Reveal key={photo.src} delay={i * 60}>
                 <Link
                   href="/gallery"
-                  className="block rounded-[4px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-ink)]"
+                  className="block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
                   aria-label="View the full photo gallery"
                 >
                   <Photo src={photo.src} alt={photo.alt} ratio="1 / 1" sizes="(max-width: 640px) 50vw, 33vw" />
