@@ -1,7 +1,7 @@
 // ─── Service detail (/services/[slug]) ────────────────────────────────────────
-// Statically generated SEO page per service: focused hero with the real action
-// photo, what's included, when you need it, an accessible native-<details> FAQ
-// (with FAQPage JSON-LD), cross-links to the other services, and the CTA band.
+// Statically generated SEO page per service: focused hero with the real photo,
+// what's included, when you need it, an accessible <details> FAQ (with FAQPage
+// JSON-LD), cross-links, and the CTA band. Light theme, no emergency motifs.
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -13,9 +13,7 @@ import { SERVICE_PHOTO } from "@/lib/photos";
 import { ServiceJsonLd, FaqJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
 import { Photo } from "@/components/ui/Photo";
-import { Glow } from "@/components/ui/Glow";
-import { HazardStripe } from "@/components/ui/HazardStripe";
-import { LiveStatus } from "@/components/ui/LiveStatus";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CTABand } from "@/components/sections/CTABand";
 
 type Params = { slug: string };
@@ -48,25 +46,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
       <ServiceJsonLd service={service} />
       <FaqJsonLd faqs={service.faqs} />
 
-      {/* Focused hero */}
-      <section className="relative overflow-hidden bg-midnight" aria-labelledby="service-heading">
-        <HazardStripe height={6} className="absolute inset-x-0 top-0 z-10" />
-        <Glow intensity="high" className="top-0 right-0 h-[520px] w-[640px] translate-x-1/4 -translate-y-1/4" />
-
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
+      {/* Focused header */}
+      <section className="bg-[var(--color-surface)] border-b border-[var(--color-border)]" aria-labelledby="service-heading">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
           <div>
-            <LiveStatus variant="line" className="mb-5" />
-            <p className="mb-3 font-display text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-gold)]">
+            <AvailabilityBadge variant="line" className="mb-5" />
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)]">
               Mobile service · GTA-wide
             </p>
             <h1
               id="service-heading"
-              className="font-display font-bold leading-[0.95] text-[var(--color-frost)]"
-              style={{ fontSize: "clamp(2.4rem, 6vw, 4rem)", letterSpacing: "-0.03em" }}
+              className="font-bold leading-[1.05] text-[var(--color-heading)]"
+              style={{ fontSize: "clamp(2.25rem, 5.5vw, 3.5rem)", letterSpacing: "-0.02em" }}
             >
               {service.name}
             </h1>
-            <p className="mt-5 max-w-md font-sans text-lg leading-relaxed text-[var(--color-frost-dim)]">
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
               {service.tagline}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -81,24 +76,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
             <Photo src={photo.src} alt={photo.alt} ratio="4 / 3" priority sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
-
-        <HazardStripe height={8} />
       </section>
 
       {/* Summary + lists */}
-      <section className="bg-midnight py-20 lg:py-28" aria-label={`About ${service.name}`}>
+      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-label={`About ${service.name}`}>
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="max-w-3xl font-sans text-xl leading-relaxed text-[var(--color-frost-dim)]">
+          <p className="max-w-3xl text-xl leading-relaxed text-[var(--color-body)]">
             {service.summary}
           </p>
 
           <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="font-display font-bold text-2xl text-[var(--color-frost)]">What&rsquo;s included</h2>
+              <h2 className="font-bold text-2xl text-[var(--color-heading)]">What&rsquo;s included</h2>
               <ul className="mt-6 space-y-3" aria-label={`What's included in ${service.name}`}>
                 {service.included.map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-sans text-base text-[var(--color-frost-dim)]">
-                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-[var(--color-gold)]" />
+                  <li key={item} className="flex items-start gap-3 text-base text-[var(--color-body)]">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
                     {item}
                   </li>
                 ))}
@@ -106,14 +99,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
             </div>
 
             <div>
-              <h2 className="font-display font-bold text-2xl text-[var(--color-frost)]">When you need it</h2>
+              <h2 className="font-bold text-2xl text-[var(--color-heading)]">When you need it</h2>
               <ul className="mt-6 space-y-4" aria-label={`When you need ${service.name}`}>
                 {service.whenYouNeed.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 rounded-[4px] border border-[rgba(245,168,28,0.18)] bg-[var(--color-steel)] px-5 py-4 font-sans text-base leading-relaxed text-[var(--color-frost-dim)]"
+                    className="flex items-start gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-4 text-base leading-relaxed text-[var(--color-body)] shadow-sm"
                   >
-                    <span aria-hidden="true" className="mt-1 shrink-0 font-display font-bold text-[var(--color-gold)]">!</span>
+                    <span aria-hidden="true" className="mt-1 shrink-0 font-bold text-[var(--color-accent)]">✓</span>
                     {item}
                   </li>
                 ))}
@@ -124,21 +117,21 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
       </section>
 
       {/* FAQ */}
-      <section className="bg-[var(--color-ink)] py-20 lg:py-28" aria-labelledby="faq-heading">
+      <section className="bg-[var(--color-surface)] py-20 lg:py-28" aria-labelledby="faq-heading">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <h2 id="faq-heading" className="font-display font-bold text-3xl text-[var(--color-frost)] lg:text-4xl">
+          <h2 id="faq-heading" className="font-bold text-3xl text-[var(--color-heading)] lg:text-4xl">
             {service.shortName} questions, answered.
           </h2>
-          <div className="mt-10 divide-y divide-[rgba(245,168,28,0.14)] border-y border-[rgba(245,168,28,0.14)]">
+          <div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
             {service.faqs.map((faq) => (
               <details key={faq.q} className="group py-5">
-                <summary className="flex cursor-pointer items-center justify-between gap-4 font-display font-semibold text-lg text-[var(--color-frost)] marker:content-none [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-lg text-[var(--color-heading)] marker:content-none [&::-webkit-details-marker]:hidden">
                   {faq.q}
-                  <span aria-hidden="true" className="shrink-0 text-[var(--color-gold)] text-xl transition-transform duration-200 group-open:rotate-45">
+                  <span aria-hidden="true" className="shrink-0 text-[var(--color-accent)] text-xl transition-transform duration-200 group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-3 font-sans text-base leading-relaxed text-[var(--color-frost-dim)]">{faq.a}</p>
+                <p className="mt-3 text-base leading-relaxed text-[var(--color-body)]">{faq.a}</p>
               </details>
             ))}
           </div>
@@ -146,9 +139,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
       </section>
 
       {/* Cross-links */}
-      <section className="bg-midnight py-20 lg:py-24" aria-labelledby="other-services-heading">
+      <section className="bg-[var(--color-page)] py-20 lg:py-24" aria-labelledby="other-services-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 id="other-services-heading" className="mb-8 font-display font-bold text-2xl text-[var(--color-frost)]">
+          <h2 id="other-services-heading" className="mb-8 font-bold text-2xl text-[var(--color-heading)]">
             We also handle
           </h2>
           <div className="grid gap-4 sm:grid-cols-3">
@@ -156,11 +149,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex items-center justify-between gap-3 rounded-[4px] border border-[rgba(245,168,28,0.18)] bg-[var(--color-steel)] px-5 py-5 transition-colors duration-200 hover:border-[var(--color-gold)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-midnight)]"
+                className="group flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm transition-colors duration-200 hover:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
                 aria-label={`${s.name} — view service`}
               >
-                <span className="font-display font-bold text-lg text-[var(--color-frost)]">{s.shortName}</span>
-                <span aria-hidden="true" className="text-[var(--color-gold)] transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <span className="font-bold text-lg text-[var(--color-heading)]">{s.shortName}</span>
+                <span aria-hidden="true" className="text-[var(--color-accent)] transition-transform duration-200 group-hover:translate-x-1">→</span>
               </Link>
             ))}
           </div>

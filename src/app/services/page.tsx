@@ -24,7 +24,7 @@ export default function ServicesPage() {
           <>
             Everything we do,
             <br />
-            <span className="text-[var(--color-gold)]">at your location.</span>
+            <span className="text-[var(--color-accent)]">at your location.</span>
           </>
         }
         intro={`Four mobile services across the ${BUSINESS.areaServed} — no shop visit, no tow, no wasted Saturday. Pick what stopped you, or just call and tell us.`}
@@ -35,7 +35,7 @@ export default function ServicesPage() {
         </Button>
       </PageHeader>
 
-      <section className="bg-midnight py-20 lg:py-28" aria-label="Our services">
+      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-label="Our services">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="space-y-20 lg:space-y-28">
             {SERVICES.map((service, i) => (
