@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-page)]" aria-label="Hero — Golden North Mobile Tire Services">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-24">
+        <div className="grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:py-20">
           {/* Text column */}
           <div>
             <AvailabilityBadge variant="line" className="mb-7" />

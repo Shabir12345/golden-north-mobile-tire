@@ -50,32 +50,35 @@ The site must NOT look like any of these:
 - **Loud discount-tire retailers** — big-box promo energy, sale tags, price-screaming
   banners.
 
-The tension to manage: express *urgency and boldness* through the Midnight & Gold
-system, not by importing the visual language of the loud-retailer or generic-auto-shop
-lanes we're rejecting. Bold ≠ loud-and-cheap.
+The tension to manage: convey *24/7 dependability* through the calm Clean & Trustworthy
+system (white canvas, one trust-blue accent, Inter), not by importing the visual
+language of the loud-retailer or generic-auto-shop lanes we're rejecting. Reassuring ≠
+bland; trustworthy ≠ loud-and-cheap.
 
 ## Design Principles
 
-1. **Call-first, always.** The phone call is the single conversion action. The gold
+1. **Call-first, always.** The phone call is the single conversion action. The trust-blue
    Call button is the dominant CTA on every surface; forms and "contact" links are
    styled as secondary fallbacks that never compete with it.
-2. **Help is already moving.** Convey 24/7 rescue urgency through contrast, decisive
-   motion, and operational copy — not red/yellow promo noise. The feeling to leave is
-   relief, not alarm.
+2. **Calm confidence, not alarm.** Convey 24/7 dependability through clear hierarchy,
+   plain operational copy, and a steady single accent — not red/yellow promo noise or
+   emergency motifs. The feeling to leave is relief: help is on the way, and it's easy
+   to reach.
 3. **Operational voice, not marketing voice.** Declarative dispatch language. State the
    uncommon promise plainly; trust it instead of padding with superlatives.
-4. **Distinctive over safe.** Commit to the Midnight & Gold identity and the signature
-   motifs (north-star mark, tread dividers, directional headlight glow). Reject
-   category slop and template defaults; average is invisible.
+4. **Distinctive over safe.** Commit to the Clean & Trustworthy identity — white canvas,
+   one trust-blue accent, Inter, soft cards, the north-star mark. Reject category slop
+   and template defaults (cream/sand backgrounds, per-section eyebrows, identical
+   icon-cards); calm is the differentiator, not blandness.
 5. **Stranded-on-mobile-first.** Design for the worst-case visitor — stressed, outdoors,
    on a phone, possibly at night. Large tap targets, instant clarity, fast loads, the
    call action always within reach.
 
 ## Accessibility & Inclusion
 
-Target **WCAG 2.2 AA**: body contrast ≥4.5:1 and large text ≥3:1 (gold-on-dark
+Target **WCAG 2.2 AA**: body contrast ≥4.5:1 and large text ≥3:1 (trust-blue-on-white
 verified), visible focus states on all interactive elements, semantic landmarks and
 heading hierarchy, descriptive alt text on all imagery, and `prefers-reduced-motion`
-alternatives for every glow/animation (the reduced-motion block in `globals.css` is
+alternatives for every animation (the reduced-motion block in `globals.css` is
 load-bearing — do not remove it). Given the stranded-mobile context, keep tap targets
 generous and the primary call action reachable without precise aim.

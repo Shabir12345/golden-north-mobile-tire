@@ -9,6 +9,7 @@ import { CallButton } from "@/components/ui/Button";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CoverageMap } from "@/components/sections/CoverageMap";
+import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
 export const metadata = buildMetadata({
   title: "Contact — Call 24/7",
@@ -64,6 +65,8 @@ export default function ContactPage() {
           </dl>
         </div>
       </section>
+
+      <ReviewsWidget />
 
       {/* Secondary: message form */}
       <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="message-heading">

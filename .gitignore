@@ -24,11 +24,9 @@
 .DS_Store
 *.pem
 
-# claude code machine-local settings (impeccable design hook lives here)
-.claude/settings.local.json
-
-# impeccable live-mode local session journal (not project source)
-.impeccable/live/sessions/
+# claude code + impeccable local tooling (dev machinery, not website source)
+.claude/
+.impeccable/
 
 # debug
 npm-debug.log*

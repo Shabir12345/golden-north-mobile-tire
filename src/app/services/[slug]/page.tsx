@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { SERVICES, SERVICE_SLUGS, getService } from "@/lib/services";
 import { SERVICE_PHOTO } from "@/lib/photos";
-import { ServiceJsonLd, FaqJsonLd } from "@/lib/jsonld";
+import { ServiceJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
 import { Photo } from "@/components/ui/Photo";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
@@ -44,6 +44,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
     <>
       <ServiceJsonLd service={service} />
       <FaqJsonLd faqs={service.faqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+          { name: service.name, path: `/services/${service.slug}` },
+        ]}
+      />
+
 
       {/* Focused header */}
       <section className="bg-[var(--color-surface)] border-b border-[var(--color-border)]" aria-labelledby="service-heading">

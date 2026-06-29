@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 import { BUSINESS } from "@/lib/business";
 
-// Branded social-share card (Midnight & High-Vis Amber). next/og renders this
-// at build time; system fonts are used (no custom font needed for OG).
+// Branded social-share card — Clean & Trustworthy (white + trust-blue #1D6FE0).
+// next/og renders this at build time; system fonts are used (no custom font).
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = `${BUSINESS.name} — 24/7 mobile tire & roadside service in the GTA`;
@@ -17,49 +17,49 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#0B1220",
+          backgroundColor: "#FFFFFF",
           padding: "72px 80px",
           fontFamily: "sans-serif",
         }}
       >
-        {/* top hazard edge */}
+        {/* top trust-blue edge */}
         <div
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             right: 0,
-            height: 14,
-            backgroundImage:
-              "repeating-linear-gradient(-45deg, #F5A81C 0 28px, #0B1220 28px 56px)",
+            height: 12,
+            backgroundColor: "#1D6FE0",
           }}
         />
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-          <svg width="40" height="40" viewBox="0 0 64 64">
-            <path d="M32 6 L38 26 L58 32 L38 38 L32 58 L26 38 L6 32 L26 26 Z" fill="#F5A81C" />
+          <svg width="44" height="44" viewBox="0 0 64 64">
+            <rect width="64" height="64" rx="14" fill="#1D6FE0" />
+            <path d="M32 11 L36.5 27.5 L53 32 L36.5 36.5 L32 53 L27.5 36.5 L11 32 L27.5 27.5 Z" fill="#FFFFFF" />
           </svg>
-          <div style={{ color: "#EEF2F8", fontSize: 28, fontWeight: 700, letterSpacing: 4, textTransform: "uppercase" }}>
+          <div style={{ color: "#16202E", fontSize: 28, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
             {BUSINESS.shortName}
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", color: "#F5A81C", fontSize: 26, fontWeight: 700, letterSpacing: 6, textTransform: "uppercase", marginBottom: 16 }}>
+          <div style={{ display: "flex", color: "#1657B0", fontSize: 26, fontWeight: 700, letterSpacing: 5, textTransform: "uppercase", marginBottom: 16 }}>
             Open 24/7 · We come to you
           </div>
-          <div style={{ display: "flex", color: "#EEF2F8", fontSize: 104, fontWeight: 800, lineHeight: 1 }}>
+          <div style={{ display: "flex", color: "#16202E", fontSize: 104, fontWeight: 800, lineHeight: 1 }}>
             We come to you.
           </div>
-          <div style={{ display: "flex", color: "#C3CDDB", fontSize: 32, marginTop: 24 }}>
+          <div style={{ display: "flex", color: "#4A5564", fontSize: 32, marginTop: 24 }}>
             Mobile tire change · tires · battery · roadside — across the GTA
           </div>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", color: "#F5A81C", fontSize: 44, fontWeight: 800 }}>
+          <div style={{ display: "flex", color: "#1D6FE0", fontSize: 44, fontWeight: 800 }}>
             {BUSINESS.phoneDisplay}
           </div>
-          <div style={{ display: "flex", color: "#93A1B4", fontSize: 24 }}>
+          <div style={{ display: "flex", color: "#6B7685", fontSize: 24 }}>
             goldennorthmobiletires.com
           </div>
         </div>

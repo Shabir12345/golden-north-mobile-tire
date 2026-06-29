@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CallButton } from "@/components/ui/Button";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { BUSINESS } from "@/lib/business";
@@ -40,6 +41,9 @@ function HamburgerIcon({ open }: { open: boolean }) {
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    !pathname ? false : href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header
@@ -63,7 +67,10 @@ export function Header() {
             <Link
               key={href}
               href={href}
-              className="text-sm font-medium text-[var(--color-body)] hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-page)]"
+              aria-current={isActive(href) ? "page" : undefined}
+              className={`text-sm rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-page)] ${
+                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-[var(--color-body)]"
+              }`}
             >
               {label}
             </Link>
@@ -99,7 +106,10 @@ export function Header() {
               key={href}
               href={href}
               onClick={closeMenu}
-              className="text-base font-medium text-[var(--color-body)] hover:text-[var(--color-accent)] px-2 py-3 border-b border-[var(--color-border)] last:border-0 rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-surface)]"
+              aria-current={isActive(href) ? "page" : undefined}
+              className={`text-base px-2 py-3 border-b border-[var(--color-border)] last:border-0 rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-surface)] ${
+                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-[var(--color-body)]"
+              }`}
             >
               {label}
             </Link>

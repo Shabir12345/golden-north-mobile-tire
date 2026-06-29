@@ -13,6 +13,7 @@ import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Hero } from "@/components/sections/Hero";
+import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 import { ServiceRow } from "@/components/sections/ServiceRow";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CoverageMap } from "@/components/sections/CoverageMap";
@@ -30,6 +31,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+
+      <ReviewsWidget />
 
       {/* Trust bar */}
       <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call Golden North">
@@ -71,7 +74,7 @@ export default function Home() {
       <CoverageMap />
 
       {/* Gallery teaser — real photos */}
-      <section className="bg-[var(--color-surface)] py-24 lg:py-32" aria-labelledby="gallery-teaser-heading">
+      <section className="bg-[var(--color-surface)] py-20 lg:py-28" aria-labelledby="gallery-teaser-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <h2 id="gallery-teaser-heading" className="font-bold text-3xl leading-tight text-[var(--color-heading)] lg:text-4xl">

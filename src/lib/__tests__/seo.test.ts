@@ -6,6 +6,6 @@ describe("buildMetadata", () => {
     const m = buildMetadata({ title: "Battery", description: "Mobile battery replacement", path: "/services/battery" });
     expect(m.title).toContain("Battery");
     expect(m.alternates?.canonical).toBe("https://www.goldennorthmobiletires.com/services/battery");
-    expect((m.openGraph as any)?.url).toContain("/services/battery");
+    expect((m.openGraph as { url?: string })?.url).toContain("/services/battery");
   });
 });
