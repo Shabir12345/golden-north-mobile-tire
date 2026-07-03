@@ -16,8 +16,17 @@ export function LocalBusinessJsonLd() {
     logo: `${BUSINESS.url}/icon.svg`,
     priceRange: "$$",
     slogan: BUSINESS.tagline,
-    // Mobile / service-area business: no storefront address, a GTA service area
-    // centred on downtown Toronto instead.
+    // Registered base address — strengthens local SEO even though service is mobile.
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.locality,
+      addressRegion: BUSINESS.address.region,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.country,
+    },
+    // Mobile / service-area business: a GTA service area centred on downtown
+    // Toronto, in addition to the base address above.
     areaServed: {
       "@type": "GeoCircle",
       geoMidpoint: { "@type": "GeoCoordinates", latitude: 43.6532, longitude: -79.3832 },
