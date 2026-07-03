@@ -1,9 +1,11 @@
 // Footer — the one grounded dark anchor at the bottom of a light page. The phone
 // number is the loudest element here too; the footer is a last-chance CTA.
 
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS, telHref, mailHref } from "@/lib/business";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
+import { CompassRose } from "@/components/ui/CompassRose";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -32,14 +34,18 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--color-footer)] text-[var(--color-footer-fg)]" aria-label="Site footer">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+    <footer className="relative overflow-hidden bg-[var(--color-footer)] text-[var(--color-footer-fg)]" aria-label="Site footer">
+      <CompassRose className="pointer-events-none absolute -left-24 -bottom-28 h-96 w-96 text-[var(--color-accent)] opacity-[0.05]" />
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between pb-10 border-b border-white/15">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span aria-hidden="true" className="text-[var(--color-accent)] text-lg">✦</span>
-              <p className="font-bold tracking-tight text-white text-base">{BUSINESS.name}</p>
-            </div>
+            <Image
+              src="/logo.png"
+              alt={`${BUSINESS.name} logo`}
+              width={140}
+              height={147}
+              className="h-24 w-auto"
+            />
             <div className="space-y-2 text-sm text-[var(--color-footer-fg)]">
               <p>
                 <a
@@ -78,7 +84,7 @@ export function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-sm font-medium text-white/70 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
+                className="text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
               >
                 {label}
               </Link>

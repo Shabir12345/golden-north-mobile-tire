@@ -113,7 +113,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
                     key={item}
                     className="flex items-start gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-4 text-base leading-relaxed text-[var(--color-body)] shadow-sm"
                   >
-                    <span aria-hidden="true" className="mt-1 shrink-0 font-bold text-[var(--color-accent)]">✓</span>
+                    <span aria-hidden="true" className="mt-1 shrink-0 font-bold text-[var(--color-accent-deep)]">✓</span>
                     {item}
                   </li>
                 ))}
@@ -134,7 +134,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
               <details key={faq.q} className="group py-5">
                 <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-lg text-[var(--color-heading)] marker:content-none [&::-webkit-details-marker]:hidden">
                   {faq.q}
-                  <span aria-hidden="true" className="shrink-0 text-[var(--color-accent)] text-xl transition-transform duration-200 group-open:rotate-45">
+                  <span aria-hidden="true" className="shrink-0 text-[var(--color-accent-deep)] text-xl transition-transform duration-200 group-open:rotate-45">
                     +
                   </span>
                 </summary>
@@ -160,7 +160,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
                 aria-label={`${s.name} — view service`}
               >
                 <span className="font-bold text-lg text-[var(--color-heading)]">{s.shortName}</span>
-                <span aria-hidden="true" className="text-[var(--color-accent)] transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <span aria-hidden="true" className="text-[var(--color-accent-deep)] transition-transform duration-200 group-hover:translate-x-1">→</span>
               </Link>
             ))}
           </div>

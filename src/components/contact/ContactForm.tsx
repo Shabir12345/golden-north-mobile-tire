@@ -78,7 +78,7 @@ export function ContactForm() {
   if (status === "sent") {
     return (
       <div role="status" className="rounded-lg border border-[var(--color-border)] bg-[var(--color-accent-soft)] p-6 text-center">
-        <p className="text-xl font-bold text-[var(--color-accent)]">Thanks — message received.</p>
+        <p className="text-xl font-bold text-[var(--color-accent-deep)]">Thanks — message received.</p>
         <p className="mt-2 text-sm text-[var(--color-body)]">
           We&rsquo;ll reply shortly. Need help right now? Calling is always fastest.
         </p>
@@ -145,7 +145,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="group/btn inline-flex items-center justify-center gap-2.5 rounded-lg bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-[transform,box-shadow,background-color] duration-200 [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-0.5 hover:bg-[var(--color-accent-deep)] hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+        className="group/btn inline-flex items-center justify-center gap-2.5 rounded-lg bg-[var(--color-accent)] px-7 py-3.5 text-sm font-semibold text-[var(--color-navy)] shadow-sm transition-[transform,box-shadow,background-color] duration-200 [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-0.5 hover:bg-[#D99500] hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>

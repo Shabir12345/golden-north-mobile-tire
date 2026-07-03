@@ -1,19 +1,22 @@
 ---
 name: Golden North Mobile Tire Services
-description: Clean & Trustworthy — a white canvas, one trust-blue accent, Inter throughout.
+description: Golden North Premium — compass gold on deep navy over a warm off-white canvas, Inter throughout.
 colors:
-  page: "#FFFFFF"
-  surface: "#F4F6F9"
+  page: "#FBF9F4"
+  surface: "#F3F1EA"
   card: "#FFFFFF"
-  border: "#E2E8F0"
-  heading: "#16202E"
-  body: "#475467"
-  muted: "#697586"
-  accent: "#1D6FE0"
-  accent-deep: "#1657B0"
-  accent-soft: "#EAF2FD"
-  footer: "#10243F"
-  footer-fg: "#D6E2F0"
+  border: "#E7E1D3"
+  heading: "#1B2334"
+  body: "#4A5162"
+  muted: "#686D7D"
+  accent: "#F0A500"
+  accent-deep: "#8C6200"
+  accent-soft: "#FBF1DC"
+  accent-hover: "#D99500"
+  navy: "#151D2E"
+  footer: "#0E1524"
+  footer-fg: "#C7CEDC"
+  on-navy: "#E8EBF2"
 typography:
   display:
     fontFamily: "Inter, system-ui, sans-serif"
@@ -39,35 +42,60 @@ rounded:
 
 # Design System: Golden North Mobile Tire Services
 
-## Overview — "Clean & Trustworthy"
+## Overview — "Golden North Premium"
 
-A bright, friendly, easy-to-navigate local-service site. White canvas, one
-trust-blue accent (#1D6FE0) carrying every action and emphasis, Inter
-throughout, and soft cards with gentle shadows. Calm and approachable — the
-phone call is still the loudest action on every surface, but the feeling is
-"a dependable local service," not an emergency.
+A gold & navy brand system derived from the real logo (gold compass rose inside
+a tire, deep navy outlines). Navy bands — header, hero, "How it works", page
+headers, footer — give every page its rhythm; the light bands between them sit
+on a warm off-white canvas, not stark white. Compass gold is the only saturated
+color and carries every action. The phone call is the loudest object on every
+surface. Premium and dependable, not loud or "emergency".
 
 ## Colors
-One blue accent is the only saturated color. White/`surface` bands carry the
-sectional rhythm; the footer is the single grounded dark-navy anchor. Body copy
-is `#475467` (`--color-body`); `--color-muted` is for labels/captions only.
+
+- **Gold (`--color-accent`, #F0A500)** is the single accent: CTAs, links,
+  icon chips, step numbers, focus rings, the availability dot. Gold **fills
+  always carry navy text** (≈8:1) — never white.
+- **Raw gold text is only allowed on navy** surfaces. On light surfaces,
+  gold-as-text uses `--color-accent-deep` (#8C6200, AA on page/surface/card).
+  Gold button hover is #D99500 (`accent-hover`).
+- **Navy** (#151D2E) is the brand dark for bands and the header;
+  `--color-footer` (#0E1524) is the deepest anchor. On navy: white headings,
+  `--color-footer-fg` body, `--color-on-navy` for brighter labels, gold links.
+- Light bands alternate `page` (warm off-white) and `surface` (warm grey);
+  cards stay white with warm `border` hairlines.
+
+## Logo
+
+`public/logo.png` (full lockup, transparent) in Header and Footer;
+`public/logo-mark.png` is the square compass disc. The favicon/apple-icon/OG
+mark is a drawn gold compass star on navy that echoes it. A faint
+`CompassRose` watermark (gold at 5–6% opacity) may sit in one corner of navy
+bands — never on light bands, never above 8% opacity.
 
 ## Typography
+
 Inter for headings and body — normal width, bold weights for hierarchy,
-comfortable tracking. Big and highly legible.
+comfortable tracking. Big and highly legible. White headings on navy, `heading`
+on light.
 
 ## Components
-- Buttons: primary = solid blue, white text, `rounded-lg`, soft hover lift;
-  ghost = bordered white, blue text. CallButton is always primary.
-- Cards: white, 1px `--color-border`, soft `shadow-sm`, 12px radius.
-- AvailabilityBadge: a calm static blue dot + "Open 24/7" / "Available 24/7 ·
-  We come to you". No pulse.
-- Inputs: white, hairline border, blue focus ring.
+
+- Buttons: primary = solid gold, **navy text**, `rounded-lg`, soft hover lift
+  to #D99500; ghost = bordered white card, heading text. CallButton is always
+  primary.
+- Cards on light: white, 1px `--color-border`, soft `shadow-sm`, 12px radius.
+  Cards on navy: `border-white/10` + `bg-white/[0.04]`, no shadow.
+- AvailabilityBadge: gold dot + label; `onDark` renders `on-navy` text.
+- Inputs: white, warm hairline border, gold focus ring.
+- MobileCallBar: navy strip, gold call button.
 
 ## Do / Don't
-- **Do** keep the blue CallButton the loudest object on every surface.
-- **Do** use white/surface bands and soft shadows for rhythm.
-- **Do** use `--color-body` for paragraphs, `--color-muted` for labels.
-- **Don't** add a second accent hue, gradient text, or any hazard/glow/emergency
-  motif.
-- **Don't** make it loud — calm, clean, and clear over bold-and-urgent.
+
+- **Do** keep the gold CallButton the loudest object on every surface.
+- **Do** alternate navy / page / surface bands for sectional rhythm.
+- **Do** pair gold fills with navy text, and use `accent-deep` for gold-toned
+  text on light surfaces.
+- **Don't** put raw gold text on light backgrounds, or white text on gold.
+- **Don't** add a second accent hue, gradient text, or hazard/glow/emergency
+  motifs — premium and calm, not alarm.

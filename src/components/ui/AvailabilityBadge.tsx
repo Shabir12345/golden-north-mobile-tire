@@ -17,7 +17,7 @@ export function AvailabilityBadge({ className = "", variant = "badge", label, on
   const text = label ?? (variant === "line" ? "Available 24/7 · We come to you" : BUSINESS.hours);
 
   const labelColor = onDark
-    ? "text-[var(--color-footer-fg)]"
+    ? "text-[var(--color-on-navy)]"
     : variant === "line"
       ? "text-[var(--color-accent-deep)]"
       : "text-[var(--color-muted)]";

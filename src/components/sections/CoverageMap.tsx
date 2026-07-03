@@ -18,7 +18,7 @@ export function CoverageMap() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
           <div>
             <h2 id="coverage-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
-              The whole GTA, <span className="text-[var(--color-accent)]">not just downtown.</span>
+              The whole GTA, <span className="text-[var(--color-accent-deep)]">not just downtown.</span>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-[var(--color-body)]">
               {BUSINESS.shortName} covers the full {BUSINESS.areaServed}. A Brampton driveway,
@@ -55,7 +55,7 @@ export function CoverageMap() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-deep)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)]"
+                className="shrink-0 text-sm font-semibold text-[var(--color-accent-deep)] hover:text-[var(--color-heading)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)]"
               >
                 Get directions →
               </a>

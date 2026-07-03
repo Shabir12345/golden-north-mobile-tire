@@ -29,7 +29,7 @@ export function ServiceRow({ service, index }: ServiceRowProps) {
         <div className="flex items-baseline gap-4">
           <span
             aria-hidden="true"
-            className="font-bold leading-none text-[var(--color-accent)]/30 tabular-nums"
+            className="font-bold leading-none text-[var(--color-accent)]/45 tabular-nums"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
           >
             {num}
