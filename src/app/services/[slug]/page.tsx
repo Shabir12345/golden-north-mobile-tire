@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const service = getService(slug);
   if (!service) return {};
   return buildMetadata({
-    title: service.name,
-    description: service.summary.slice(0, 155),
+    title: service.seoTitle,
+    description: service.seoDescription,
     path: `/services/${service.slug}`,
   });
 }
