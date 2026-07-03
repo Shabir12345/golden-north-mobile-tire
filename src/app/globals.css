@@ -47,19 +47,23 @@
   --z-toast: 80;
 }
 
-/* ── Base ── */
-body {
-  background-color: var(--color-page);
-  color: var(--color-body);
-}
+/* ── Base ──
+   Inside @layer base so Tailwind utilities (e.g. text-white on navy bands)
+   can override the default heading color. */
+@layer base {
+  body {
+    background-color: var(--color-page);
+    color: var(--color-body);
+  }
 
-h1, h2, h3 {
-  color: var(--color-heading);
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
+  h1, h2, h3 {
+    color: var(--color-heading);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
 
-p { text-wrap: pretty; }
+  p { text-wrap: pretty; }
+}
 
 ::selection {
   background: var(--color-accent);

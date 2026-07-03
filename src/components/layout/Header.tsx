@@ -49,13 +49,22 @@ export function Header() {
           aria-label="Golden North — home"
         >
           <Image
-            src="/logo.png"
-            alt={`${BUSINESS.name} logo`}
-            width={150}
-            height={158}
+            src="/logo-mark.png"
+            alt=""
+            aria-hidden="true"
+            width={40}
+            height={40}
             priority
-            className="h-12 w-auto"
+            className="h-10 w-10"
           />
+          <span className="ml-2.5 flex flex-col leading-none">
+            <span className="font-bold tracking-tight text-white text-base">
+              {BUSINESS.shortName}
+            </span>
+            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
+              Mobile Tire Services
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 ml-6" aria-label="Primary navigation">

@@ -8,6 +8,7 @@ import { BUSINESS, mailHref } from "@/lib/business";
 import { CallButton } from "@/components/ui/Button";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { CompassRose } from "@/components/ui/CompassRose";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
@@ -21,17 +22,18 @@ export default function ContactPage() {
   return (
     <>
       {/* Call-first header */}
-      <section className="bg-[var(--color-surface)] border-b border-[var(--color-border)]" aria-labelledby="contact-heading">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <AvailabilityBadge variant="line" className="mb-6" label="Available · We come to you" />
+      <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-labelledby="contact-heading">
+        <CompassRose className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 text-[var(--color-accent)] opacity-[0.06]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+          <AvailabilityBadge variant="line" onDark className="mb-6" label="Available · We come to you" />
           <h1
             id="contact-heading"
-            className="max-w-3xl font-bold leading-[1.05] text-[var(--color-heading)]"
+            className="max-w-3xl font-bold leading-[1.05] text-white"
             style={{ fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)", letterSpacing: "-0.02em" }}
           >
             We pick up. <span className="text-[var(--color-accent)]">Day or night.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-body)]">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-footer-fg)]">
             The fastest way to get help moving is to call. One number, a real person, no queue —
             then we&rsquo;re on our way to you.
           </p>

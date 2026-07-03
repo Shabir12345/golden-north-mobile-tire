@@ -13,6 +13,7 @@ import { ServiceJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
 import { Photo } from "@/components/ui/Photo";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
+import { CompassRose } from "@/components/ui/CompassRose";
 import { CTABand } from "@/components/sections/CTABand";
 
 type Params = { slug: string };
@@ -54,21 +55,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
 
 
       {/* Focused header */}
-      <section className="bg-[var(--color-surface)] border-b border-[var(--color-border)]" aria-labelledby="service-heading">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
+      <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-labelledby="service-heading">
+        <CompassRose className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 text-[var(--color-accent)] opacity-[0.06]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
           <div>
-            <AvailabilityBadge variant="line" className="mb-5" />
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent-deep)]">
+            <AvailabilityBadge variant="line" onDark className="mb-5" />
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)]">
               Mobile service · GTA-wide
             </p>
             <h1
               id="service-heading"
-              className="font-bold leading-[1.05] text-[var(--color-heading)]"
+              className="font-bold leading-[1.05] text-white"
               style={{ fontSize: "clamp(2.25rem, 5.5vw, 3.5rem)", letterSpacing: "-0.02em" }}
             >
               {service.name}
             </h1>
-            <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
               {service.tagline}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
