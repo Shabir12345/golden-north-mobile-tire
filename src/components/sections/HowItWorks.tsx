@@ -1,6 +1,7 @@
 // ─── HowItWorks ───────────────────────────────────────────────────────────────
-// Three steps that ARE a real sequence (call → we head out → done). Big accent
-// numerals on white cards over a quiet surface band. Copy is plain and friendly.
+// Three steps that ARE a real sequence (call → we head out → done). Big gold
+// numerals on translucent cards over the navy brand band. Copy is plain and
+// friendly.
 
 import { Reveal } from "@/components/ui/Reveal";
 import { BUSINESS } from "@/lib/business";
@@ -13,17 +14,17 @@ export function HowItWorks() {
   ] as const;
 
   return (
-    <section className="bg-[var(--color-surface)] py-24 lg:py-32" aria-labelledby="how-it-works-heading">
+    <section className="bg-[var(--color-navy)] py-24 lg:py-32" aria-labelledby="how-it-works-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-14 max-w-xl">
-          <h2 id="how-it-works-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
+          <h2 id="how-it-works-heading" className="font-bold text-4xl leading-[1.05] text-white lg:text-5xl">
             Three steps to <span className="text-[var(--color-accent)]">moving again.</span>
           </h2>
         </div>
 
         <ol className="grid gap-5 md:grid-cols-3">
           {steps.map((step, i) => (
-            <Reveal as="li" key={step.n} delay={i * 90} className="rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-7 shadow-sm lg:p-9">
+            <Reveal as="li" key={step.n} delay={i * 90} className="rounded-xl border border-white/10 bg-white/[0.04] p-7 lg:p-9">
               <span
                 aria-hidden="true"
                 className="block font-bold leading-none text-[var(--color-accent)] tabular-nums"
@@ -31,8 +32,8 @@ export function HowItWorks() {
               >
                 {step.n}
               </span>
-              <h3 className="mt-4 font-bold text-2xl text-[var(--color-heading)]">{step.heading}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-[var(--color-body)]">{step.body}</p>
+              <h3 className="mt-4 font-bold text-2xl text-white">{step.heading}</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-[var(--color-footer-fg)]">{step.body}</p>
             </Reveal>
           ))}
         </ol>

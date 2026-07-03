@@ -24,7 +24,7 @@ function PhoneIcon({ className = "" }: { className?: string }) {
   );
 }
 
-// Friendly rounded button. Primary = solid blue; ghost = bordered, clearly secondary.
+// Friendly rounded button. Primary = solid gold; ghost = bordered, clearly secondary.
 const base = [
   "group/btn inline-flex items-center justify-center gap-2.5",
   "font-semibold leading-none rounded-lg select-none cursor-pointer",
@@ -39,16 +39,16 @@ const sizeMap: Record<ButtonSize, string> = {
   lg: "text-base px-7 py-4",
 };
 
-// Primary: white-on-blue. AA: white on #1D6FE0 ≈ 4.7:1.
+// Primary: navy-on-gold. AA: #151D2E on #F0A500 ≈ 8:1 (hover gold ≈ 6.6:1).
 const primaryStyles = [
-  "bg-[var(--color-accent)] text-white shadow-sm",
-  "hover:bg-[var(--color-accent-deep)] hover:-translate-y-0.5 hover:shadow-md",
+  "bg-[var(--color-accent)] text-[var(--color-navy)] shadow-sm",
+  "hover:bg-[#D99500] hover:-translate-y-0.5 hover:shadow-md",
   "active:translate-y-0",
 ].join(" ");
 
-// Ghost: bordered white card; never competes with primary.
+// Ghost: bordered card; reads as secondary on light and navy surfaces alike.
 const ghostStyles = [
-  "bg-white text-[var(--color-accent)] border border-[var(--color-border)]",
+  "bg-white/95 text-[var(--color-heading)] border border-[var(--color-border)]",
   "hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)]",
 ].join(" ");
 
@@ -90,7 +90,7 @@ export function Button({
   );
 }
 
-// CallButton — call-first law: always the primary (blue) button on its surface.
+// CallButton — call-first law: always the primary (gold) button on its surface.
 export function CallButton({
   className,
   size = "md",

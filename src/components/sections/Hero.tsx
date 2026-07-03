@@ -1,32 +1,36 @@
 // ─── Hero ─────────────────────────────────────────────────────────────────────
-// Clean, friendly hero on white. One clear promise — "We come to you." — a calm
-// availability badge, simple at-a-glance chips, the call-first CTA, and the real
-// photo of the van and tech. No glow, no hazard stripes, no alarm.
+// The navy brand stage. One clear promise — "We come to you." — a calm
+// availability badge, simple at-a-glance chips, the gold call-first CTA, and
+// the real photo of the van and tech. A faint compass-rose watermark nods to
+// the logo. No glow, no hazard stripes, no alarm.
 
 import { Photo } from "@/components/ui/Photo";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CallButton, Button } from "@/components/ui/Button";
+import { CompassRose } from "@/components/ui/CompassRose";
 import { BUSINESS } from "@/lib/business";
 
 const CHIPS = ["24/7", "GTA-wide", "No tow needed"] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-page)]" aria-label="Hero — Golden North Mobile Tire Services">
+    <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — Golden North Mobile Tire Services">
+      <CompassRose className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-[var(--color-accent)] opacity-[0.06]" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:py-20">
           {/* Text column */}
           <div>
-            <AvailabilityBadge variant="line" className="mb-7" />
+            <AvailabilityBadge variant="line" onDark className="mb-7" />
 
             <h1
-              className="font-bold leading-[1.04] text-[var(--color-heading)]"
+              className="font-bold leading-[1.04] text-white"
               style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.02em" }}
             >
               We come <span className="text-[var(--color-accent)]">to you.</span>
+              <span aria-hidden="true" className="mt-5 block h-1 w-20 rounded-full bg-[var(--color-accent)]" />
             </h1>
 
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
               Mobile tire change, new &amp; used tires, battery and roadside help — at your
               driveway, lot, or roadside, anywhere in the GTA. {BUSINESS.tagline}
             </p>
@@ -39,8 +43,8 @@ export function Hero() {
                   className={
                     "text-xs font-semibold px-3 py-1.5 rounded-full " +
                     (i === 0
-                      ? "bg-[var(--color-accent)] text-white"
-                      : "text-[var(--color-body)] bg-[var(--color-accent-soft)]")
+                      ? "bg-[var(--color-accent)] text-[var(--color-navy)]"
+                      : "bg-white/10 text-[var(--color-on-navy)]")
                   }
                 >
                   {chip}
@@ -55,7 +59,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-muted)]">
+            <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-footer-fg)]">
               {BUSINESS.areaServed}
             </p>
           </div>

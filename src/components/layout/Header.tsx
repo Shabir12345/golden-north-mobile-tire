@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CallButton } from "@/components/ui/Button";
@@ -13,15 +14,6 @@ const NAV = [
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ] as const;
-
-// North-star mark — a simple nod to "Golden North". No animation.
-function NorthStar() {
-  return (
-    <span aria-hidden="true" className="text-[var(--color-accent)] text-xl leading-none select-none">
-      ✦
-    </span>
-  );
-}
 
 function HamburgerIcon({ open }: { open: boolean }) {
   return (
@@ -36,8 +28,8 @@ function HamburgerIcon({ open }: { open: boolean }) {
 }
 
 // ─── Header ───────────────────────────────────────────────────────────────────
-// Clean white sticky bar with a hairline border and a soft shadow. Call-first:
-// the blue CallButton shows at every breakpoint (compact on mobile).
+// Navy sticky bar carrying the real brand logo. Call-first: the gold CallButton
+// shows at every breakpoint (compact on mobile).
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
@@ -47,19 +39,23 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 border-b border-[var(--color-border)] bg-white/90 shadow-sm backdrop-blur-md"
+      className="sticky top-0 border-b border-white/10 bg-[#151D2Ee6] shadow-sm backdrop-blur-md"
       style={{ zIndex: "var(--z-sticky)" }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center gap-3 sm:gap-4">
         <Link
           href="/"
-          className="flex items-center gap-2 flex-shrink-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+          className="flex items-center flex-shrink-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
           aria-label="Golden North — home"
         >
-          <NorthStar />
-          <span className="font-bold tracking-tight text-[var(--color-heading)] text-base leading-none">
-            {BUSINESS.shortName}
-          </span>
+          <Image
+            src="/logo.png"
+            alt={`${BUSINESS.name} logo`}
+            width={150}
+            height={158}
+            priority
+            className="h-12 w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 ml-6" aria-label="Primary navigation">
@@ -68,8 +64,8 @@ export function Header() {
               key={href}
               href={href}
               aria-current={isActive(href) ? "page" : undefined}
-              className={`text-sm rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-page)] ${
-                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-[var(--color-body)]"
+              className={`text-sm rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
+                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-white/80"
               }`}
             >
               {label}
@@ -79,12 +75,12 @@ export function Header() {
 
         <div className="ml-auto flex items-center gap-3 sm:gap-4">
           <div className="hidden lg:block">
-            <AvailabilityBadge />
+            <AvailabilityBadge onDark />
           </div>
           <CallButton compact />
           <button
             type="button"
-            className="md:hidden p-2 -mr-2 text-[var(--color-heading)] hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+            className="md:hidden p-2 -mr-2 text-white/90 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
@@ -98,7 +94,7 @@ export function Header() {
       <div
         id="mobile-nav"
         hidden={!menuOpen}
-        className="md:hidden border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-5"
+        className="md:hidden border-t border-white/10 bg-[var(--color-navy)] px-4 py-5"
       >
         <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
           {NAV.map(({ href, label }) => (
@@ -107,8 +103,8 @@ export function Header() {
               href={href}
               onClick={closeMenu}
               aria-current={isActive(href) ? "page" : undefined}
-              className={`text-base px-2 py-3 border-b border-[var(--color-border)] last:border-0 rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-surface)] ${
-                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-[var(--color-body)]"
+              className={`text-base px-2 py-3 border-b border-white/10 last:border-0 rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
+                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-white/85"
               }`}
             >
               {label}
@@ -117,7 +113,7 @@ export function Header() {
         </nav>
         {menuOpen && (
           <div className="mt-4">
-            <AvailabilityBadge variant="line" />
+            <AvailabilityBadge variant="line" onDark />
           </div>
         )}
       </div>
