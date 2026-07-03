@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BUSINESS } from "./business";
 
-export function buildMetadata(opts: { title: string; description: string; path: string; image?: string }): Metadata {
+export function buildMetadata(opts: { title: string; description: string; path: string; image?: string; keywords?: string[] }): Metadata {
   const url = `${BUSINESS.url}${opts.path}`;
   const branded = `${opts.title} | ${BUSINESS.shortName}`;
   // The root layout's title.template adds the " | Golden North" suffix to child
@@ -18,6 +18,7 @@ export function buildMetadata(opts: { title: string; description: string; path: 
   return {
     title: documentTitle,
     description: opts.description,
+    keywords: opts.keywords,
     alternates: { canonical: url },
     openGraph: {
       title: branded, description: opts.description, url, siteName: BUSINESS.name, type: "website",

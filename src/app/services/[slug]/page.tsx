@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: service.seoTitle,
     description: service.seoDescription,
     path: `/services/${service.slug}`,
+    keywords: service.keywords,
   });
 }
 

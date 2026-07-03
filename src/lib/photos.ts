@@ -14,7 +14,7 @@ export interface CatalogPhoto {
 export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
   "tire-change": {
     src: "/photos/action-mercedes-street.webp",
-    alt: "Golden North mobile tire change on a red Mercedes on a Toronto residential street, yellow service van parked behind",
+    alt: "Golden North mobile tire change on a red Mercedes on a GTA residential street, yellow service van parked behind",
   },
   tires: {
     src: "/photos/tires-warehouse.webp",
@@ -22,7 +22,7 @@ export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
   },
   battery: {
     src: "/photos/night-mini-station.webp",
-    alt: "Night mobile battery and tire service for a MINI at a lit Toronto gas station, the open yellow van alongside",
+    alt: "Night mobile battery and tire service for a MINI at a lit gas station, the open yellow van alongside",
   },
   roadside: {
     src: "/photos/night-sedan-roadside.webp",
@@ -39,7 +39,7 @@ export const HERO_PHOTO: CatalogPhoto = {
 // Gallery set — the full job log. Ratios hint the masonry layout.
 export const GALLERY: (CatalogPhoto & { ratio: string })[] = [
   { src: "/photos/hero-night-tech.webp", alt: "Hi-vis technician balancing a wheel inside the lit van at night", ratio: "3 / 4" },
-  { src: "/photos/action-mercedes-street.webp", alt: "Mobile tire change on a red Mercedes on a Toronto residential street", ratio: "4 / 3" },
+  { src: "/photos/action-mercedes-street.webp", alt: "Mobile tire change on a red Mercedes on a GTA residential street", ratio: "4 / 3" },
   { src: "/photos/action-mustang-jack.webp", alt: "Black Mustang on the jack for a tire change, yellow van behind on a sunny day", ratio: "3 / 4" },
   { src: "/photos/action-porsche-winter.webp", alt: "Red Porsche Taycan getting a winter tire changeover in a GTA parking lot", ratio: "3 / 4" },
   { src: "/photos/van-mansion-driveway.webp", alt: "Golden North mobile tire service van in a large GTA home driveway", ratio: "4 / 3" },

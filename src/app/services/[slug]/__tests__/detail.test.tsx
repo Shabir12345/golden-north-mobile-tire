@@ -26,4 +26,9 @@ describe("Service detail", () => {
     expect(m.title).toBe("Mobile Tire Change Toronto — Seasonal Swaps at Your Door");
     expect(m.description).toContain("Call (416) 558-5915");
   });
+
+  it("wires the service's keywords array into page metadata", async () => {
+    const m = await generateMetadata({ params: Promise.resolve({ slug: "tire-change" }) });
+    expect(m.keywords).toContain("mobile tire change Toronto");
+  });
 });

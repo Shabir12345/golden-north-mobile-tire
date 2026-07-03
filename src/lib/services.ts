@@ -171,7 +171,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "How long does a car battery last in Canadian winters?",
-        a: "Typically 3–5 years. Cold is the killer: at -18°C a battery delivers roughly half its rated cranking power, which is why batteries that limped through summer die on the first real cold morning. If yours is over 4 years old and the engine cranks slowly, have it load-tested before winter — we test free with any service call.",
+        a: "Typically 3–5 years. Cold is the killer: at -18°C a battery delivers roughly half its rated cranking power, which is why batteries that limped through summer die on the first real cold morning. If yours is over 4 years old and the engine cranks slowly, have it load-tested before winter — we can test it when we come out.",
       },
       {
         q: "How much does mobile battery replacement cost?",
