@@ -27,10 +27,12 @@ the path in `src/lib/photos.ts`.
 
 ## Recommended replacements / additions
 
-- **Logo:** no official logo file was provided. The header/footer currently use
-  a four-point north-star mark (`✦`) + the "Golden North" wordmark, and the
-  favicon is `src/app/icon.svg`. Drop in a real logo (SVG preferred) and wire it
-  into `Header.tsx` / `Footer.tsx` when available.
+- **Logo:** the official logo lives at `public/logo.png` (full lockup,
+  transparent) and `public/logo-mark.png` (square compass disc). Both were
+  extracted from the client's `Golden Northhh (1).pdf` at the repo root
+  (rendered at 4×, white background knocked out to alpha). Used in
+  `Header.tsx` / `Footer.tsx`; the favicon is `src/app/icon.svg` (a drawn
+  compass star matching the mark).
 - **Battery service photo:** no dedicated battery/jump-start shot exists yet; a
   night roadside photo stands in. A real battery-swap photo would be ideal at
   `night-mini-station.webp`'s slot (edit `SERVICE_PHOTO.battery` in
