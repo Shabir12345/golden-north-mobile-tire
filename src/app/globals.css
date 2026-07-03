@@ -1,31 +1,34 @@
 @import "tailwindcss";
 
 /* ════════════════════════════════════════════════════════════════════════════
-   GOLDEN NORTH — "Clean & Trustworthy" light design system
-   A white canvas, one trust-blue accent, Inter throughout. Friendly and easy
-   to read; the phone call is still the loudest action on every surface.
+   GOLDEN NORTH — "Golden North Premium" gold & navy design system
+   Logo-derived: compass gold on deep navy, over a warm off-white canvas.
+   Navy bands (hero, process, header, footer) give the page its rhythm; gold
+   carries every action. The phone call is the loudest object on every surface.
    ════════════════════════════════════════════════════════════════════════════ */
 
 @theme {
-  /* ── Surfaces ── */
-  --color-page: #FFFFFF;        /* base page background                       */
-  --color-surface: #F4F6F9;     /* alternating bands, quiet panels            */
+  /* ── Light surfaces (warm) ── */
+  --color-page: #FBF9F4;        /* warm off-white base                        */
+  --color-surface: #F3F1EA;     /* alternating warm-grey bands                */
   --color-card: #FFFFFF;        /* raised cards (with border + soft shadow)   */
-  --color-border: #E2E8F0;      /* hairlines, card edges, dividers            */
+  --color-border: #E7E1D3;      /* warm hairlines, card edges, dividers       */
 
-  /* ── Text ── */
-  --color-heading: #16202E;     /* headings + primary text                    */
-  --color-body: #475467;        /* body copy (AA on white & surface)          */
-  --color-muted: #697586;       /* labels, captions, metadata                 */
+  /* ── Text on light ── */
+  --color-heading: #1B2334;     /* headings + primary text                    */
+  --color-body: #4A5162;        /* body copy (AA on page & surface)           */
+  --color-muted: #686D7D;       /* labels, captions, metadata                 */
 
-  /* ── The one voice: trust blue ── */
-  --color-accent: #1D6FE0;      /* CTAs, links, emphasis                      */
-  --color-accent-deep: #1657B0; /* hover / pressed                            */
-  --color-accent-soft: #EAF2FD; /* tinted backgrounds, the calm CTA band      */
+  /* ── The brand voice: compass gold ── */
+  --color-accent: #F0A500;      /* fills & CTAs — always with navy text       */
+  --color-accent-deep: #8C6200; /* gold-as-text on light surfaces (AA)        */
+  --color-accent-soft: #FBF1DC; /* gold-tinted bands, chips, hovers           */
 
-  /* ── Footer anchor (one grounded dark block) ── */
-  --color-footer: #10243F;
-  --color-footer-fg: #D6E2F0;
+  /* ── Dark surfaces: logo navy ── */
+  --color-navy: #151D2E;        /* hero, process band, header                 */
+  --color-footer: #0E1524;      /* footer — the deepest anchor                */
+  --color-footer-fg: #C7CEDC;   /* body text on navy                          */
+  --color-on-navy: #E8EBF2;     /* brighter text on navy                      */
 
   /* ── Type: Inter carries everything ── */
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -60,7 +63,7 @@ p { text-wrap: pretty; }
 
 ::selection {
   background: var(--color-accent);
-  color: #FFFFFF;
+  color: var(--color-navy);
 }
 
 /* ── Motion ──────────────────────────────────────────────────────────────────
