@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     description: post.description,
     path: `/blog/${post.slug}`,
     keywords: post.keywords,
+    ogType: "article",
+    publishedTime: post.date,
+    modifiedTime: post.updated,
   });
 }
 
