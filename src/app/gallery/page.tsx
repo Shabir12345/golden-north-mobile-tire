@@ -10,8 +10,8 @@ import { GalleryGrid } from "@/components/sections/GalleryGrid";
 import { CTABand } from "@/components/sections/CTABand";
 
 export const metadata = buildMetadata({
-  title: "Gallery — On the Job Across the GTA",
-  description: `Real Golden North jobs across the ${BUSINESS.areaServed}: driveway tire changes, night roadside rescues, battery swaps, and the fully-equipped mobile van.`,
+  title: "Mobile Tire Service Photos — On the Job Across the GTA",
+  description: `Real ${BUSINESS.shortName} jobs across the GTA: driveway tire changes, night roadside rescues, battery swaps, and the fully-equipped mobile tire van.`,
   path: "/gallery",
 });
 

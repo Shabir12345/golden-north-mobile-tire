@@ -11,8 +11,8 @@ import { CTABand } from "@/components/sections/CTABand";
 import { CallButton, Button } from "@/components/ui/Button";
 
 export const metadata = buildMetadata({
-  title: "Mobile Tire & Roadside Services",
-  description: `Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance across the ${BUSINESS.areaServed}. ${BUSINESS.shortName} brings the shop to you.`,
+  title: "Mobile Tire & Roadside Services — Toronto & the GTA",
+  description: `Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance across the GTA. ${BUSINESS.shortName} brings the shop to you — call ${BUSINESS.phoneDisplay}.`,
   path: "/services",
 });
 
@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <span className="text-[var(--color-accent)]">at your location.</span>
           </>
         }
-        intro={`Four mobile services across the ${BUSINESS.areaServed} — no shop visit, no tow, no wasted Saturday. Pick what stopped you, or just call and tell us.`}
+        intro={`Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance — everywhere in the ${BUSINESS.areaServed}. No shop visit, no tow, no wasted Saturday. Pick what stopped you, or just call and tell us.`}
       >
         <CallButton size="lg" />
         <Button variant="ghost" size="lg" href="/contact" aria-label="Contact Golden North">

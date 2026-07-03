@@ -13,8 +13,8 @@ import { CoverageMap } from "@/components/sections/CoverageMap";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
 export const metadata = buildMetadata({
-  title: "Contact — Call 24/7",
-  description: `Reach ${BUSINESS.name} 24/7 for mobile tire and roadside help across the ${BUSINESS.areaServed}. Call ${BUSINESS.phoneDisplay} — or send a message.`,
+  title: "Contact — 24/7 Mobile Tire & Roadside Help in the GTA",
+  description: `Reach ${BUSINESS.name} 24/7 for mobile tire change, battery, and roadside help anywhere in the GTA. Call ${BUSINESS.phoneDisplay} — or send a message.`,
   path: "/contact",
 });
 

@@ -14,19 +14,19 @@ export interface CatalogPhoto {
 export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
   "tire-change": {
     src: "/photos/action-mercedes-street.webp",
-    alt: "Golden North changing a wheel on a red Mercedes on a quiet GTA residential street, yellow service van parked behind",
+    alt: "Golden North mobile tire change on a red Mercedes on a Toronto residential street, yellow service van parked behind",
   },
   tires: {
     src: "/photos/tires-warehouse.webp",
-    alt: "Racks of new and used tires in sizes for common GTA vehicles, sourced and installed on-site",
+    alt: "Racks of new and used tires in common GTA sizes, ready for on-site installation at your home or office",
   },
   battery: {
     src: "/photos/night-mini-station.webp",
-    alt: "Night roadside battery and tire service for a MINI at a lit gas station, the open yellow van alongside",
+    alt: "Night mobile battery and tire service for a MINI at a lit Toronto gas station, the open yellow van alongside",
   },
   roadside: {
     src: "/photos/night-sedan-roadside.webp",
-    alt: "Late-night roadside rescue: a sedan up on the jack with the Golden North van's headlights lighting the work",
+    alt: "Late-night GTA roadside assistance: a sedan up on the jack with the Golden North van's headlights lighting the work",
   },
 };
 
@@ -39,16 +39,16 @@ export const HERO_PHOTO: CatalogPhoto = {
 // Gallery set — the full job log. Ratios hint the masonry layout.
 export const GALLERY: (CatalogPhoto & { ratio: string })[] = [
   { src: "/photos/hero-night-tech.webp", alt: "Hi-vis technician balancing a wheel inside the lit van at night", ratio: "3 / 4" },
-  { src: "/photos/action-mercedes-street.webp", alt: "Wheel-off tire change on a red Mercedes on a GTA residential street", ratio: "4 / 3" },
+  { src: "/photos/action-mercedes-street.webp", alt: "Mobile tire change on a red Mercedes on a Toronto residential street", ratio: "4 / 3" },
   { src: "/photos/action-mustang-jack.webp", alt: "Black Mustang on the jack for a tire change, yellow van behind on a sunny day", ratio: "3 / 4" },
-  { src: "/photos/action-porsche-winter.webp", alt: "Red Porsche Taycan getting a winter wheel changed in a parking lot", ratio: "3 / 4" },
-  { src: "/photos/van-mansion-driveway.webp", alt: "Yellow Golden North van parked in a large GTA home driveway for a mobile service call", ratio: "4 / 3" },
-  { src: "/photos/night-sedan-roadside.webp", alt: "Night roadside tire change lit by the van's headlights", ratio: "4 / 3" },
+  { src: "/photos/action-porsche-winter.webp", alt: "Red Porsche Taycan getting a winter tire changeover in a GTA parking lot", ratio: "3 / 4" },
+  { src: "/photos/van-mansion-driveway.webp", alt: "Golden North mobile tire service van in a large GTA home driveway", ratio: "4 / 3" },
+  { src: "/photos/night-sedan-roadside.webp", alt: "Night roadside assistance tire change lit by the van's headlights", ratio: "4 / 3" },
   { src: "/photos/van-interior-balancer.webp", alt: "Inside the van: a tire on the balancing machine with hoses, tools and a fire extinguisher", ratio: "3 / 4" },
-  { src: "/photos/tires-warehouse.webp", alt: "Warehouse racks of new and used tires", ratio: "3 / 4" },
+  { src: "/photos/tires-warehouse.webp", alt: "Warehouse racks of new and used tires for GTA mobile installation", ratio: "3 / 4" },
   { src: "/photos/van-residential-driveway.webp", alt: "Van in a residential driveway, side door open, servicing a black SUV", ratio: "3 / 4" },
-  { src: "/photos/tire-puncture.webp", alt: "Close-up of a punctured winter tire — the kind of flat Golden North fixes on the spot", ratio: "3 / 4" },
-  { src: "/photos/night-mini-station.webp", alt: "Night service for a MINI at a lit gas station", ratio: "4 / 3" },
+  { src: "/photos/tire-puncture.webp", alt: "Punctured winter tire — the kind of flat tire Golden North replaces on the spot", ratio: "3 / 4" },
+  { src: "/photos/night-mini-station.webp", alt: "24/7 night mobile battery service for a MINI at a lit gas station", ratio: "4 / 3" },
   { src: "/photos/van-loadingdock-bmw.webp", alt: "Servicing a gray BMW beside the van at a loading dock", ratio: "4 / 3" },
   { src: "/photos/rim-on-machine.jpg", alt: "An alloy wheel mounted on the van's tire machine for balancing", ratio: "3 / 4" },
   { src: "/photos/van-shop-winter.webp", alt: "The branded yellow Golden North van in winter", ratio: "16 / 9" },
