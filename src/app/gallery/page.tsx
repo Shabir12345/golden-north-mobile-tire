@@ -11,7 +11,7 @@ import { CTABand } from "@/components/sections/CTABand";
 
 export const metadata = buildMetadata({
   title: "Mobile Tire Service Photos — On the Job Across the GTA",
-  description: `Real ${BUSINESS.shortName} jobs across the GTA: driveway tire changes, night roadside rescues, battery swaps, and the fully-equipped mobile tire van.`,
+  description: `See real ${BUSINESS.shortName} jobs across the GTA: driveway tire changes, night roadside rescues, and battery swaps. Call ${BUSINESS.phoneDisplay} for service.`,
   path: "/gallery",
 });
 
