@@ -20,8 +20,8 @@ import { CoverageMap } from "@/components/sections/CoverageMap";
 import { CTABand } from "@/components/sections/CTABand";
 
 export const metadata = buildMetadata({
-  title: "24/7 Mobile Tire Service in the GTA",
-  description: `${BUSINESS.name} provides 24/7 mobile tire change, new & used tire supply, battery replacement, and roadside assistance across the ${BUSINESS.areaServed}. We come to you — no shop visit required.`,
+  title: "Mobile Tire Service Toronto & GTA — 24/7",
+  description: `24/7 mobile tire change, new & used tires, battery replacement & roadside assistance across Toronto and the GTA. We come to you — call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
 
@@ -53,11 +53,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 max-w-2xl">
             <h2 id="services-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
-              Four ways we get you <span className="text-[var(--color-accent-deep)]">rolling.</span>
+              Mobile tire change, batteries &amp; roadside —{" "}
+              <span className="text-[var(--color-accent-deep)]">four ways we get you rolling.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--color-body)]">
-              Whatever stopped you — a seasonal swap, a worn tire, a dead battery, a flat on
-              the shoulder — we bring the shop to your location and handle it on the spot.
+              Whatever stopped you — a seasonal swap in Markham, a worn tire in Etobicoke, a dead
+              battery downtown, a flat on the 401 — we bring the shop to your location and handle
+              it on the spot.
             </p>
           </div>
 

@@ -6,7 +6,7 @@ describe("Home", () => {
   it("renders all four service cards", () => {
     render(<Home />);
     for (const name of [/tire change/i,/used tires/i,/battery/i,/roadside/i]) {
-      expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name, level: 3 })).toBeInTheDocument();
     }
   });
 });

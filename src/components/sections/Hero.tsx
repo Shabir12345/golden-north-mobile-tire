@@ -31,8 +31,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              Mobile tire change, new &amp; used tires, battery and roadside help — at your
-              driveway, lot, or roadside, anywhere in the GTA. {BUSINESS.tagline}
+              24/7 mobile tire service across Toronto &amp; the GTA — tire changes, new &amp; used
+              tires, battery replacement and roadside help at your driveway, lot, or roadside.{" "}
+              {BUSINESS.tagline}
             </p>
 
             {/* At-a-glance chips */}
