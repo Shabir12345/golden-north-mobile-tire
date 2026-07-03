@@ -49,6 +49,38 @@ export function LocalBusinessJsonLd() {
   );
 }
 
+export function ArticleJsonLd({
+  post,
+}: {
+  post: { title: string; description: string; date: string; updated: string; slug: string };
+}) {
+  const url = `${BUSINESS.url}/blog/${post.slug}`;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.updated,
+    author: { "@type": "Organization", name: BUSINESS.name, url: BUSINESS.url },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${BUSINESS.url}/#business`,
+      name: BUSINESS.name,
+      logo: { "@type": "ImageObject", url: `${BUSINESS.url}/icon.svg` },
+    },
+    image: `${BUSINESS.url}/opengraph-image`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export function BreadcrumbJsonLd({ items }: { items: { name: string; path: string }[] }) {
   const data = {
     "@context": "https://schema.org",
