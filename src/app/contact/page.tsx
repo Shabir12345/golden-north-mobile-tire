@@ -11,6 +11,9 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { CompassRose } from "@/components/ui/CompassRose";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
+import { TrustBadges } from "@/components/ui/TrustBadges";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { CONTACT_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "Contact — 24/7 Mobile Tire & Roadside Help in the GTA",
@@ -65,6 +68,8 @@ export default function ContactPage() {
               <dd className="mt-2 text-lg font-bold text-[var(--color-heading)]">{BUSINESS.areaServed}</dd>
             </div>
           </dl>
+
+          <TrustBadges onDark className="mt-10" />
         </div>
       </section>
 
@@ -85,6 +90,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection heading="Before you call" faqs={CONTACT_FAQS} emitJsonLd />
 
       <CoverageMap />
     </>

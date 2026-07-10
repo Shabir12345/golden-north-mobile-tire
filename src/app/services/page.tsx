@@ -8,7 +8,9 @@ import { SERVICES } from "@/lib/services";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ServiceRow } from "@/components/sections/ServiceRow";
 import { CTABand } from "@/components/sections/CTABand";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { CallButton, Button } from "@/components/ui/Button";
+import { SERVICES_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "Mobile Tire & Roadside Services — Toronto & the GTA",
@@ -44,6 +46,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection heading="Service questions, answered" faqs={SERVICES_FAQS} emitJsonLd />
 
       <CTABand />
     </>
