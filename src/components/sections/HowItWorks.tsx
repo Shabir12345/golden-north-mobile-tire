@@ -9,7 +9,7 @@ import { BUSINESS } from "@/lib/business";
 export function HowItWorks() {
   const steps = [
     { n: "01", heading: "Call.", body: `One number — ${BUSINESS.phoneDisplay} — connects you straight to us. No app, no queue, no chatbot. We answer.` },
-    { n: "02", heading: "We head out.", body: "Tell us where you are — a Vaughan driveway, a Mississauga office lot, a highway shoulder. We come to you, anywhere in the GTA, day or night." },
+    { n: "02", heading: "We head out.", body: "Tell us where you are — a Vaughan driveway, a Markham office lot, a highway shoulder. We come to you, anywhere in the GTA, day or night." },
     { n: "03", heading: "Back on the road.", body: "We handle it on the spot — tire changed, battery swapped, car assessed — and you carry on with your day." },
   ] as const;
 
