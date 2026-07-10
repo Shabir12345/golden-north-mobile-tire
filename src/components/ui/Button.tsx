@@ -105,7 +105,7 @@ export function CallButton({
       variant="primary"
       size={size}
       href={telHref}
-      aria-label={`Call Golden North at ${BUSINESS.phoneDisplay}`}
+      aria-label={`Call GoldenNorth at ${BUSINESS.phoneDisplay}`}
       className={className}
     >
       <PhoneIcon className="transition-transform duration-200 group-hover/btn:-rotate-12" />

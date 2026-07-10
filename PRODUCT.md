@@ -18,7 +18,7 @@ is measured by the phone call placed, not time on page.
 
 ## Product Purpose
 
-The marketing site for **Golden North Mobile Tire Services**, a 24/7 mobile tire and
+The marketing site for **GoldenNorth Mobile Tire Services**, a 24/7 mobile tire and
 roadside business serving the Greater Toronto Area (mobile tire changes, new & used
 tire sales, battery replacement, roadside assistance). It exists to turn a stranded
 or shopping visitor into a phone call, and to rank for local intent searches
@@ -26,7 +26,7 @@ or shopping visitor into a phone call, and to rank for local intent searches
 goldennorthmobiletires.com with a stronger, distinctive, SEO-solid rebuild.
 
 Success looks like: a visitor on a phone at the side of the road understands within
-one screen that Golden North will come to them now, and taps **Call (416) 558-5915**.
+one screen that GoldenNorth will come to them now, and taps **Call (416) 558-5915**.
 
 ## Brand Personality
 

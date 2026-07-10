@@ -7,8 +7,8 @@
 import { BUSINESS, addressDisplay, mapsEmbedSrc, mapsLinkHref } from "@/lib/business";
 
 const AREAS = [
-  "Toronto", "Mississauga", "Brampton", "Vaughan", "Markham",
-  "Scarborough", "Etobicoke", "North York", "Oakville", "Richmond Hill",
+  "Toronto", "Vaughan", "Markham", "Scarborough",
+  "Etobicoke", "North York", "Oakville", "Richmond Hill",
 ] as const;
 
 export function CoverageMap() {
@@ -22,8 +22,8 @@ export function CoverageMap() {
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-[var(--color-body)]">
               {BUSINESS.shortName} runs mobile tire and roadside service across the full{" "}
-              {BUSINESS.areaServed}. A Brampton driveway, a Markham condo garage, the shoulder of
-              the 401 through Mississauga — one call reaches us.
+              {BUSINESS.areaServed}. A Vaughan driveway, a Markham condo garage, the shoulder of
+              the 401 through Etobicoke — one call reaches us.
             </p>
 
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5" aria-label="Areas served">

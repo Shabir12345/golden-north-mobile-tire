@@ -1,6 +1,6 @@
-# Golden North Mobile Tire Services — Website
+# GoldenNorth Mobile Tire Services — Website
 
-Marketing site for Golden North, a 24/7 mobile tire & roadside service in the
+Marketing site for GoldenNorth, a 24/7 mobile tire & roadside service in the
 Greater Toronto Area. Next.js (App Router) + TypeScript + Tailwind CSS v4,
 statically generated, call-first, SEO-ready. Visual direction: **High-Vis
 Rescue** — a night canvas, high-vis amber drawn from the real yellow van, and a

@@ -1,5 +1,5 @@
 // ─── Photo catalog ──────────────────────────────────────────────────────────
-// Real Golden North photos (in /public/photos). Alt text is written as voice,
+// Real GoldenNorth photos (in /public/photos). Alt text is written as voice,
 // not filler — it describes the scene a stranded driver recognises. When the
 // client delivers higher-res or additional shots, swap the files in
 // /public/photos keeping these names, or edit the paths here. See
@@ -14,7 +14,7 @@ export interface CatalogPhoto {
 export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
   "tire-change": {
     src: "/photos/action-mercedes-street.webp",
-    alt: "Golden North mobile tire change on a red Mercedes on a GTA residential street, yellow service van parked behind",
+    alt: "GoldenNorth mobile tire change on a red Mercedes on a GTA residential street, yellow service van parked behind",
   },
   tires: {
     src: "/photos/tires-warehouse.webp",
@@ -26,14 +26,14 @@ export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
   },
   roadside: {
     src: "/photos/night-sedan-roadside.webp",
-    alt: "Late-night GTA roadside assistance: a sedan up on the jack with the Golden North van's headlights lighting the work",
+    alt: "Late-night GTA roadside assistance: a sedan up on the jack with the GoldenNorth van's headlights lighting the work",
   },
 };
 
 // Hero / signature shots used around the site.
 export const HERO_PHOTO: CatalogPhoto = {
   src: "/photos/hero-night-tech.webp",
-  alt: "A Golden North technician in a hi-vis vest balancing a wheel inside the lit yellow service van at night",
+  alt: "A GoldenNorth technician in a hi-vis vest balancing a wheel inside the lit yellow service van at night",
 };
 
 // Gallery set — the full job log. Ratios hint the masonry layout.
@@ -42,14 +42,14 @@ export const GALLERY: (CatalogPhoto & { ratio: string })[] = [
   { src: "/photos/action-mercedes-street.webp", alt: "Mobile tire change on a red Mercedes on a GTA residential street", ratio: "4 / 3" },
   { src: "/photos/action-mustang-jack.webp", alt: "Black Mustang on the jack for a tire change, yellow van behind on a sunny day", ratio: "3 / 4" },
   { src: "/photos/action-porsche-winter.webp", alt: "Red Porsche Taycan getting a winter tire changeover in a GTA parking lot", ratio: "3 / 4" },
-  { src: "/photos/van-mansion-driveway.webp", alt: "Golden North mobile tire service van in a large GTA home driveway", ratio: "4 / 3" },
+  { src: "/photos/van-mansion-driveway.webp", alt: "GoldenNorth mobile tire service van in a large GTA home driveway", ratio: "4 / 3" },
   { src: "/photos/night-sedan-roadside.webp", alt: "Night roadside assistance tire change lit by the van's headlights", ratio: "4 / 3" },
   { src: "/photos/van-interior-balancer.webp", alt: "Inside the van: a tire on the balancing machine with hoses, tools and a fire extinguisher", ratio: "3 / 4" },
   { src: "/photos/tires-warehouse.webp", alt: "Warehouse racks of new and used tires for GTA mobile installation", ratio: "3 / 4" },
   { src: "/photos/van-residential-driveway.webp", alt: "Van in a residential driveway, side door open, servicing a black SUV", ratio: "3 / 4" },
-  { src: "/photos/tire-puncture.webp", alt: "Punctured winter tire — the kind of flat tire Golden North replaces on the spot", ratio: "3 / 4" },
+  { src: "/photos/tire-puncture.webp", alt: "Punctured winter tire — the kind of flat tire GoldenNorth replaces on the spot", ratio: "3 / 4" },
   { src: "/photos/night-mini-station.webp", alt: "24/7 night mobile battery service for a MINI at a lit gas station", ratio: "4 / 3" },
   { src: "/photos/van-loadingdock-bmw.webp", alt: "Servicing a gray BMW beside the van at a loading dock", ratio: "4 / 3" },
   { src: "/photos/rim-on-machine.jpg", alt: "An alloy wheel mounted on the van's tire machine for balancing", ratio: "3 / 4" },
-  { src: "/photos/van-shop-winter.webp", alt: "The branded yellow Golden North van in winter", ratio: "16 / 9" },
+  { src: "/photos/van-shop-winter.webp", alt: "The branded yellow GoldenNorth van in winter", ratio: "16 / 9" },
 ];

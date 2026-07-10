@@ -1,7 +1,7 @@
 ---
 title: "New vs. Used Tires: Which Should You Buy?"
 seoTitle: "New vs. Used Tires: Which Should You Buy?"
-description: "Buy new for a full set you'll run for years, or choose a used tire to match one damaged tire. Golden North sells both and installs at your door across the GTA."
+description: "Buy new for a full set you'll run for years, or choose a used tire to match one damaged tire. GoldenNorth sells both and installs at your door across the GTA."
 excerpt: "Buy new when you need a full set you'll run for years; choose a quality used tire when you're matching a single damaged one."
 keywords:
   - new vs used tires
@@ -74,6 +74,6 @@ Tell us the size and what happened, and we can usually tell you on the phone whe
 
 ## Either way, installed wherever you're parked
 
-Golden North stocks [new and inspected used tires](/services/tires) and installs them at your location anywhere in the GTA — home, office, or the shoulder where the drywall screw found you. We'll give you a straight recommendation between new and used for your actual situation, mount and balance on the spot, torque to spec, and set your pressures before we go.
+GoldenNorth stocks [new and inspected used tires](/services/tires) and installs them at your location anywhere in the GTA — home, office, or the shoulder where the drywall screw found you. We'll give you a straight recommendation between new and used for your actual situation, mount and balance on the spot, torque to spec, and set your pressures before we go.
 
 One tire or four: **(416) 558-5915**.

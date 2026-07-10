@@ -15,7 +15,7 @@ export function buildMetadata(opts: {
 }): Metadata {
   const url = `${BUSINESS.url}${opts.path}`;
   const branded = `${opts.title} | ${BUSINESS.shortName}`;
-  // The root layout's title.template adds the " | Golden North" suffix to child
+  // The root layout's title.template adds the " | GoldenNorth" suffix to child
   // segments, so their document title stays bare here to avoid doubling. The
   // template does NOT apply to the root page (same segment as the layout) — so
   // home gets the brand spelled out. OG/Twitter titles are never touched by the

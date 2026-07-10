@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BUSINESS, telHref, mailHref } from "@/lib/business";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CompassRose } from "@/components/ui/CompassRose";
+import { TrustBadges } from "@/components/ui/TrustBadges";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -72,12 +73,14 @@ export function Footer() {
               href={telHref}
               className="inline-block font-bold tracking-tight text-white leading-none rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-footer)]"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
-              aria-label={`Call Golden North at ${BUSINESS.phoneDisplay}`}
+              aria-label={`Call GoldenNorth at ${BUSINESS.phoneDisplay}`}
             >
               {BUSINESS.phoneDisplay}
             </a>
           </div>
         </div>
+
+        <TrustBadges variant="compact" onDark className="pt-8 pb-6 border-b border-white/10" />
 
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
@@ -93,10 +96,10 @@ export function Footer() {
           </nav>
 
           <div className="flex items-center gap-5">
-            <a href={BUSINESS.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Golden North on TikTok (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
+            <a href={BUSINESS.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on TikTok (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <TikTokIcon />
             </a>
-            <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Golden North on Instagram (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
+            <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on Instagram (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <InstagramIcon />
             </a>
           </div>

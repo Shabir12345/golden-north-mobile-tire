@@ -24,7 +24,7 @@ export const SERVICES: Service[] = [
     seoDescription:
       "24/7 mobile tire change across Toronto & the GTA. We come to your driveway, condo garage, or roadside for seasonal swaps and flats. Call (416) 558-5915.",
     summary:
-      "Golden North provides 24/7 mobile tire change service across Toronto and the GTA — we come to your driveway, office parking lot, or condo garage to mount, balance, and swap your seasonal tires on-site. Whether you're switching to dedicated winters before the first Brampton snowfall or doing a spring changeover in Scarborough, the shop comes to you.",
+      "GoldenNorth provides 24/7 mobile tire change service across Toronto and the GTA — we come to your driveway, office parking lot, or condo garage to mount, balance, and swap your seasonal tires on-site. Whether you're switching to dedicated winters before the first GTA snowfall or doing a spring changeover in Scarborough, the shop comes to you.",
     included: [
       "On-rim seasonal changeover (winter ↔ summer / all-season)",
       "Flat tire replacement with your spare",
@@ -41,8 +41,6 @@ export const SERVICES: Service[] = [
       "mobile tire change Toronto",
       "seasonal tire swap at home GTA",
       "winter tire changeover Toronto",
-      "flat tire change Mississauga",
-      "mobile tire swap Brampton",
       "on-rim tire change North York",
       "tire change at home Vaughan",
     ],
@@ -69,7 +67,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "What areas of the GTA do you serve for tire changes?",
-        a: "We cover Toronto, Mississauga, Brampton, Vaughan, Markham, Scarborough, Etobicoke, and surrounding areas. Call us to confirm availability at your address.",
+        a: "We cover Toronto, Vaughan, Markham, Scarborough, Etobicoke, North York, Oakville, Richmond Hill, and surrounding areas across the GTA. Call us to confirm availability at your address.",
       },
     ],
   },
@@ -82,7 +80,7 @@ export const SERVICES: Service[] = [
     seoDescription:
       "New and quality used tires sourced in your size and installed at your home, office, or roadside anywhere in the GTA. Most sizes within 24 hours. Call 24/7.",
     summary:
-      "Golden North sources new and quality used tires and installs them at your location anywhere in Toronto and the GTA — no hauling rims to a shop, no waiting room. We carry touring, all-season, winter, and all-terrain options in the sizes most common on GTA roads, from compact sedans to full-size pickups, at honest prices without chain-store upsell pressure.",
+      "GoldenNorth sources new and quality used tires and installs them at your location anywhere in Toronto and the GTA — no hauling rims to a shop, no waiting room. We carry touring, all-season, winter, and all-terrain options in the sizes most common on GTA roads, from compact sedans to full-size pickups, at honest prices without chain-store upsell pressure.",
     included: [
       "Tire sourcing in your vehicle's exact size (new or quality used)",
       "On-site mounting and inflation to spec",
@@ -98,10 +96,9 @@ export const SERVICES: Service[] = [
     keywords: [
       "used tires Toronto",
       "new tires installed at home GTA",
-      "mobile tire installation Mississauga",
-      "affordable winter tires Brampton",
       "same-day tire replacement Toronto",
       "buy one used tire GTA",
+      "mobile tire installation Vaughan",
     ],
     faqs: [
       {
@@ -133,9 +130,9 @@ export const SERVICES: Service[] = [
     tagline: "Dead battery? We diagnose, boost, or replace — right where you're parked.",
     seoTitle: "Mobile Car Battery Replacement Toronto — 24/7 Service",
     seoDescription:
-      "Dead battery? Golden North tests, boosts, or replaces car batteries on the spot — home, work, or roadside across the GTA, 24/7. Call (416) 558-5915.",
+      "Dead battery? GoldenNorth tests, boosts, or replaces car batteries on the spot — home, work, or roadside across the GTA, 24/7. Call (416) 558-5915.",
     summary:
-      "Golden North replaces car batteries on the spot anywhere in Toronto and the GTA, 24/7 — at your home, workplace, parking garage, or roadside. We test the battery and charging system first, boost it if that's all it needs, or install a fresh warranted unit from the van. A dead battery in a Toronto winter shouldn't mean waiting hours for a tow.",
+      "GoldenNorth replaces car batteries on the spot anywhere in Toronto and the GTA, 24/7 — at your home, workplace, parking garage, or roadside. We test the battery and charging system first, boost it if that's all it needs, or install a fresh warranted unit from the van. A dead battery in a Toronto winter shouldn't mean waiting hours for a tow.",
     included: [
       "Battery load test and charging system check",
       "Boost start if the battery can hold a charge",
@@ -152,9 +149,8 @@ export const SERVICES: Service[] = [
       "mobile battery replacement Toronto",
       "car battery boost GTA",
       "24/7 battery service Toronto",
-      "dead battery help Mississauga",
-      "on-site car battery change Brampton",
       "car battery installation at home GTA",
+      "dead battery help Scarborough",
     ],
     faqs: [
       {
@@ -188,7 +184,7 @@ export const SERVICES: Service[] = [
     seoDescription:
       "Stranded? 24/7 roadside assistance across Toronto & the GTA — no membership needed. Flat tires, dead batteries, jump starts. One call: (416) 558-5915.",
     summary:
-      "Golden North provides 24/7 roadside assistance across Toronto and the GTA with no membership required — flat tire changes, battery boosts, jump starts, and on-the-spot fixes that get you moving without the cost and delay of a tow. One call and we're en route: day, night, weekends, holidays.",
+      "GoldenNorth provides 24/7 roadside assistance across Toronto and the GTA with no membership required — flat tire changes, battery boosts, jump starts, and on-the-spot fixes that get you moving without the cost and delay of a tow. One call and we're en route: day, night, weekends, holidays.",
     included: [
       "Flat tire change using your spare or a replacement tire",
       "Battery boost or on-site battery replacement",
@@ -205,14 +201,13 @@ export const SERVICES: Service[] = [
       "roadside assistance Toronto",
       "24/7 roadside assistance GTA no membership",
       "flat tire help Toronto",
-      "jump start service Mississauga",
-      "emergency roadside Brampton",
       "highway 401 roadside assistance",
+      "emergency roadside Etobicoke",
     ],
     faqs: [
       {
         q: "How fast can you reach me in the GTA?",
-        a: "Response times vary by location and demand, but we aim to reach most Toronto, Mississauga, and Brampton addresses within 45–90 minutes. During severe weather or peak demand we'll give you an honest ETA when you call — (416) 558-5915.",
+        a: "Response times vary by location and demand, but we aim to reach most Toronto and GTA addresses within 45–90 minutes. During severe weather or peak demand we'll give you an honest ETA when you call — (416) 558-5915.",
       },
       {
         q: "Do you cover highways like the 401, 427, or the DVP?",
@@ -224,7 +219,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Do I need a membership or subscription?",
-        a: "No. Golden North is pay-per-call — you pay for the help you actually use, with no annual fee, no membership card, and no coverage limits per year. If you only need roadside help once every couple of winters, that usually costs far less than a club membership.",
+        a: "No. GoldenNorth is pay-per-call — you pay for the help you actually use, with no annual fee, no membership card, and no coverage limits per year. If you only need roadside help once every couple of winters, that usually costs far less than a club membership.",
       },
       {
         q: "What should I do while I wait on a highway shoulder?",

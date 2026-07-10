@@ -31,4 +31,10 @@ describe("Service detail", () => {
     const m = await generateMetadata({ params: Promise.resolve({ slug: "tire-change" }) });
     expect(m.keywords).toContain("mobile tire change Toronto");
   });
+
+  it("shows professional trust signals", async () => {
+    render(await Page({ params: Promise.resolve({ slug: "battery" }) }));
+    expect(screen.getByText("Licensed & insured")).toBeInTheDocument();
+    expect(screen.getByText("Warranty-backed parts")).toBeInTheDocument();
+  });
 });

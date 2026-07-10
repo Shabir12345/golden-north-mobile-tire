@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   // that crawlers and social scrapers can't resolve.
   metadataBase: new URL(BUSINESS.url),
   title: {
-    default: "Golden North Mobile Tire Services",
+    default: "GoldenNorth Mobile Tire Services",
     template: `%s | ${BUSINESS.shortName}`,
   },
   description:

@@ -9,12 +9,15 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { SERVICES, SERVICE_SLUGS, getService } from "@/lib/services";
 import { SERVICE_PHOTO } from "@/lib/photos";
-import { ServiceJsonLd, FaqJsonLd, BreadcrumbJsonLd } from "@/lib/jsonld";
+import { ServiceJsonLd, BreadcrumbJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
 import { Photo } from "@/components/ui/Photo";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CompassRose } from "@/components/ui/CompassRose";
 import { CTABand } from "@/components/sections/CTABand";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { TrustBadges } from "@/components/ui/TrustBadges";
+import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
 type Params = { slug: string };
 
@@ -45,7 +48,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
   return (
     <>
       <ServiceJsonLd service={service} />
-      <FaqJsonLd faqs={service.faqs} />
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
@@ -76,7 +78,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
-              <Button variant="ghost" size="lg" href="/contact" aria-label="Contact Golden North">
+              <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">
                 Contact us
               </Button>
             </div>
@@ -94,6 +96,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
           <p className="max-w-3xl text-xl leading-relaxed text-[var(--color-body)]">
             {service.summary}
           </p>
+
+          <TrustBadges className="mt-10 border-t border-[var(--color-border)] pt-8" />
 
           <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -127,26 +131,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
       </section>
 
       {/* FAQ */}
-      <section className="bg-[var(--color-surface)] py-20 lg:py-28" aria-labelledby="faq-heading">
-        <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <h2 id="faq-heading" className="font-bold text-3xl text-[var(--color-heading)] lg:text-4xl">
-            {service.shortName} questions, answered.
-          </h2>
-          <div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
-            {service.faqs.map((faq) => (
-              <details key={faq.q} className="group py-5">
-                <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-lg text-[var(--color-heading)] marker:content-none [&::-webkit-details-marker]:hidden">
-                  {faq.q}
-                  <span aria-hidden="true" className="shrink-0 text-[var(--color-accent-deep)] text-xl transition-transform duration-200 group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-base leading-relaxed text-[var(--color-body)]">{faq.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection heading={`${service.shortName} questions, answered.`} faqs={service.faqs} emitJsonLd />
 
       {/* Cross-links */}
       <section className="bg-[var(--color-page)] py-20 lg:py-24" aria-labelledby="other-services-heading">
@@ -170,6 +155,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
         </div>
       </section>
 
+      <ReviewsWidget />
       <CTABand />
     </>
   );

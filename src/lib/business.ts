@@ -1,6 +1,6 @@
 export const BUSINESS = {
-  name: "Golden North Mobile Tire Services",
-  shortName: "Golden North",
+  name: "GoldenNorth Mobile Tire Services",
+  shortName: "GoldenNorth",
   phoneDisplay: "(416) 558-5915",
   phoneRaw: "+14165585915",
   email: "info.goldennorth@gmail.com",

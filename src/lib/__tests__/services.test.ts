@@ -15,9 +15,13 @@ describe("services", () => {
       expect(s.seoDescription.length).toBeGreaterThanOrEqual(120);
       expect(s.seoDescription.length).toBeLessThanOrEqual(165);
       // Answer-first opener: sentence one must name the brand + a location term.
-      expect(s.summary).toMatch(/^Golden North/);
+      expect(s.summary).toMatch(/^GoldenNorth/);
       expect(s.summary.split(".")[0]).toMatch(/GTA|Toronto/);
     }
+  });
+  it("names no removed service-area cities", () => {
+    const blob = JSON.stringify(SERVICES);
+    expect(blob).not.toMatch(/Mississauga|Brampton/);
   });
   it("looks up by slug", () => {
     expect(getService("battery")?.name).toMatch(/battery/i);
