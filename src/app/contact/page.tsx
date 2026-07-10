@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <a
                   href={mailHref}
                   className="text-lg font-bold text-[var(--color-accent-deep)] hover:text-[var(--color-heading)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-card)]"
-                  aria-label={`Email Golden North at ${BUSINESS.email}`}
+                  aria-label={`Email GoldenNorth at ${BUSINESS.email}`}
                 >
                   {BUSINESS.email}
                 </a>

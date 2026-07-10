@@ -47,7 +47,7 @@ export function Header() {
         <Link
           href="/"
           className="flex items-center flex-shrink-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
-          aria-label="Golden North — home"
+          aria-label="GoldenNorth — home"
         >
           <Image
             src="/logo-mark.png"

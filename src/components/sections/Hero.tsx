@@ -14,7 +14,7 @@ const CHIPS = ["24/7", "GTA-wide", "No tow needed"] as const;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — Golden North Mobile Tire Services">
+    <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — GoldenNorth Mobile Tire Services">
       <CompassRose className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-[var(--color-accent)] opacity-[0.06]" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:py-20">
@@ -69,7 +69,7 @@ export function Hero() {
           <div className="relative">
             <Photo
               src="/photos/hero-night-tech.webp"
-              alt="A Golden North technician in a hi-vis vest balancing a wheel beside the yellow service van"
+              alt="A GoldenNorth technician in a hi-vis vest balancing a wheel beside the yellow service van"
               ratio="3 / 4"
               priority
               overlay
@@ -81,7 +81,7 @@ export function Hero() {
                 <AvailabilityBadge label="Serving the GTA" />
               </span>
               <span className="hidden rounded-lg bg-white/90 px-3 py-2 text-xs font-semibold text-[var(--color-body)] backdrop-blur-sm shadow-sm sm:inline">
-                The real Golden North van
+                The real GoldenNorth van
               </span>
             </div>
           </div>

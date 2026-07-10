@@ -1,7 +1,7 @@
 ---
 title: Why Car Batteries Die in Toronto Winters
 seoTitle: Why Car Batteries Die in Toronto Winters
-description: "Near -18°C a battery gives roughly half its cranking power, so a weak one quits on the first frigid morning. Golden North tests and replaces batteries on the spot."
+description: "Near -18°C a battery gives roughly half its cranking power, so a weak one quits on the first frigid morning. GoldenNorth tests and replaces batteries on the spot."
 excerpt: "A car battery that limped through summer often dies on the first truly cold morning — because near -18°C it delivers only about half its rated cranking power."
 keywords:
   - car battery dies in cold
@@ -84,7 +84,7 @@ The way to know is to test rather than guess — check the battery's actual outp
 
 ## Tested and replaced right where the car sits
 
-Golden North does [mobile battery service](/services/battery) across Toronto and the GTA, 24/7. We come to the car — your driveway, your office lot, the third level of a condo garage, or a highway shoulder — load-test the battery and charging system first, and give you a straight answer. If a boost genuinely solves it, that's what you get. If the battery is done, we install a fresh, warranted replacement on the spot and make sure the car starts strong before we leave.
+GoldenNorth does [mobile battery service](/services/battery) across Toronto and the GTA, 24/7. We come to the car — your driveway, your office lot, the third level of a condo garage, or a highway shoulder — load-test the battery and charging system first, and give you a straight answer. If a boost genuinely solves it, that's what you get. If the battery is done, we install a fresh, warranted replacement on the spot and make sure the car starts strong before we leave.
 
 No waiting for a tow, no losing a morning to a waiting room — and no membership required.
 

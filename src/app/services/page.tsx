@@ -30,7 +30,7 @@ export default function ServicesPage() {
         intro={`Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance — everywhere in the ${BUSINESS.areaServed}. No shop visit, no tow, no wasted Saturday. Pick what stopped you, or just call and tell us.`}
       >
         <CallButton size="lg" />
-        <Button variant="ghost" size="lg" href="/contact" aria-label="Contact Golden North">
+        <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">
           Contact us
         </Button>
       </PageHeader>

@@ -35,7 +35,7 @@ export default function Home() {
       <ReviewsWidget />
 
       {/* Trust bar */}
-      <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call Golden North">
+      <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call GoldenNorth">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <StatStrip
             items={[

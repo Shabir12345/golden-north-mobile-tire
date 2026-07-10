@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { BUSINESS } from "@/lib/business";
 
-// Branded social-share card — Golden North Premium (navy #151D2E + gold #F0A500).
+// Branded social-share card — GoldenNorth Premium (navy #151D2E + gold #F0A500).
 // next/og renders this at build time; system fonts are used (no custom font).
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

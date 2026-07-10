@@ -27,7 +27,7 @@ export async function sendContactEmail(payload: ContactPayload): Promise<void> {
   const resend = new Resend(apiKey);
 
   await resend.emails.send({
-    from: "Golden North Website <onboarding@resend.dev>",
+    from: "GoldenNorth Website <onboarding@resend.dev>",
     to,
     replyTo: payload.email,
     subject: `New website enquiry from ${payload.name}`,

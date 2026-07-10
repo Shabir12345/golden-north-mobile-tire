@@ -1,6 +1,6 @@
 ---
-name: Golden North Mobile Tire Services
-description: Golden North Premium — compass gold on deep navy over a warm off-white canvas, Inter throughout.
+name: GoldenNorth Mobile Tire Services
+description: GoldenNorth Premium — compass gold on deep navy over a warm off-white canvas, Inter throughout.
 colors:
   page: "#FBF9F4"
   surface: "#F3F1EA"
@@ -40,9 +40,9 @@ rounded:
   full: "9999px"
 ---
 
-# Design System: Golden North Mobile Tire Services
+# Design System: GoldenNorth Mobile Tire Services
 
-## Overview — "Golden North Premium"
+## Overview — "GoldenNorth Premium"
 
 A gold & navy brand system derived from the real logo (gold compass rose inside
 a tire, deep navy outlines). Navy bands — header, hero, "How it works", page

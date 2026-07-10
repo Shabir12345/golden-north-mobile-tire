@@ -1,7 +1,7 @@
 ---
 title: When to Put On Winter Tires in Ontario
 seoTitle: When to Put On Winter Tires in Ontario (7°C Rule)
-description: "In Ontario, fit winter tires once daytime temperatures stay below 7°C — usually late October to mid-November. Golden North swaps them at your door, GTA-wide."
+description: "In Ontario, fit winter tires once daytime temperatures stay below 7°C — usually late October to mid-November. GoldenNorth swaps them at your door, GTA-wide."
 excerpt: "Once daytime temperatures in the GTA stay consistently below 7°C — usually late October to mid-November — it's time to switch to winter tires."
 keywords:
   - when to put on winter tires ontario
@@ -72,7 +72,7 @@ One decision that pays off every year: **keep your winter tires mounted on their
 
 ## The changeover, without the shop
 
-Here's the part that surprises people: none of this requires a waiting room. Golden North does [mobile tire changeovers](/services/tire-change) across Toronto and the GTA — driveway, condo garage, office parking lot. We bring the equipment to you, swap the set, torque every wheel to the manufacturer's spec, and set your pressures before we leave. Your Saturday stays yours.
+Here's the part that surprises people: none of this requires a waiting room. GoldenNorth does [mobile tire changeovers](/services/tire-change) across Toronto and the GTA — driveway, condo garage, office parking lot. We bring the equipment to you, swap the set, torque every wheel to the manufacturer's spec, and set your pressures before we leave. Your Saturday stays yours.
 
 If you need rubber as well as the swap, we can help there too — see our [new and used tire options](/services/tires) and have them installed at your door in the same visit.
 

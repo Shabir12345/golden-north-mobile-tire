@@ -12,7 +12,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { BreadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Mobile Tire & Roadside Tips — Golden North Blog",
+  title: "Mobile Tire & Roadside Tips — GoldenNorth Blog",
   description: `Practical winter-tire, roadside, and car-battery advice for Toronto & GTA drivers from ${BUSINESS.shortName} — when to swap, what to do, and how mobile service saves the shop trip.`,
   path: "/blog",
 });

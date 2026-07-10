@@ -1,7 +1,7 @@
 # Site assets — what to swap before / after launch
 
 All site photography lives in `public/photos/`. The current files are the real
-Golden North photos supplied by the client (copied from the `Business Media`
+GoldenNorth photos supplied by the client (copied from the `Business Media`
 folder). They are wired in through `src/lib/photos.ts` — to replace a photo,
 either overwrite the file in `public/photos/` keeping the same filename, or edit
 the path in `src/lib/photos.ts`.
@@ -29,7 +29,7 @@ the path in `src/lib/photos.ts`.
 
 - **Logo:** the official logo lives at `public/logo.png` (full lockup,
   transparent) and `public/logo-mark.png` (square compass disc). Both were
-  extracted from the client's `Golden Northhh (1).pdf` at the repo root
+  extracted from the client's `GoldenNorthhh (1).pdf` at the repo root
   (rendered at 4×, white background knocked out to alpha). Used in
   `Header.tsx` / `Footer.tsx`; the favicon is `src/app/icon.svg` (a drawn
   compass star matching the mark).

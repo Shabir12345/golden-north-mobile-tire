@@ -67,7 +67,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         <CompassRose className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 text-[var(--color-accent)] opacity-[0.06]" />
         <div className="relative mx-auto max-w-3xl px-6 py-16 lg:px-10 lg:py-24">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)]">
-            Golden North Blog
+            GoldenNorth Blog
           </p>
           <h1
             id="post-heading"

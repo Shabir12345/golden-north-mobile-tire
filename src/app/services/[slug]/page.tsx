@@ -76,7 +76,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
-              <Button variant="ghost" size="lg" href="/contact" aria-label="Contact Golden North">
+              <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">
                 Contact us
               </Button>
             </div>

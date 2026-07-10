@@ -1,7 +1,7 @@
 ---
 title: What to Do If You Get a Flat on the 401
 seoTitle: What to Do If You Get a Flat on the 401
-description: "Flat on a GTA highway? Pull right, hazards on, stay buckled behind a barrier if safe, and call for help. Golden North reaches highway shoulders across the GTA, 24/7."
+description: "Flat on a GTA highway? Pull right, hazards on, stay buckled behind a barrier if safe, and call for help. GoldenNorth reaches highway shoulders across the GTA, 24/7."
 excerpt: "Ease off the throttle, pull as far onto the right shoulder as you safely can, put your hazards on, and don't change a highway-side tire in live traffic."
 keywords:
   - flat tire on highway
@@ -21,7 +21,7 @@ faqs:
   - q: Do you come out to highway shoulders?
     a: Yes. We service shoulders across the GTA corridor including the 401, 427, and DVP. Pull as far right as you safely can, put your hazards on, and call.
   - q: Do I need a membership to get roadside help?
-    a: No. Golden North is pay-per-call — no membership, no annual fee. You pay for the help you actually use.
+    a: No. GoldenNorth is pay-per-call — no membership, no annual fee. You pay for the help you actually use.
 ---
 
 A tire rarely fails politely. At 100 km/h on the 401 it's a bang you feel through the floor, then a low flapping drone and a steering wheel that suddenly wants to go somewhere you don't. What you do in the next sixty seconds matters far more than the flat itself — because on a busy highway, the danger was never the tire. It's the traffic passing a metre from your door.
@@ -89,7 +89,7 @@ Help finds you faster when you can answer four questions:
 3. **Your vehicle** — make, model, and colour, so the driver spots you on a shoulder full of cars.
 4. **Which tire is flat** — it tells the operator how the truck should position when it arrives.
 
-Golden North handles [24/7 roadside assistance](/services/roadside) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
+GoldenNorth handles [24/7 roadside assistance](/services/roadside) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
 
 ## While you wait
 
