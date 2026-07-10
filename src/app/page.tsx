@@ -12,12 +12,15 @@ import { StatStrip } from "@/components/ui/StatStrip";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { TrustBadges } from "@/components/ui/TrustBadges";
 import { Hero } from "@/components/sections/Hero";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 import { ServiceRow } from "@/components/sections/ServiceRow";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 import { CTABand } from "@/components/sections/CTABand";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "Mobile Tire Service Toronto & GTA — 24/7",
@@ -45,6 +48,7 @@ export default function Home() {
               { value: "No tow", label: "Fixed on the spot" },
             ]}
           />
+          <TrustBadges className="mt-10" />
         </div>
       </section>
 
@@ -102,6 +106,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FaqSection heading="Questions drivers ask us" faqs={HOME_FAQS} emitJsonLd />
 
       <CTABand />
     </>
