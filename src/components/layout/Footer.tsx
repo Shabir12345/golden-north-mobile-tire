@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BUSINESS, telHref, mailHref } from "@/lib/business";
 import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CompassRose } from "@/components/ui/CompassRose";
+import { TrustBadges } from "@/components/ui/TrustBadges";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -78,6 +79,8 @@ export function Footer() {
             </a>
           </div>
         </div>
+
+        <TrustBadges variant="compact" onDark className="pt-8 pb-6 border-b border-white/10" />
 
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
