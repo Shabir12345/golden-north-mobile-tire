@@ -88,7 +88,7 @@ export function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
+                className="link-grow text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
               >
                 {label}
               </Link>

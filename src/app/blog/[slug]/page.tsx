@@ -141,9 +141,9 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm transition-colors duration-200 hover:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+                  className="group card-lift rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
                 >
-                  <span className="font-bold text-lg text-[var(--color-heading)] group-hover:text-[var(--color-accent-deep)]">
+                  <span className="font-bold text-lg text-[var(--color-heading)] transition-colors duration-200 group-hover:text-[var(--color-accent-deep)]">
                     {p.title}
                   </span>
                 </Link>

@@ -53,14 +53,14 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm transition-colors duration-200 hover:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+                  className="group card-lift flex flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
                 >
                   {service && (
                     <span className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-accent-deep)]">
                       {service.shortName}
                     </span>
                   )}
-                  <h2 className="mt-2 font-bold text-xl leading-snug text-[var(--color-heading)] group-hover:text-[var(--color-accent-deep)]">
+                  <h2 className="mt-2 font-bold text-xl leading-snug text-[var(--color-heading)] transition-colors duration-200 group-hover:text-[var(--color-accent-deep)]">
                     {post.title}
                   </h2>
                   <p className="mt-3 flex-1 text-base leading-relaxed text-[var(--color-body)]">{post.excerpt}</p>

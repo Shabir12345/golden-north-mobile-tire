@@ -74,7 +74,7 @@ export function Header() {
               key={href}
               href={href}
               aria-current={isActive(href) ? "page" : undefined}
-              className={`text-sm rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
+              className={`link-grow text-sm rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
                 isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-white/80"
               }`}
             >

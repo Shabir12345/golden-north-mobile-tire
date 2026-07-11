@@ -144,7 +144,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm transition-colors duration-200 hover:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+                className="group card-lift flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
                 aria-label={`${s.name} — view service`}
               >
                 <span className="font-bold text-lg text-[var(--color-heading)]">{s.shortName}</span>
