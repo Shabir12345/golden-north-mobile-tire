@@ -43,13 +43,14 @@ const sizeMap: Record<ButtonSize, string> = {
 const primaryStyles = [
   "bg-[var(--color-accent)] text-[var(--color-navy)] shadow-sm",
   "hover:bg-[#D99500] hover:-translate-y-0.5 hover:shadow-md",
-  "active:translate-y-0",
+  "active:translate-y-0 active:scale-[0.98] active:duration-75",
 ].join(" ");
 
 // Ghost: bordered card; reads as secondary on light and navy surfaces alike.
 const ghostStyles = [
   "bg-white/95 text-[var(--color-heading)] border border-[var(--color-border)]",
   "hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)]",
+  "active:scale-[0.98] active:duration-75",
 ].join(" ");
 
 const variantMap: Record<ButtonVariant, string> = {
@@ -108,7 +109,7 @@ export function CallButton({
       aria-label={`Call GoldenNorth at ${BUSINESS.phoneDisplay}`}
       className={className}
     >
-      <PhoneIcon className="transition-transform duration-200 group-hover/btn:-rotate-12" />
+      <PhoneIcon className="group-hover/btn:animate-[phoneRing_0.6s_ease-in-out]" />
       {compact ? (
         <>
           <span className="sm:hidden">Call</span>
