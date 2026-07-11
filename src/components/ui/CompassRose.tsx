@@ -5,7 +5,12 @@
 
 export function CompassRose({ className = "" }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 100 100" className={className} fill="currentColor">
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 100 100"
+      className={`compass-spin ${className}`.trim()}
+      fill="currentColor"
+    >
       <path d="M50 0 L56 44 L100 50 L56 56 L50 100 L44 56 L0 50 L44 44 Z" />
       <path
         d="M50 20 L54 46 L80 50 L54 54 L50 80 L46 54 L20 50 L46 46 Z"
