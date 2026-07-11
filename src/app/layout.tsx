@@ -40,8 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Structured data — rendered once, in the document body. */}
         <LocalBusinessJsonLd />
         <Header />
-        {/* pb-20 md:pb-0: leaves room for the fixed MobileCallBar below md. */}
-        <main className="pb-20 md:pb-0">{children}</main>
+        <main>{children}</main>
         <Footer />
         <MobileCallBar />
       </body>

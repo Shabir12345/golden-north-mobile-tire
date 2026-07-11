@@ -38,7 +38,9 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[var(--color-footer)] text-[var(--color-footer-fg)]" aria-label="Site footer">
       <CompassRose className="pointer-events-none absolute -left-24 -bottom-28 h-96 w-96 text-[var(--color-accent)] opacity-[0.05]" />
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+      {/* pb-36 below md: clears the fixed MobileCallBar (+ safe-area inset) at
+          full scroll depth so the last footer row is never covered. */}
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 pt-14 sm:pt-16 pb-36 md:pb-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between pb-10 border-b border-white/15">
           <div className="space-y-4">
             <Image
@@ -88,7 +90,7 @@ export function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="link-grow text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
+                className="link-grow inline-block py-2 text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
               >
                 {label}
               </Link>
@@ -96,10 +98,10 @@ export function Footer() {
           </nav>
 
           <div className="flex items-center gap-5">
-            <a href={BUSINESS.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on TikTok (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
+            <a href={BUSINESS.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on TikTok (opens in new tab)" className="p-2 -m-1 text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <TikTokIcon />
             </a>
-            <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on Instagram (opens in new tab)" className="text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
+            <a href={BUSINESS.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="GoldenNorth on Instagram (opens in new tab)" className="p-2 -m-1 text-white/60 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]">
               <InstagramIcon />
             </a>
           </div>
