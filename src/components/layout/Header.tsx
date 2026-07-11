@@ -101,32 +101,32 @@ export function Header() {
         </div>
       </div>
 
-      <div
-        id="mobile-nav"
-        hidden={!menuOpen}
-        className="md:hidden border-t border-white/10 bg-[var(--color-navy)] px-4 py-5"
-      >
-        <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
-          {NAV.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={closeMenu}
-              aria-current={isActive(href) ? "page" : undefined}
-              className={`text-base px-2 py-3 border-b border-white/10 last:border-0 rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
-                isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-white/85"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
-        {menuOpen && (
-          <div className="mt-4">
+      {menuOpen && (
+        <div
+          id="mobile-nav"
+          className="menu-panel md:hidden border-t border-white/10 bg-[var(--color-navy)] px-4 py-5"
+        >
+          <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
+            {NAV.map(({ href, label }, i) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={closeMenu}
+                aria-current={isActive(href) ? "page" : undefined}
+                style={{ animationDelay: `${i * 40}ms` }}
+                className={`menu-item text-base px-2 py-3 border-b border-white/10 last:border-0 rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-navy)] ${
+                  isActive(href) ? "font-semibold text-[var(--color-accent)]" : "font-medium text-white/85"
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <div className="menu-item mt-4" style={{ animationDelay: `${NAV.length * 40}ms` }}>
             <AvailabilityBadge variant="line" onDark />
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }

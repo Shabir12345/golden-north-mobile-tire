@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Header } from "@/components/layout/Header";
 
 describe("Header", () => {
@@ -13,5 +14,21 @@ describe("Header", () => {
     for (const href of ["/services","/gallery","/contact"]) {
       expect(screen.getByRole("link", { name: new RegExp(href.slice(1), "i") })).toHaveAttribute("href", href);
     }
+  });
+});
+
+describe("Header mobile menu", () => {
+  it("mounts the panel on open and unmounts it on close", async () => {
+    const user = userEvent.setup();
+    render(<Header />);
+    expect(document.getElementById("mobile-nav")).toBeNull();
+
+    const toggle = screen.getByRole("button", { name: /open navigation menu/i });
+    await user.click(toggle);
+    expect(document.getElementById("mobile-nav")).not.toBeNull();
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+
+    await user.click(screen.getByRole("button", { name: /close navigation menu/i }));
+    expect(document.getElementById("mobile-nav")).toBeNull();
   });
 });
