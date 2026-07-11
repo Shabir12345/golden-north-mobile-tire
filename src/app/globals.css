@@ -86,6 +86,82 @@
   animation: fadeUp 0.7s var(--ease-out-expo) both;
 }
 
+/* Phone-icon ring wiggle — played on CallButton hover (see Button.tsx). */
+@keyframes phoneRing {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-14deg); }
+  40%      { transform: rotate(10deg); }
+  60%      { transform: rotate(-7deg); }
+  80%      { transform: rotate(4deg); }
+}
+
+/* One-time gold sheen sweep across primary call buttons shortly after load.
+   The overlay lives off-canvas (translateX(-130%)) so with animations
+   disabled it simply never appears. Lighter gold, not white, not a glow. */
+@keyframes shineSweep {
+  from { transform: translateX(-130%) skewX(-18deg); }
+  to   { transform: translateX(130%) skewX(-18deg); }
+}
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translateX(-130%) skewX(-18deg);
+  background: linear-gradient(
+    100deg,
+    transparent 32%,
+    color-mix(in srgb, var(--color-accent-soft) 55%, transparent) 50%,
+    transparent 68%
+  );
+  animation: shineSweep 1.1s var(--ease-out-quart) 0.9s 1 both;
+}
+
+/* Mobile menu entrance — panel slides/fades, items cascade (delay inline). */
+@keyframes menuPanelIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes menuItemIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.menu-panel { animation: menuPanelIn 0.25s var(--ease-out-quart) both; }
+.menu-item  { animation: menuItemIn 0.3s var(--ease-out-quart) both; }
+
+/* Compass watermark — one turn every 140s, barely perceptible. */
+@keyframes compassSpin { to { transform: rotate(360deg); } }
+.compass-spin {
+  animation: compassSpin 140s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Underline-grow for text links (uses currentColor so it inherits the
+   link's hover color). */
+.link-grow {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.25s var(--ease-out-quart);
+}
+.link-grow:hover { background-size: 100% 1px; }
+
+/* Card hover — soft lift + gold border. Pair with existing border/shadow
+   classes on the card. */
+.card-lift {
+  transition:
+    transform 0.2s var(--ease-out-quart),
+    box-shadow 0.2s var(--ease-out-quart),
+    border-color 0.2s var(--ease-out-quart);
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -12px rgba(16, 32, 63, 0.18);
+  border-color: var(--color-accent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal, .reveal.is-armed { opacity: 1 !important; transform: none !important; }
