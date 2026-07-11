@@ -54,8 +54,8 @@ export function ServiceRow({ service, index }: ServiceRowProps) {
 
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <CallButton />
-          <Button variant="ghost" href={`/services/${service.slug}`} aria-label={`Learn more about ${service.name}`}>
-            Learn more
+          <Button variant="ghost" href={`/services/${service.slug}`} aria-label={`See what's included in ${service.name}`}>
+            What&rsquo;s included
           </Button>
         </div>
       </div>

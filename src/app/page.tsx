@@ -24,7 +24,7 @@ import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "Mobile Tire Service Toronto & GTA — 24/7",
-  description: `24/7 mobile tire change, new & used tires, battery replacement & roadside assistance across Toronto and the GTA. We come to you — call ${BUSINESS.phoneDisplay}.`,
+  description: `24/7 mobile tire change, new & used tires, batteries & roadside help across Toronto & the GTA. Upfront pricing, no membership. We come to you — call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
 
@@ -44,7 +44,7 @@ export default function Home() {
             items={[
               { value: "24/7", label: "Always open" },
               { value: "GTA-wide", label: "We come to you" },
-              { value: "1 call", label: "To dispatch" },
+              { value: "45–90 min", label: "Typical arrival" },
               { value: "No tow", label: "Fixed on the spot" },
             ]}
           />

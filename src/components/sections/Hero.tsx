@@ -31,9 +31,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              24/7 mobile tire service across Toronto &amp; the GTA — tire changes, new &amp; used
-              tires, battery replacement and roadside help at your driveway, lot, or roadside.{" "}
-              {BUSINESS.tagline}
+              Flat tire, dead battery, or a seasonal swap — one call sends a mobile tire
+              technician to your driveway, office lot, or highway shoulder, anywhere in Toronto
+              &amp; the GTA. {BUSINESS.tagline}
             </p>
 
             {/* At-a-glance chips */}
@@ -59,6 +59,10 @@ export function Hero() {
                 See services
               </Button>
             </div>
+
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-[var(--color-footer-fg)]">
+              Straight quote and an honest ETA on the call — no membership, no hidden fees.
+            </p>
 
             <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-footer-fg)]">
               {BUSINESS.areaServed}

@@ -23,9 +23,9 @@ export function CTABand() {
         </h2>
 
         <p className="mx-auto mt-5 mb-9 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
-          One call to {BUSINESS.shortName} gets a mobile tire and roadside technician moving to
-          your location, anywhere in the GTA — no app, no queue, no tow. Day, night, weekends,
-          holidays.
+          Tell us where you are and what happened. You&rsquo;ll get an upfront quote and an
+          honest ETA on the call — then a {BUSINESS.shortName} technician is on the way, anywhere
+          in the GTA. Day, night, weekends, holidays.
         </p>
 
         <div className="flex justify-center">

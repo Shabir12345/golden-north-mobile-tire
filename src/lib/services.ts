@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
     slug: "tires",
     name: "New & Used Tires",
     shortName: "Tires",
-    tagline: "The right tire for your car, sourced and installed at your location.",
+    tagline: "New or quality used, sourced in your size — most within 24 hours, installed wherever you're parked.",
     seoTitle: "New & Used Tires Delivered & Installed — Toronto & GTA",
     seoDescription:
       "New and quality used tires sourced in your size and installed at your home, office, or roadside anywhere in the GTA. Most sizes within 24 hours. Call 24/7.",
@@ -182,9 +182,9 @@ export const SERVICES: Service[] = [
     tagline: "Stuck on the 401 or a Scarborough side street — we get you moving.",
     seoTitle: "24/7 Roadside Assistance Toronto & GTA — No Membership",
     seoDescription:
-      "Stranded? 24/7 roadside assistance across Toronto & the GTA — no membership needed. Flat tires, dead batteries, jump starts. One call: (416) 558-5915.",
+      "Stranded? 24/7 roadside assistance across Toronto & the GTA — no membership, typical arrival 45–90 min. Flat tires, dead batteries, jump starts. Call (416) 558-5915.",
     summary:
-      "GoldenNorth provides 24/7 roadside assistance across Toronto and the GTA with no membership required — flat tire changes, battery boosts, jump starts, and on-the-spot fixes that get you moving without the cost and delay of a tow. One call and we're en route: day, night, weekends, holidays.",
+      "GoldenNorth provides 24/7 roadside assistance across Toronto and the GTA with no membership required — flat tire changes, battery boosts, jump starts, and on-the-spot fixes that get you moving without the cost and delay of a tow. One call and we're en route — we aim to reach most GTA locations within 45–90 minutes, day, night, weekends, holidays.",
     included: [
       "Flat tire change using your spare or a replacement tire",
       "Battery boost or on-site battery replacement",

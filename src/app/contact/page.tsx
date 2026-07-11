@@ -38,7 +38,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-footer-fg)]">
             The fastest way to get help moving is to call. One number, a real person, no queue —
-            then we&rsquo;re on our way to you.
+            and you&rsquo;ll have an upfront quote and an honest ETA before we hang up.
           </p>
 
           <div className="mt-9">

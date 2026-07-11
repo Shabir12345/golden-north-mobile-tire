@@ -20,7 +20,7 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     q: "How fast can you get to me?",
-    a: "It depends on your location and current demand, but we'll always give you an honest ETA when you call. We run 24/7 — days, nights, weekends, and holidays.",
+    a: "We aim to reach most Toronto and GTA addresses within 45–90 minutes, depending on location and demand — and we'll give you an honest ETA when you call. We run 24/7 — days, nights, weekends, and holidays.",
   },
   {
     q: "Are you licensed and insured?",
