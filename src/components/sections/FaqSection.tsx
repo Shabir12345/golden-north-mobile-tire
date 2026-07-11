@@ -29,14 +29,15 @@ export function FaqSection({
         </h2>
         <div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
           {faqs.map((faq) => (
-            <details key={faq.q} className="group py-5">
-              <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold text-lg text-[var(--color-heading)] marker:content-none [&::-webkit-details-marker]:hidden">
+            <details key={faq.q} className="group">
+              {/* Padding lives on the summary so the whole row is the tap target. */}
+              <summary className="flex cursor-pointer items-center justify-between gap-4 py-5 font-semibold text-lg text-[var(--color-heading)] marker:content-none [&::-webkit-details-marker]:hidden">
                 {faq.q}
                 <span aria-hidden="true" className="shrink-0 text-[var(--color-accent-deep)] text-xl transition-transform duration-200 group-open:rotate-45">
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-base leading-relaxed text-[var(--color-body)]">{faq.a}</p>
+              <p className="-mt-2 pb-5 text-base leading-relaxed text-[var(--color-body)]">{faq.a}</p>
             </details>
           ))}
         </div>

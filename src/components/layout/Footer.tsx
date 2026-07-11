@@ -54,7 +54,7 @@ export function Footer() {
               <p>
                 <a
                   href={mailHref}
-                  className="hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
+                  className="inline-block py-2 -my-2 hover:text-white rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
                 >
                   {BUSINESS.email}
                 </a>
@@ -73,7 +73,7 @@ export function Footer() {
             </p>
             <a
               href={telHref}
-              className="inline-block font-bold tracking-tight text-white leading-none rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-footer)]"
+              className="inline-block py-2 -my-2 font-bold tracking-tight text-white leading-none rounded-md transition-colors duration-150 hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-footer)]"
               style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
               aria-label={`Call GoldenNorth at ${BUSINESS.phoneDisplay}`}
             >

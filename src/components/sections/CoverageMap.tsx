@@ -55,7 +55,7 @@ export function CoverageMap() {
                 href={mapsLinkHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 text-sm font-semibold text-[var(--color-accent-deep)] hover:text-[var(--color-heading)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)]"
+                className="shrink-0 inline-block py-2 -my-2 text-sm font-semibold text-[var(--color-accent-deep)] hover:text-[var(--color-heading)] rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)]"
               >
                 Get directions →
               </a>
