@@ -57,13 +57,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 max-w-2xl">
             <h2 id="services-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
-              Mobile tire change, batteries &amp; roadside —{" "}
-              <span className="text-[var(--color-accent-deep)]">four ways we get you rolling.</span>
+              Whatever stopped you, <span className="text-[var(--color-accent-deep)]">we fix it where you stand.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--color-body)]">
-              Whatever stopped you — a seasonal swap in Markham, a worn tire in Etobicoke, a dead
-              battery downtown, a flat on the 401 — we bring the shop to your location and handle
-              it on the spot.
+              Roadside emergencies, tires, batteries, lockouts, and driveway repairs — one call sends
+              help anywhere in Toronto &amp; the GTA, in as little as 20–30 minutes.
             </p>
           </div>
 

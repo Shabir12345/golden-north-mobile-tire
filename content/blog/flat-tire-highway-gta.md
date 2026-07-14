@@ -10,7 +10,7 @@ keywords:
   - what to do flat tire gta
 date: "2026-07-01"
 updated: "2026-07-03"
-relatedService: roadside
+relatedService: roadside-assistance
 faqs:
   - q: Should I change a flat myself on the highway?
     a: Only if the flat is on the side away from traffic, the shoulder is wide, and the car sits on firm, level ground. Passing vehicles are the real danger, not the tire. On a road like the 401, the safer call is to stay buckled inside and phone for help.

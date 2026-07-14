@@ -10,7 +10,7 @@ keywords:
   - winter tires gta
 date: "2026-07-03"
 updated: "2026-07-03"
-relatedService: tire-change
+relatedService: mobile-tire-service
 faqs:
   - q: What temperature should I switch to winter tires?
     a: Once daytime highs stay consistently below 7°C — usually late October to mid-November in the GTA. Below that, all-season rubber hardens and loses grip even on dry roads.

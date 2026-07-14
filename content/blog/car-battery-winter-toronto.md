@@ -10,7 +10,7 @@ keywords:
   - mobile battery replacement
 date: "2026-06-30"
 updated: "2026-07-03"
-relatedService: battery
+relatedService: battery-jump-start
 faqs:
   - q: Why does my car battery die in winter?
     a: Cold slows the battery's chemistry. Near -18°C it delivers about half its normal cranking power, while a cold engine demands more — so a weak battery quits.

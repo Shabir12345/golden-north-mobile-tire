@@ -12,21 +12,25 @@ export interface CatalogPhoto {
 
 // Per-service signature image, keyed by service slug.
 export const SERVICE_PHOTO: Record<string, CatalogPhoto> = {
-  "tire-change": {
+  "roadside-assistance": {
+    src: "/photos/night-sedan-roadside.webp",
+    alt: "Late-night GTA roadside assistance: a sedan up on the jack with the GoldenNorth van's headlights lighting the work",
+  },
+  "mobile-tire-service": {
     src: "/photos/action-mercedes-street.webp",
     alt: "GoldenNorth mobile tire change on a red Mercedes on a GTA residential street, yellow service van parked behind",
   },
-  tires: {
-    src: "/photos/tires-warehouse.webp",
-    alt: "Racks of new and used tires in common GTA sizes, ready for on-site installation at your home or office",
-  },
-  battery: {
+  "battery-jump-start": {
     src: "/photos/night-mini-station.webp",
-    alt: "Night mobile battery and tire service for a MINI at a lit gas station, the open yellow van alongside",
+    alt: "Night mobile battery and jump start service for a MINI at a lit gas station, the open yellow van alongside",
   },
-  roadside: {
-    src: "/photos/night-sedan-roadside.webp",
-    alt: "Late-night GTA roadside assistance: a sedan up on the jack with the GoldenNorth van's headlights lighting the work",
+  "car-lockout": {
+    src: "/photos/van-residential-driveway.webp",
+    alt: "GoldenNorth van in a residential driveway with the side door open, technician helping at a black SUV",
+  },
+  "mobile-mechanic": {
+    src: "/photos/van-loadingdock-bmw.webp",
+    alt: "GoldenNorth technician servicing a gray BMW beside the yellow van at a loading dock",
   },
 };
 

@@ -10,7 +10,7 @@ keywords:
   - cheap tires gta
 date: "2026-07-02"
 updated: "2026-07-03"
-relatedService: tires
+relatedService: mobile-tire-service
 faqs:
   - q: Are used tires safe?
     a: A properly inspected used tire is safe. We only sell used tires with at least 4/32" of tread, even wear, sound sidewalls, no exposed cords, and no shoulder plugs.

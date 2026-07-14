@@ -1,5 +1,5 @@
 // ─── Services overview (/services) ────────────────────────────────────────────
-// Intro header + the four service rows (reusing the home ServiceRow) + the
+// Intro header + the five service rows (reusing the home ServiceRow) + the
 // drenched CTA band. Each row links to its SEO detail page.
 
 import { buildMetadata } from "@/lib/seo";
@@ -13,8 +13,8 @@ import { CallButton, Button } from "@/components/ui/Button";
 import { SERVICES_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "Mobile Tire & Roadside Services — Toronto & the GTA",
-  description: `Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance across the GTA. ${BUSINESS.shortName} brings the shop to you — call ${BUSINESS.phoneDisplay}.`,
+  title: "24/7 Roadside & Mobile Services — Toronto & the GTA",
+  description: `Roadside assistance, mobile tire service, battery jump starts, car lockouts & mobile mechanics across Toronto & the GTA. We come to you — call ${BUSINESS.phoneDisplay}.`,
   path: "/services",
 });
 
@@ -24,12 +24,12 @@ export default function ServicesPage() {
       <PageHeader
         title={
           <>
-            Everything we do,
+            Whatever stopped you,
             <br />
-            <span className="text-[var(--color-accent)]">at your location.</span>
+            <span className="text-[var(--color-accent)]">we come fix it.</span>
           </>
         }
-        intro={`Mobile tire change, new & used tires, battery replacement, and 24/7 roadside assistance — everywhere in the ${BUSINESS.areaServed}. No shop visit, no tow, no wasted Saturday. Pick what stopped you, or just call and tell us.`}
+        intro={`Roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs — everywhere in Toronto & the GTA, 24/7, in as little as 20–30 minutes. Pick what stopped you, or just call and tell us.`}
       >
         <CallButton size="lg" />
         <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">

@@ -5,7 +5,13 @@ import ServicesPage from "@/app/services/page";
 describe("Services overview", () => {
   it("lists all services with links to detail pages", () => {
     render(<ServicesPage />);
-    expect(screen.getByRole("link", { name: /tire change/i })).toHaveAttribute("href", "/services/tire-change");
-    expect(screen.getByRole("link", { name: /roadside/i })).toHaveAttribute("href", "/services/roadside");
+    expect(screen.getByRole("link", { name: /mobile tire service/i })).toHaveAttribute(
+      "href",
+      "/services/mobile-tire-service"
+    );
+    expect(screen.getByRole("link", { name: /roadside assistance/i })).toHaveAttribute(
+      "href",
+      "/services/roadside-assistance"
+    );
   });
 });
