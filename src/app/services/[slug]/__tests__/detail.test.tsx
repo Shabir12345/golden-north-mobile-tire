@@ -43,4 +43,11 @@ describe("Service detail", () => {
     expect(screen.getByText("Licensed & insured")).toBeInTheDocument();
     expect(screen.getByText("Warranty-backed parts")).toBeInTheDocument();
   });
+
+  it("renders the problem→solution hero", async () => {
+    render(await Page({ params: Promise.resolve({ slug: "car-lockout" }) }));
+    const h1 = screen.getByRole("heading", { level: 1 });
+    expect(h1).toHaveTextContent("Locked out of your car?");
+    expect(h1).toHaveTextContent("Back inside without a scratch — in as little as 20–30 minutes.");
+  });
 });
