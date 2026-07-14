@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -45,6 +45,7 @@ export function Header() {
     setServicesHoverOpen(false);
     setServicesClickOpen(false);
   };
+  const servicesTriggerRef = useRef<HTMLButtonElement>(null);
   const closeMenu = () => setMenuOpen(false);
   const pathname = usePathname();
   const isActive = (href: string) =>
@@ -93,6 +94,17 @@ export function Header() {
                   className="relative"
                   onMouseEnter={() => setServicesHoverOpen(true)}
                   onMouseLeave={() => setServicesHoverOpen(false)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Escape" && servicesOpen) {
+                      closeServicesMenu();
+                      servicesTriggerRef.current?.focus();
+                    }
+                  }}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                      closeServicesMenu();
+                    }
+                  }}
                 >
                   <div className="flex items-center">
                     <Link
@@ -103,6 +115,7 @@ export function Header() {
                       {label}
                     </Link>
                     <button
+                      ref={servicesTriggerRef}
                       type="button"
                       aria-label="Services menu"
                       aria-expanded={servicesOpen}

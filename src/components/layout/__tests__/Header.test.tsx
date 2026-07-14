@@ -33,6 +33,15 @@ describe("Header desktop Services dropdown", () => {
       "/services/mobile-mechanic"
     );
   });
+
+  it("closes the services dropdown on Escape", async () => {
+    render(<Header />);
+    const trigger = screen.getByRole("button", { name: /services menu/i });
+    await userEvent.click(trigger);
+    expect(trigger).toHaveAttribute("aria-expanded", "true");
+    await userEvent.keyboard("{Escape}");
+    expect(trigger).toHaveAttribute("aria-expanded", "false");
+  });
 });
 
 describe("Header mobile menu", () => {
