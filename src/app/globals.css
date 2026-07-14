@@ -164,6 +164,49 @@
   border-color: var(--color-accent);
 }
 
+/* ── Attention tier (repeating — reserved for the 3 conversion anchors) ─────
+   1. .btn-pulse  — soft gold pulse ring on primary call buttons (~3s loop)
+   2. .live-dot   — breathing green dot for the 24/7 live-dispatch line
+   Reassure tier (plays once):
+   3. .sweep-once — single gold highlight sweep, triggered by adding .is-in
+   All are killed by the prefers-reduced-motion override below. */
+
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0.45); }
+  60%  { box-shadow: 0 0 0 14px rgba(240, 165, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0); }
+}
+.btn-pulse { animation: pulseRing 3s var(--ease-out-quart) 1.6s infinite; }
+
+@keyframes dotBreathe {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.8); }
+}
+.live-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #35C46F; /* green reads "live"; decorative — text carries meaning */
+  animation: dotBreathe 2.4s ease-in-out infinite;
+}
+
+@keyframes sweepOnce {
+  from { background-position: -120% 0; }
+  to   { background-position: 220% 0; }
+}
+.sweep-once.is-in {
+  background-image: linear-gradient(
+    100deg,
+    transparent 40%,
+    color-mix(in srgb, var(--color-accent) 22%, transparent) 50%,
+    transparent 60%
+  );
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  animation: sweepOnce 1.2s var(--ease-out-quart) 1 both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal, .reveal.is-armed { opacity: 1 !important; transform: none !important; }
