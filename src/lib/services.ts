@@ -97,7 +97,82 @@ export const SERVICES: Service[] = [
         a: "Your location (a highway marker, exit, intersection, or nearest address), your vehicle's make, model, and colour, and what happened. Not sure what's wrong? Describe what you see and hear and we'll triage on arrival.",
       },
     ],
-    subServices: [], // Stage 2: fuel-delivery, tow-coordination
+    subServices: [
+      {
+        slug: "fuel-delivery",
+        name: "Emergency Fuel Delivery",
+        problem: "Out of gas?",
+        solution: "Fuel comes to you — in as little as 20–30 minutes.",
+        seoTitle: "Emergency Fuel Delivery Toronto — 24/7 Gas to Your Car",
+        seoDescription:
+          "Ran out of gas in Toronto or the GTA? 24/7 emergency fuel delivery — enough fuel to reach a station, in as little as 20–30 minutes. Call (416) 558-5915.",
+        summary:
+          "The gauge said you'd make it; the car disagreed. GoldenNorth brings fuel to you anywhere in Toronto and the GTA, 24/7 — in as little as 20–30 minutes. We pour safely, make sure the car starts, and you drive to the nearest station instead of walking to it. Fair, upfront price quoted on the call — no membership, no hidden fees.",
+        included: [
+          "Gasoline or diesel brought to your location",
+          "Enough fuel to reach the nearest station comfortably",
+          "Safe pour and a start check before we leave",
+          "Highway shoulders, parking garages, and side streets covered",
+        ],
+        keywords: [
+          "emergency fuel delivery Toronto",
+          "out of gas GTA",
+          "gas delivery to car Toronto",
+          "roadside fuel delivery 401",
+        ],
+        faqs: [
+          {
+            q: "How much fuel do you bring?",
+            a: "Enough to get you comfortably to the nearest station — typically several litres. Tell us your vehicle and location when you call and we'll confirm.",
+          },
+          {
+            q: "Do you deliver diesel too?",
+            a: "Yes — tell us gasoline or diesel when you call so we load the right fuel. If you're not sure, the fuel door or owner's manual says.",
+          },
+          {
+            q: "What if the car still won't start after refuelling?",
+            a: "Some vehicles need a few extra cranks after running dry, and we know the tricks. If it's genuinely not fuel — a failed pump, a dead battery — we can triage that on the spot, since we're already there.",
+          },
+        ],
+      },
+      {
+        slug: "tow-coordination",
+        name: "Tow Coordination",
+        problem: "Need a tow after all?",
+        solution: "We assess first, arrange the tow if it's truly needed, and point you to a shop you can trust.",
+        seoTitle: "Tow Coordination Toronto & GTA — When It Can't Be Fixed",
+        seoDescription:
+          "If your car can't be fixed at the roadside, GoldenNorth helps arrange the tow and points you to a trustworthy GTA shop. 24/7 honest triage. (416) 558-5915.",
+        summary:
+          "Most calls we fix on the spot — that's the point of mobile service. When the problem is genuinely beyond a roadside repair, we say so, help arrange a tow, and point you toward a shop we'd send our own cars to. You get a straight answer instead of a tow bill you didn't need. 24/7, anywhere in Toronto and the GTA.",
+        included: [
+          "Roadside triage first — most problems don't need a tow",
+          "Tow arrangement when the repair genuinely needs a shop",
+          "A recommendation for a trustworthy repair shop",
+          "Honest advice on what the repair likely involves",
+        ],
+        keywords: [
+          "tow coordination Toronto",
+          "do I need a tow GTA",
+          "roadside triage Toronto",
+          "car breakdown help Toronto",
+        ],
+        faqs: [
+          {
+            q: "Do you run your own tow trucks?",
+            a: "Our job is fixing your car where it stands. When a tow is genuinely required, we coordinate one for you rather than leaving you to search from the shoulder.",
+          },
+          {
+            q: "How do you decide if my car needs a tow?",
+            a: "We triage first. Flat tires, dead batteries, lockouts, and empty tanks get fixed on the spot. Broken axles, seized brakes, and engine failures need a shop — and we tell you which one you're dealing with, plainly.",
+          },
+          {
+            q: "What does this cost me?",
+            a: "You get a fair, upfront price quoted on the call — no membership, no hidden fees. If it turns out you need a tow instead of a roadside fix, we tell you straight rather than charge you for work that won't solve it.",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "mobile-tire-service",
@@ -154,7 +229,165 @@ export const SERVICES: Service[] = [
         a: "Toronto and across the GTA — Scarborough, North York, Etobicoke, Vaughan, Markham, Richmond Hill, Oakville, and surrounding areas. Call to confirm availability at your address.",
       },
     ],
-    subServices: [], // Stage 2: flat-tire, spare-tire-install, new-used-tires, seasonal-tire-change
+    subServices: [
+      {
+        slug: "flat-tire",
+        name: "Flat Tire Repair & Change",
+        problem: "Flat tire right now?",
+        solution: "Repaired or swapped where you stand — in as little as 20–30 minutes.",
+        seoTitle: "Flat Tire Repair Toronto — 24/7 Mobile Flat Tire Change",
+        seoDescription:
+          "Flat tire in Toronto or the GTA? 24/7 mobile flat tire repair and change at your location, in as little as 20–30 minutes. Fair quote on the call. (416) 558-5915.",
+        summary:
+          "A flat doesn't wait for a convenient moment. GoldenNorth comes to you anywhere in Toronto and the GTA, 24/7 — in as little as 20–30 minutes. We assess the puncture, repair it on the spot when it's safe to, install your spare, or fit a replacement tire if the damage is beyond saving. You get a fair, upfront price quoted on the call — no membership, no hidden fees.",
+        included: [
+          "Puncture assessment — repair vs. replace, explained plainly",
+          "Plug or patch repair where the damage allows it",
+          "Spare installation, torqued to OEM spec",
+          "Replacement tire sourced if the flat is beyond repair",
+          "Pressure set on all four tires before we leave",
+        ],
+        keywords: [
+          "flat tire repair Toronto",
+          "flat tire help GTA",
+          "mobile flat tire change Toronto",
+          "flat tire 401 highway help",
+        ],
+        faqs: [
+          {
+            q: "Can my flat be repaired, or does it need replacing?",
+            a: "Punctures in the tread face under about 6 mm can usually be plugged or patched. Sidewall damage, shoulder punctures, and runs on a fully deflated tire usually mean replacement. We inspect on arrival and tell you which it is before any work starts.",
+          },
+          {
+            q: "What if I don't have a spare?",
+            a: "Many newer cars don't. We can repair the flat on-site when it's repairable, or bring a replacement tire in your size — tell us your tire size (on the sidewall, e.g. 225/65R17) when you call.",
+          },
+          {
+            q: "I'm on a highway shoulder — can you still help?",
+            a: "Yes. Pull as far right as safely possible, hazards on, and stay in the vehicle unless you can wait safely behind a barrier. We service shoulders across the GTA corridor and call when we're close.",
+          },
+        ],
+      },
+      {
+        slug: "spare-tire-install",
+        name: "Spare Tire Installation",
+        problem: "Spare in the trunk, no way to fit it?",
+        solution: "We install it safely — torqued to spec, pressures set.",
+        seoTitle: "Spare Tire Installation Toronto — We Come to You 24/7",
+        seoDescription:
+          "Can't change your own spare? 24/7 mobile spare tire installation across Toronto & the GTA, in as little as 20–30 minutes. Fair quote on the call. (416) 558-5915.",
+        summary:
+          "You have the spare; the highway shoulder is no place to learn to use it. GoldenNorth comes to you 24/7 anywhere in Toronto and the GTA — in as little as 20–30 minutes — jacks the car safely, fits your spare, torques it to spec, and checks the pressure so it's actually drivable. Fair, upfront price quoted on the call.",
+        included: [
+          "Safe jacking on level ground — no scraped rockers, no guesswork",
+          "Spare fitted and torqued to OEM spec",
+          "Spare pressure checked and corrected",
+          "Advice on how far and how fast your spare type can go",
+        ],
+        keywords: [
+          "spare tire installation Toronto",
+          "install my spare tire GTA",
+          "spare tire change service Toronto",
+        ],
+        faqs: [
+          {
+            q: "How far can I drive on the spare afterwards?",
+            a: "Compact (donut) spares are typically limited to about 80 km/h and roughly 100 km — enough to reach a tire shop, not a road trip. Full-size spares can go further. We tell you exactly what yours can handle before we leave.",
+          },
+          {
+            q: "What if my spare turns out to be flat too?",
+            a: "It happens more than you'd think — spares lose pressure sitting in the trunk for years. We carry a compressor and can inflate it; if it's damaged, we can source a replacement tire in your size instead.",
+          },
+          {
+            q: "How long does the install take?",
+            a: "Usually 15–20 minutes once we arrive — and we reach most Toronto and GTA locations in as little as 20–30 minutes.",
+          },
+        ],
+      },
+      {
+        slug: "new-used-tires",
+        name: "New & Used Tires",
+        problem: "Tire beyond repair?",
+        solution: "New or quality used, sourced in your size and installed at your door.",
+        seoTitle: "New & Used Tires Delivered & Installed — Toronto & GTA",
+        seoDescription:
+          "New and quality used tires sourced in your size and installed at your home, office, or roadside anywhere in the GTA. Most sizes within 24 hours. (416) 558-5915.",
+        summary:
+          "GoldenNorth sources new and quality used tires and installs them at your location anywhere in Toronto and the GTA — no hauling rims to a shop, no waiting room. Touring, all-season, winter, and all-terrain options in the sizes most common on GTA roads, from compact sedans to full-size pickups, at a fair, upfront price quoted on the call — without chain-store upsell pressure.",
+        included: [
+          "Tire sourcing in your exact size — new or quality used",
+          "Most sizes available within 24 hours",
+          "On-site mounting and inflation to spec",
+          "Torque check after installation",
+          "Old tire disposal on request",
+        ],
+        keywords: [
+          "used tires Toronto",
+          "new tires installed at home GTA",
+          "same-day tire replacement Toronto",
+          "buy one used tire GTA",
+        ],
+        faqs: [
+          {
+            q: "Are used tires safe? How do you inspect them?",
+            a: "We only sell used tires with at least 4/32\" of tread remaining, no sidewall bubbles, no visible cord damage, and no plugged punctures in the shoulder zone. Each tire is inspected before it leaves with us.",
+          },
+          {
+            q: "Can I buy just one tire instead of a full set?",
+            a: "Yes. If one tire is damaged beyond repair, we source a matching used tire close in tread depth to your remaining three. For all-wheel-drive vehicles we measure your existing tread first, since large differences can strain the drivetrain.",
+          },
+          {
+            q: "Should I buy new or used?",
+            a: "Used makes sense when you're matching a single damaged tire or the vehicle is near end of life. New is the better buy for a full set you'll run for years. We sell both, so you get an honest recommendation either way.",
+          },
+          {
+            q: "How do I find my tire size?",
+            a: "It's printed on the sidewall and on the sticker inside the driver's door jamb — a code like 225/65R17. Tell us that code when you call and we'll confirm availability, usually within 24 hours for less common sizes.",
+          },
+        ],
+      },
+      {
+        slug: "seasonal-tire-change",
+        name: "Seasonal Tire Change",
+        problem: "Winters still in the garage?",
+        solution: "On-rim swaps at your door — no shop, no Saturday lost.",
+        seoTitle: "Mobile Seasonal Tire Change Toronto — Swaps at Your Door",
+        seoDescription:
+          "24/7 mobile seasonal tire change across Toronto & the GTA. We come to your driveway or condo garage for winter and summer swaps. Call (416) 558-5915.",
+        summary:
+          "GoldenNorth swaps your seasonal tires at your driveway, office lot, or condo garage anywhere in Toronto and the GTA — mounted, torqued to spec, pressures set. Switch to winters before the first snowfall or back to summers in spring without burning a Saturday in a tire-shop waiting room. Fair, upfront price quoted on the call — no membership, no hidden fees.",
+        included: [
+          "On-rim seasonal changeover (winter ↔ summer / all-season)",
+          "Torque-wrench tightened to OEM spec",
+          "Valve stem inspection",
+          "Pressures set to door-jamb spec on all four",
+        ],
+        keywords: [
+          "seasonal tire swap at home GTA",
+          "winter tire changeover Toronto",
+          "on-rim tire change North York",
+          "mobile tire swap Vaughan",
+        ],
+        faqs: [
+          {
+            q: "When should I put on winter tires in Ontario?",
+            a: "The 7°C rule: once daytime temperatures stay consistently below 7°C — usually late October to mid-November in the GTA — all-season rubber hardens and loses grip. Keep winters on until spring temperatures hold above 7°C, typically mid-April. Booking before the first snowfall rush means faster scheduling.",
+          },
+          {
+            q: "How long does a mobile seasonal swap take?",
+            a: "A typical on-rim swap takes 30–45 minutes for a passenger car, SUV, or light truck — including torque to spec and setting pressures.",
+          },
+          {
+            q: "Can you do the swap in a condo underground garage?",
+            a: "Yes — most underground garages have enough clearance, and we use a portable compressor and cordless tools, so no shore power is needed. You just need a spot for the duration.",
+          },
+          {
+            q: "My winters aren't on rims — can you still swap them?",
+            a: "Yes, tires that need mounting and balancing on your rims take longer than an on-rim swap, and we'll quote a realistic time and price when you book.",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "battery-jump-start",
