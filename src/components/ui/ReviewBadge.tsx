@@ -19,6 +19,7 @@ export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
   if (!stats) return null;
 
   const full = Math.round(stats.rating);
+  const iconColor = onDark ? "text-[var(--color-accent)]" : "text-[var(--color-accent-deep)]";
   return (
     <p
       className={`inline-flex items-center gap-2.5 text-sm font-semibold ${
@@ -26,7 +27,7 @@ export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
       }`}
       aria-label={`Rated ${stats.rating} out of 5 from ${stats.count} Google reviews`}
     >
-      <span aria-hidden="true" className="flex items-center gap-0.5 text-[var(--color-accent)]">
+      <span aria-hidden="true" className={`flex items-center gap-0.5 ${iconColor}`}>
         {Array.from({ length: 5 }, (_, i) => (
           <Star key={i} className={i < full ? "" : "opacity-30"} />
         ))}
