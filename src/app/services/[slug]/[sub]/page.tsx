@@ -94,8 +94,8 @@ export default async function SubServicePage({ params }: { params: Promise<Param
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
-              <Button variant="ghost" size="lg" href={`/services/${service.slug}`} aria-label={`See all ${service.name} services`}>
-                All {service.shortName.toLowerCase()} services
+              <Button variant="ghost" size="lg" href={`/services/${service.slug}`}>
+                All {service.name} services
               </Button>
             </div>
           </div>
