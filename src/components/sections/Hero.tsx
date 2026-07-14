@@ -1,68 +1,61 @@
 // ─── Hero ─────────────────────────────────────────────────────────────────────
-// The navy brand stage. One clear promise — "We come to you." — a calm
-// availability badge, simple at-a-glance chips, the gold call-first CTA, and
-// the real photo of the van and tech. A faint compass-rose watermark nods to
-// the logo. No glow, no hazard stripes, no alarm.
+// The emergency conversion stage. Problem→solution H1 with the ETA promise,
+// a live-dispatch line (breathing dot), the pulsing gold call CTA, and the
+// live Google review badge. Exactly three attention anchors move; nothing
+// else in the hero animates. Navy stage + real van photo retained.
 
 import { Photo } from "@/components/ui/Photo";
-import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CallButton, Button } from "@/components/ui/Button";
 import { CompassRose } from "@/components/ui/CompassRose";
+import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { BUSINESS } from "@/lib/business";
 
-const CHIPS = ["24/7", "GTA-wide", "No tow needed"] as const;
+export async function Hero() {
+  // Resolved here (rather than left as a `<ReviewBadge onDark />` element)
+  // because this Vitest setup — plain @vitejs/plugin-react + jsdom, not the
+  // Next.js RSC runtime — can't render a nested async component that's still
+  // unresolved when this component's own tree is returned: "Since `async`
+  // Server Components are new to the React ecosystem, Vitest currently does
+  // not support them" (node_modules/next/dist/docs/01-app/02-guides/testing/vitest.md).
+  // Resolving it to a plain element keeps `render(await Hero())` working.
+  const reviewBadge = await ReviewBadge({ onDark: true });
 
-export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — GoldenNorth Mobile Tire Services">
+    <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — 24/7 emergency roadside assistance">
       <CompassRose className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-[var(--color-accent)] opacity-[0.06]" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:py-20">
+        <div className="grid items-center gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-14 lg:py-20">
           {/* Text column */}
           <div>
-            <AvailabilityBadge variant="line" onDark className="mb-7" />
-
-            <h1
-              className="font-bold leading-[1.04] text-white"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.02em" }}
-            >
-              We come <span className="text-[var(--color-accent)]">to you.</span>
-              <span aria-hidden="true" className="mt-5 block h-1 w-20 rounded-full bg-[var(--color-accent)]" />
-            </h1>
-
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              Flat tire, dead battery, or a seasonal swap — one call sends a mobile tire
-              technician to your driveway, office lot, or highway shoulder, anywhere in Toronto
-              &amp; the GTA. {BUSINESS.tagline}
+            {/* Attention anchor 1 — live dispatch */}
+            <p className="mb-7 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[var(--color-on-navy)]">
+              <span className="live-dot" aria-hidden="true" />
+              24/7 Emergency Dispatch — answering now
             </p>
 
-            {/* At-a-glance chips */}
-            <ul className="mt-7 flex flex-wrap gap-2.5" aria-label="At a glance">
-              {CHIPS.map((chip, i) => (
-                <li
-                  key={chip}
-                  className={
-                    "text-xs font-semibold px-3 py-1.5 rounded-full " +
-                    (i === 0
-                      ? "bg-[var(--color-accent)] text-[var(--color-navy)]"
-                      : "bg-white/10 text-[var(--color-on-navy)]")
-                  }
-                >
-                  {chip}
-                </li>
-              ))}
-            </ul>
+            <h1 className="font-bold leading-[1.02] text-white" style={{ fontSize: "clamp(2.75rem, 6.5vw, 5rem)" }}>
+              Stranded in the GTA?
+              <span className="mt-3 block text-[var(--color-accent)]">
+                We&rsquo;re on our way — in as little as 20–30 minutes.
+              </span>
+            </h1>
 
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-footer-fg)]">
+              Flat tire, dead battery, locked out, out of gas, or a breakdown — one call sends a
+              roadside technician to you, anywhere in Toronto &amp; the GTA. Fair price quoted
+              before we roll — no membership, no hidden fees.
+            </p>
+
+            {/* Attention anchor 2 — the call */}
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <CallButton size="lg" />
+              <CallButton size="lg" className="btn-pulse" />
               <Button variant="ghost" size="lg" href="/services" aria-label="See all services">
                 See services
               </Button>
             </div>
 
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-[var(--color-footer-fg)]">
-              Straight quote and an honest ETA on the call — no membership, no hidden fees.
-            </p>
+            {/* Attention anchor 3 — live reviews */}
+            <div className="mt-6">{reviewBadge}</div>
 
             <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-footer-fg)]">
               {BUSINESS.areaServed}
@@ -80,14 +73,9 @@ export function Hero() {
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="shadow-[0_20px_50px_-20px_rgba(16,32,63,0.35)]"
             />
-            <div className="absolute left-4 bottom-4 right-4 flex items-center justify-between gap-3">
-              <span className="inline-flex items-center gap-2 rounded-lg bg-white/90 px-3 py-2 backdrop-blur-sm shadow-sm">
-                <AvailabilityBadge label="Serving the GTA" />
-              </span>
-              <span className="hidden rounded-lg bg-white/90 px-3 py-2 text-xs font-semibold text-[var(--color-body)] backdrop-blur-sm shadow-sm sm:inline">
-                The real GoldenNorth van
-              </span>
-            </div>
+            <span className="absolute left-4 bottom-4 inline-flex rounded-lg bg-white/90 px-3 py-2 text-xs font-semibold text-[var(--color-body)] backdrop-blur-sm shadow-sm">
+              The real GoldenNorth van — on a real GTA call
+            </span>
           </div>
         </div>
       </div>
