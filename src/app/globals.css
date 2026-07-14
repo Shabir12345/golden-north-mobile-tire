@@ -30,8 +30,9 @@
   --color-footer-fg: #C7CEDC;   /* body text on navy                          */
   --color-on-navy: #E8EBF2;     /* brighter text on navy                      */
 
-  /* ── Type: Inter carries everything ── */
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  /* ── Type: Barlow (body) + Barlow Condensed (display) ── */
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), var(--font-barlow), system-ui, sans-serif;
 }
 
 /* ── Semantic, non-color tokens ── */
@@ -57,8 +58,9 @@
   }
 
   h1, h2, h3 {
+    font-family: var(--font-display);
     color: var(--color-heading);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;      /* condensed faces need no negative tracking */
     text-wrap: balance;
   }
 
