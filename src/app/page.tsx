@@ -44,7 +44,7 @@ export default function Home() {
             items={[
               { value: "24/7", label: "Always open" },
               { value: "GTA-wide", label: "We come to you" },
-              { value: "45–90 min", label: "Typical arrival" },
+              { value: "20–30 min", label: "We can be on our way" },
               { value: "No tow", label: "Fixed on the spot" },
             ]}
           />

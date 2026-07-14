@@ -89,7 +89,7 @@ Help finds you faster when you can answer four questions:
 3. **Your vehicle** — make, model, and colour, so the driver spots you on a shoulder full of cars.
 4. **Which tire is flat** — it tells the operator how the truck should position when it arrives.
 
-GoldenNorth handles [24/7 roadside assistance](/services/roadside) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
+GoldenNorth handles [24/7 roadside assistance](/services/roadside-assistance) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
 
 ## While you wait
 

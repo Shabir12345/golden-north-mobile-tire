@@ -72,8 +72,8 @@ One decision that pays off every year: **keep your winter tires mounted on their
 
 ## The changeover, without the shop
 
-Here's the part that surprises people: none of this requires a waiting room. GoldenNorth does [mobile tire changeovers](/services/tire-change) across Toronto and the GTA — driveway, condo garage, office parking lot. We bring the equipment to you, swap the set, torque every wheel to the manufacturer's spec, and set your pressures before we leave. Your Saturday stays yours.
+Here's the part that surprises people: none of this requires a waiting room. GoldenNorth does [mobile tire changeovers](/services/mobile-tire-service) across Toronto and the GTA — driveway, condo garage, office parking lot. We bring the equipment to you, swap the set, torque every wheel to the manufacturer's spec, and set your pressures before we leave. Your Saturday stays yours.
 
-If you need rubber as well as the swap, we can help there too — see our [new and used tire options](/services/tires) and have them installed at your door in the same visit.
+If you need rubber as well as the swap, we can help there too — see our [new and used tire options](/services/mobile-tire-service) and have them installed at your door in the same visit.
 
 Watching the forecast dip? Get ahead of the first storm: **(416) 558-5915**.

@@ -84,7 +84,7 @@ The way to know is to test rather than guess — check the battery's actual outp
 
 ## Tested and replaced right where the car sits
 
-GoldenNorth does [mobile battery service](/services/battery) across Toronto and the GTA, 24/7. We come to the car — your driveway, your office lot, the third level of a condo garage, or a highway shoulder — load-test the battery and charging system first, and give you a straight answer. If a boost genuinely solves it, that's what you get. If the battery is done, we install a fresh, warranted replacement on the spot and make sure the car starts strong before we leave.
+GoldenNorth does [mobile battery service](/services/battery-jump-start) across Toronto and the GTA, 24/7. We come to the car — your driveway, your office lot, the third level of a condo garage, or a highway shoulder — load-test the battery and charging system first, and give you a straight answer. If a boost genuinely solves it, that's what you get. If the battery is done, we install a fresh, warranted replacement on the spot and make sure the car starts strong before we leave.
 
 No waiting for a tow, no losing a morning to a waiting room — and no membership required.
 

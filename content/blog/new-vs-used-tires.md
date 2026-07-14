@@ -74,6 +74,6 @@ Tell us the size and what happened, and we can usually tell you on the phone whe
 
 ## Either way, installed wherever you're parked
 
-GoldenNorth stocks [new and inspected used tires](/services/tires) and installs them at your location anywhere in the GTA — home, office, or the shoulder where the drywall screw found you. We'll give you a straight recommendation between new and used for your actual situation, mount and balance on the spot, torque to spec, and set your pressures before we go.
+GoldenNorth stocks [new and inspected used tires](/services/mobile-tire-service) and installs them at your location anywhere in the GTA — home, office, or the shoulder where the drywall screw found you. We'll give you a straight recommendation between new and used for your actual situation, mount and balance on the spot, torque to spec, and set your pressures before we go.
 
 One tire or four: **(416) 558-5915**.
