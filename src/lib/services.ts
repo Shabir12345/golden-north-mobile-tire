@@ -444,7 +444,81 @@ export const SERVICES: Service[] = [
         a: "A boost costs less than a replacement; replacement price depends on your battery's group size and type (AGM units cost more than standard flooded). Either way you get a fair, upfront price quoted on the call — no membership, no hidden fees, no shop markup.",
       },
     ],
-    subServices: [], // Stage 2: battery-replacement, battery-testing
+    subServices: [
+      {
+        slug: "battery-replacement",
+        name: "Battery Replacement",
+        problem: "Battery finally died?",
+        solution: "A fresh, warranted battery installed where you're parked.",
+        seoTitle: "Mobile Car Battery Replacement Toronto — 24/7 Service",
+        seoDescription:
+          "Dead battery? We test, then install a fresh warranted battery on the spot — home, work, or roadside across the GTA, 24/7. Call (416) 558-5915.",
+        summary:
+          "A dead battery in a Toronto winter shouldn't mean waiting hours for a tow. GoldenNorth installs a fresh, warranted battery right where your car sits — home, workplace, parking garage, or roadside, anywhere in Toronto and the GTA, 24/7. We load-test first so you're not buying a battery you don't need, and you get a fair, upfront price quoted on the call.",
+        included: [
+          "Load test first — you only replace what's actually dead",
+          "Fresh, warranted battery installed from the van",
+          "Memory saver used to protect radio and computer settings",
+          "Terminal cleaning and corrosion treatment",
+          "Alternator output check so the new battery stays charged",
+        ],
+        keywords: [
+          "mobile battery replacement Toronto",
+          "car battery installation at home GTA",
+          "battery replacement service Toronto",
+        ],
+        faqs: [
+          {
+            q: "What battery brands and sizes do you carry?",
+            a: "Trusted replacement brands in the most common group sizes (35, 47, 48, 65, 94R), covering most Honda, Toyota, Ford, GM, and Nissan vehicles on Toronto roads. Unusual size? Call ahead and we'll source it.",
+          },
+          {
+            q: "Will replacing the battery reset my car's settings?",
+            a: "Modern vehicles can lose some memory settings when the battery is swapped. We use a memory saver during replacement to minimise this, and we'll flag beforehand if your vehicle has known sensitivities.",
+          },
+          {
+            q: "How long does a car battery last in Canadian winters?",
+            a: "Typically 3–5 years. Cold is the killer: at -18°C a battery delivers roughly half its rated cranking power. If yours is over 4 years old and cranking slowly, have it load-tested before winter does it for you.",
+          },
+        ],
+      },
+      {
+        slug: "battery-testing",
+        name: "Battery Testing",
+        problem: "Battery acting up?",
+        solution: "Load-tested on the spot — so you know before winter does.",
+        seoTitle: "Car Battery Testing Toronto — Mobile Load Test & Check",
+        seoDescription:
+          "Slow cranks or a battery you don't trust? Mobile battery load testing and charging-system checks at your location across Toronto & the GTA. (416) 558-5915.",
+        summary:
+          "Slow cranking on cold mornings is a battery telling you something. GoldenNorth comes to your home or workplace anywhere in Toronto and the GTA and runs a proper load test plus a charging-system check — so you know whether the battery is ageing, the alternator is undercharging, or something is draining it. You see the test result yourself, and there's no pressure to replace what still passes.",
+        included: [
+          "Battery load test with the result shown to you",
+          "Charging system / alternator output check",
+          "Parasitic drain check when something keeps killing the battery",
+          "A plain-language verdict: keep it, watch it, or replace it",
+        ],
+        keywords: [
+          "car battery testing Toronto",
+          "battery load test GTA",
+          "battery keeps dying Toronto",
+        ],
+        faqs: [
+          {
+            q: "What does a load test actually tell you?",
+            a: "It measures how much cranking power the battery delivers under load — the thing that matters on a -18°C morning. A voltage reading alone can look fine on a battery that's about to quit; a load test can't be fooled.",
+          },
+          {
+            q: "My battery keeps dying overnight. Is that the battery?",
+            a: "Not always — it can be a parasitic drain (a module or light staying awake) or an alternator that isn't charging. We test all three so you fix the actual cause instead of replacing batteries repeatedly.",
+          },
+          {
+            q: "If the battery fails the test, can you replace it right away?",
+            a: "Yes — we carry warranted batteries in the most common group sizes and can install one on the spot, with a fair, upfront price quoted before any work starts.",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "car-lockout",
@@ -556,7 +630,152 @@ export const SERVICES: Service[] = [
         a: "Parts plus a straightforward service call — no shop overhead, no upsell. You get a fair, upfront price quoted on the call — no membership, no hidden fees.",
       },
     ],
-    subServices: [], // Stage 2: diagnostics, brakes, oil-change, general-repairs
+    subServices: [
+      {
+        slug: "diagnostics",
+        name: "Mobile Diagnostics",
+        problem: "Check-engine light on?",
+        solution: "Scanned and explained in plain language, at your location.",
+        seoTitle: "Mobile Car Diagnostics Toronto — Check Engine Light",
+        seoDescription:
+          "Check-engine light on in Toronto or the GTA? A mobile mechanic scans and diagnoses at your home or work, and explains it plainly. Call (416) 558-5915.",
+        summary:
+          "A warning light without an explanation is just anxiety on a dashboard. GoldenNorth comes to your home, office, or roadside anywhere in Toronto and the GTA, reads the fault codes with a professional scan tool, verifies the actual cause — a code alone isn't a diagnosis — and explains it in plain language, with a quote for the fix before any work starts.",
+        included: [
+          "Professional OBD scan for check-engine and warning lights",
+          "Verification of the real cause behind the code",
+          "Plain-language explanation of what it means",
+          "A quote for the repair before any work starts",
+        ],
+        keywords: [
+          "mobile car diagnostics Toronto",
+          "check engine light help GTA",
+          "car diagnostic at home Toronto",
+        ],
+        faqs: [
+          {
+            q: "Is it safe to keep driving with the check-engine light on?",
+            a: "A steady light usually means 'get it checked soon'; a flashing light means 'stop driving now' — it usually indicates an active misfire that can destroy the catalytic converter. If it's flashing, park it and call; we come to the car.",
+          },
+          {
+            q: "Can't I just get the code read for free at a parts store?",
+            a: "You can — but a code names a symptom, not a cause. 'Oxygen sensor code' can mean a bad sensor, a vacuum leak, or a failing catalytic converter. We verify the actual cause so you don't pay to replace parts that weren't the problem.",
+          },
+          {
+            q: "What happens after the diagnosis?",
+            a: "If it's driveway-fixable, we quote the repair and can often do it in the same visit. If it genuinely needs a shop, we tell you straight and you've only paid for the diagnosis.",
+          },
+        ],
+      },
+      {
+        slug: "brakes",
+        name: "Mobile Brake Service",
+        problem: "Brakes grinding or squealing?",
+        solution: "Pads and rotors replaced in your driveway.",
+        seoTitle: "Mobile Brake Repair Toronto — Pads & Rotors at Home",
+        seoDescription:
+          "Grinding or squealing brakes? A mobile mechanic replaces pads and rotors at your home or office across Toronto & the GTA. Fair quote first. (416) 558-5915.",
+        summary:
+          "Grinding brakes don't book appointments. GoldenNorth replaces brake pads and rotors at your home, office, or wherever the car sits, anywhere in Toronto and the GTA — quality parts, torqued to spec, road-checked before we hand the keys back. You get a fair, upfront price quoted on the call, and a straight answer if what you actually need is less than a full brake job.",
+        included: [
+          "Brake inspection with the findings shown to you",
+          "Pad and rotor replacement with quality parts",
+          "Caliper and hardware check while the wheel is off",
+          "Torque to spec and a road check before handover",
+        ],
+        keywords: [
+          "mobile brake replacement Toronto",
+          "brake repair at home GTA",
+          "brake pads and rotors Toronto mobile",
+        ],
+        faqs: [
+          {
+            q: "Is it safe to drive with grinding brakes until you arrive?",
+            a: "Grinding usually means the pad material is gone and metal is wearing the rotor — every drive makes the repair bigger. If you're hearing grinding, the safest move is to park it and have us come to the car.",
+          },
+          {
+            q: "Do I need pads only, or pads and rotors?",
+            a: "It depends on rotor thickness and condition. We measure and show you: if your rotors are within spec and smooth, we say so — you don't buy rotors you don't need.",
+          },
+          {
+            q: "How long does a mobile brake job take?",
+            a: "Typically 1–2 hours per axle at your location, depending on the vehicle. We confirm a realistic window when we quote.",
+          },
+        ],
+      },
+      {
+        slug: "oil-change",
+        name: "Mobile Oil Change",
+        problem: "Overdue for an oil change?",
+        solution: "Done at your home or office — disposal included.",
+        seoTitle: "Mobile Oil Change Toronto — At Your Home or Office",
+        seoDescription:
+          "Mobile oil change across Toronto & the GTA — the right oil and filter for your vehicle, done at your home or office, old oil disposed of. (416) 558-5915.",
+        summary:
+          "An oil change shouldn't cost you a morning. GoldenNorth comes to your driveway, office lot, or condo garage anywhere in Toronto and the GTA with the right oil and filter for your vehicle, does the job while you get on with your day, and takes the old oil away for proper disposal. Fair, upfront price quoted on the call.",
+        included: [
+          "Manufacturer-spec oil (conventional, synthetic blend, or full synthetic)",
+          "New oil filter",
+          "Fluid top-up check while we're under the hood",
+          "Old oil and filter taken away for proper disposal",
+        ],
+        keywords: [
+          "mobile oil change Toronto",
+          "oil change at home GTA",
+          "oil change at work Toronto",
+        ],
+        faqs: [
+          {
+            q: "Which oil do you use for my car?",
+            a: "Whatever your manufacturer specifies — grade and type come from your vehicle's spec, not a menu. Tell us the year, make, and model when you call and we arrive with the right oil and filter.",
+          },
+          {
+            q: "How long does it take?",
+            a: "About 30–45 minutes at your location for most vehicles. You don't need to be standing there — many customers hand us the keys and go back to work.",
+          },
+          {
+            q: "What happens to the old oil?",
+            a: "We take it with us, along with the old filter, for proper environmental disposal. Nothing is left in your driveway.",
+          },
+        ],
+      },
+      {
+        slug: "general-repairs",
+        name: "General Repairs",
+        problem: "Something's wrong, not sure what?",
+        solution: "Diagnosed and repaired where the car sits — when it's driveway-fixable.",
+        seoTitle: "Mobile Car Repairs Toronto — Fixed at Your Location",
+        seoDescription:
+          "Mobile car repairs across Toronto & the GTA: alternators, starters, belts, hoses & sensors fixed at your home or work. Fair upfront quote. (416) 558-5915.",
+        summary:
+          "Not every repair needs a hoist. Alternators, starters, belts, hoses, sensors, and batteries can all be replaced where the car sits — and GoldenNorth does exactly that, at your home, office, or roadside anywhere in Toronto and the GTA. We diagnose first, quote a fair, upfront price on the call, and tell you honestly when a job genuinely belongs in a shop.",
+        included: [
+          "Alternators, starters, and batteries",
+          "Belts and hoses",
+          "Sensors and minor electrical faults",
+          "Diagnosis first — you approve the quote before work starts",
+        ],
+        keywords: [
+          "mobile car repair Toronto",
+          "alternator replacement at home GTA",
+          "mobile auto repair Toronto",
+        ],
+        faqs: [
+          {
+            q: "What repairs can be done in a driveway?",
+            a: "Anything that doesn't need a hoist or shop-only equipment: alternators, starters, batteries, belts, hoses, sensors, and most bolt-on parts. Describe the symptom when you call and we'll tell you straight whether it's driveway-fixable.",
+          },
+          {
+            q: "Where do the parts come from?",
+            a: "We source quality parts for your exact vehicle — often same-day from local suppliers — and quote you the full price, parts and labour, before any work starts.",
+          },
+          {
+            q: "What if it turns out to need a shop after all?",
+            a: "You pay for the diagnosis, not for a repair we can't do. We help arrange a tow if needed and point you to a trustworthy shop.",
+          },
+        ],
+      },
+    ],
   },
 ];
 

@@ -65,6 +65,9 @@ describe("service catalog", () => {
     expect(subs("mobile-tire-service")).toEqual([
       "flat-tire", "spare-tire-install", "new-used-tires", "seasonal-tire-change",
     ]);
+    expect(subs("battery-jump-start")).toEqual(["battery-replacement", "battery-testing"]);
+    expect(subs("car-lockout")).toEqual([]);
+    expect(subs("mobile-mechanic")).toEqual(["diagnostics", "brakes", "oil-change", "general-repairs"]);
   });
 
   it("every sub-service has complete landing-page content and SEO budgets", () => {
