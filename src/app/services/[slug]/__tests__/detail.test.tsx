@@ -50,4 +50,12 @@ describe("Service detail", () => {
     expect(h1).toHaveTextContent("Locked out of your car?");
     expect(h1).toHaveTextContent("Back inside without a scratch — in as little as 20–30 minutes.");
   });
+
+  it("links each sub-service as a pill", async () => {
+    render(await Page({ params: Promise.resolve({ slug: "mobile-tire-service" }) }));
+    expect(screen.getByRole("link", { name: /flat tire repair & change/i })).toHaveAttribute(
+      "href",
+      "/services/mobile-tire-service/flat-tire"
+    );
+  });
 });
