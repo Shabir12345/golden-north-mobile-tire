@@ -58,4 +58,30 @@ describe("service catalog", () => {
     expect(getService("nope")).toBeUndefined();
     expect(getSubService("roadside-assistance", "nope")).toBeUndefined();
   });
+
+  it("sub-services match the approved catalog", () => {
+    const subs = (slug: string) => getService(slug)!.subServices.map((x) => x.slug);
+    expect(subs("roadside-assistance")).toEqual(["fuel-delivery", "tow-coordination"]);
+    expect(subs("mobile-tire-service")).toEqual([
+      "flat-tire", "spare-tire-install", "new-used-tires", "seasonal-tire-change",
+    ]);
+    expect(subs("battery-jump-start")).toEqual(["battery-replacement", "battery-testing"]);
+    expect(subs("car-lockout")).toEqual([]);
+    expect(subs("mobile-mechanic")).toEqual(["diagnostics", "brakes", "oil-change", "general-repairs"]);
+  });
+
+  it("every sub-service has complete landing-page content and SEO budgets", () => {
+    for (const s of SERVICES) for (const x of s.subServices) {
+      expect(x.problem.endsWith("?")).toBe(true);
+      expect(x.solution.length).toBeGreaterThan(10);
+      expect(x.summary.length).toBeGreaterThan(100);
+      expect(x.included.length).toBeGreaterThanOrEqual(3);
+      expect(x.keywords.length).toBeGreaterThanOrEqual(3);
+      expect(x.faqs.length).toBeGreaterThanOrEqual(3);
+      expect(x.seoTitle.length).toBeLessThanOrEqual(60);
+      expect(x.seoDescription.length).toBeGreaterThanOrEqual(120);
+      expect(x.seoDescription.length).toBeLessThanOrEqual(165);
+      expect(JSON.stringify(x)).not.toMatch(/\b(cheap|affordable|best|premier)\b|#1|45–90/i);
+    }
+  });
 });

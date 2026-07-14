@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { BUSINESS } from "@/lib/business";
-import { SERVICE_SLUGS } from "@/lib/services";
+import { SERVICE_SLUGS, SERVICES } from "@/lib/services";
 import { POSTS } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,6 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const subServiceRoutes: MetadataRoute.Sitemap = SERVICES.flatMap((s) =>
+    s.subServices.map((x) => ({
+      url: url(`/services/${s.slug}/${x.slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
+
   const blogRoutes: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: url(`/blog/${post.slug}`),
     lastModified: new Date(`${post.updated}T00:00:00`),
@@ -29,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...subServiceRoutes, ...blogRoutes];
 }

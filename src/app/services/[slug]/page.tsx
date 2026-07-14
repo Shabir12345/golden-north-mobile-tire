@@ -79,10 +79,25 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
-              <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">
+              <Button variant="ghost" size="lg" href="/contact">
                 Contact us
               </Button>
             </div>
+
+            {service.subServices.length > 0 && (
+              <ul className="mt-7 flex flex-wrap gap-2.5" aria-label={`${service.name} services`}>
+                {service.subServices.map((x) => (
+                  <li key={x.slug}>
+                    <Link
+                      href={`/services/${service.slug}/${x.slug}`}
+                      className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[var(--color-on-navy)] transition-colors duration-150 hover:bg-[var(--color-accent)] hover:text-[var(--color-navy)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
+                    >
+                      {x.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className="mt-10 lg:mt-0">
