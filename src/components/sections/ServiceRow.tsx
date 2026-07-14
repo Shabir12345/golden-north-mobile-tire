@@ -40,7 +40,7 @@ export function ServiceRow({ service, index }: ServiceRowProps) {
         </div>
 
         <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--color-body)]">
-          {service.tagline}
+          {service.blurb}
         </p>
 
         <ul className="mt-5 space-y-2" aria-label={`What's included in ${service.name}`}>

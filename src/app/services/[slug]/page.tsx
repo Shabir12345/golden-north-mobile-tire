@@ -64,17 +64,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
           <div>
             <AvailabilityBadge variant="line" onDark className="mb-5" />
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)]">
-              Mobile service · GTA-wide
+              {service.name} · Toronto &amp; the GTA
             </p>
             <h1
               id="service-heading"
-              className="font-bold leading-[1.05] text-white"
-              style={{ fontSize: "clamp(2.25rem, 5.5vw, 3.5rem)", letterSpacing: "-0.02em" }}
+              className="font-bold leading-[1.04] text-white"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
             >
-              {service.name}
+              {service.problem}
+              <span className="mt-2 block text-[var(--color-accent)]">{service.solution}</span>
             </h1>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              {service.tagline}
+              Fair, upfront price quoted on the call — no membership, no hidden fees.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />

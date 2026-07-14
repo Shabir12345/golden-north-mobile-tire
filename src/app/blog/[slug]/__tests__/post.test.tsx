@@ -24,7 +24,7 @@ describe("Blog post page", () => {
     const links = screen.getAllByRole("link", { name: /tire change/i });
     expect(links.length).toBeGreaterThan(0);
     for (const link of links) {
-      expect(link).toHaveAttribute("href", "/services/tire-change");
+      expect(link).toHaveAttribute("href", "/services/mobile-tire-service");
     }
   });
 

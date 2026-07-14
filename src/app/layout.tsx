@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import { BUSINESS } from "@/lib/business";
 import { Header } from "@/components/layout/Header";
@@ -7,7 +7,18 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { LocalBusinessJsonLd } from "@/lib/jsonld";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   // Absolute base for every relative URL Next generates (OG images, icons,
@@ -35,7 +46,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body className="font-sans antialiased">
         {/* Structured data — rendered once, in the document body. */}
         <LocalBusinessJsonLd />

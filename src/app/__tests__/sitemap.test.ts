@@ -6,7 +6,7 @@ describe("sitemap", () => {
     const urls = sitemap().map((e) => e.url);
     expect(urls).toContain("https://www.goldennorthmobiletires.com/");
     expect(urls).toContain("https://www.goldennorthmobiletires.com/services");
-    expect(urls).toContain("https://www.goldennorthmobiletires.com/services/battery");
+    expect(urls).toContain("https://www.goldennorthmobiletires.com/services/battery-jump-start");
     expect(urls).toContain("https://www.goldennorthmobiletires.com/gallery");
     expect(urls).toContain("https://www.goldennorthmobiletires.com/contact");
   });

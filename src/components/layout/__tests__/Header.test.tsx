@@ -17,6 +17,33 @@ describe("Header", () => {
   });
 });
 
+describe("Header desktop Services dropdown", () => {
+  it("desktop nav exposes a Services dropdown with the five services", async () => {
+    render(<Header />);
+    const trigger = screen.getByRole("button", { name: /services menu/i });
+    expect(trigger).toHaveAttribute("aria-expanded", "false");
+    await userEvent.click(trigger);
+    expect(trigger).toHaveAttribute("aria-expanded", "true");
+    expect(screen.getByRole("link", { name: /roadside assistance/i })).toHaveAttribute(
+      "href",
+      "/services/roadside-assistance"
+    );
+    expect(screen.getByRole("link", { name: /mobile mechanic/i })).toHaveAttribute(
+      "href",
+      "/services/mobile-mechanic"
+    );
+  });
+
+  it("closes the services dropdown on Escape", async () => {
+    render(<Header />);
+    const trigger = screen.getByRole("button", { name: /services menu/i });
+    await userEvent.click(trigger);
+    expect(trigger).toHaveAttribute("aria-expanded", "true");
+    await userEvent.keyboard("{Escape}");
+    expect(trigger).toHaveAttribute("aria-expanded", "false");
+  });
+});
+
 describe("Header mobile menu", () => {
   it("mounts the panel on open and unmounts it on close", async () => {
     const user = userEvent.setup();

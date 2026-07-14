@@ -10,7 +10,7 @@ keywords:
   - what to do flat tire gta
 date: "2026-07-01"
 updated: "2026-07-03"
-relatedService: roadside
+relatedService: roadside-assistance
 faqs:
   - q: Should I change a flat myself on the highway?
     a: Only if the flat is on the side away from traffic, the shoulder is wide, and the car sits on firm, level ground. Passing vehicles are the real danger, not the tire. On a road like the 401, the safer call is to stay buckled inside and phone for help.
@@ -89,7 +89,7 @@ Help finds you faster when you can answer four questions:
 3. **Your vehicle** — make, model, and colour, so the driver spots you on a shoulder full of cars.
 4. **Which tire is flat** — it tells the operator how the truck should position when it arrives.
 
-GoldenNorth handles [24/7 roadside assistance](/services/roadside) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
+GoldenNorth handles [24/7 roadside assistance](/services/roadside-assistance) on highway shoulders across the GTA corridor — the 401, 427, DVP, Gardiner, and beyond. No membership, no annual fee; you pay for the call you actually make.
 
 ## While you wait
 

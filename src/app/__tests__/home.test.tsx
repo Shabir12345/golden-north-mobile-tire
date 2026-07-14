@@ -3,9 +3,15 @@ import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
 
 describe("Home", () => {
-  it("renders all four service cards", () => {
+  it("renders all five service cards", () => {
     render(<Home />);
-    for (const name of [/tire change/i,/used tires/i,/battery/i,/roadside/i]) {
+    for (const name of [
+      /roadside assistance/i,
+      /mobile tire service/i,
+      /battery jump start/i,
+      /car lockout/i,
+      /mobile mechanic/i,
+    ]) {
       expect(screen.getByRole("heading", { name, level: 3 })).toBeInTheDocument();
     }
   });
