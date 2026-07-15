@@ -19,7 +19,7 @@ faqs:
   - q: How old is too old for a used tire?
     a: "Rubber degrades with age regardless of tread. Check the DOT date code on the sidewall — the last four digits are the week and year it was made (3524 means week 35 of 2024). Past six years or so, a tire is a pass even if the tread looks generous."
   - q: How do I find my tire size?
-    a: It's on the sidewall and on the sticker inside the driver's door jamb — a code like 225/65R17. Tell us that code and we'll confirm what fits.
+    a: Check the sticker inside the driver's door jamb first — it lists the size the carmaker fitted, as a code like 225/65R17. The sidewall shows what's on the car right now, which isn't always the same thing if a previous owner changed sizes. When the two disagree, trust the door jamb.
 ---
 
 It's a familiar Toronto moment: one tire picks up a drywall screw on the Gardiner, the puncture is in the sidewall so it can't be repaired, and the first quote you get is for a full set of four — for a car with three perfectly good tires on it.

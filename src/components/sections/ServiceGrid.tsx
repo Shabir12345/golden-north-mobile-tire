@@ -3,13 +3,16 @@
 // links. Replaces the tall editorial row layout — a stranded visitor
 // sees the full catalog in one screen. Card hover uses the ambient card-lift;
 // pills are real links so ad/search visitors can deep-dive in one tap.
+// `detailed` (the /services overview) also renders each service's `included`
+// list, so the overview carries substance of its own instead of repeating the
+// homepage card blurbs verbatim.
 
 import Link from "next/link";
 import { SERVICES } from "@/lib/services";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function ServiceGrid() {
+export function ServiceGrid({ detailed = false }: { detailed?: boolean } = {}) {
   return (
     <div className="grid gap-5 md:grid-cols-2">
       {SERVICES.map((service, i) => (
@@ -35,6 +38,17 @@ export function ServiceGrid() {
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-body)]">{service.blurb}</p>
               </div>
             </div>
+
+            {detailed && (
+              <ul className="mt-5 space-y-2.5" aria-label={`What's included in ${service.name}`}>
+                {service.included.map((line) => (
+                  <li key={line} className="flex items-start gap-3 text-sm leading-relaxed text-[var(--color-body)]">
+                    <span aria-hidden="true" className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {service.subServices.length > 0 && (
               <ul className="mt-5 flex flex-wrap gap-2 border-t border-[var(--color-border)] pt-4" aria-label={`${service.name} services`}>

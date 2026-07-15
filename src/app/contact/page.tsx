@@ -14,6 +14,7 @@ import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { CONTACT_FAQS } from "@/lib/faqs";
+import { BreadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata = buildMetadata({
   title: "Contact — 24/7 Emergency Roadside Help in the GTA",
@@ -24,6 +25,13 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
+      />
+
       {/* Call-first header */}
       <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-labelledby="contact-heading">
         <CompassRose className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 text-[var(--color-accent)] opacity-[0.06]" />

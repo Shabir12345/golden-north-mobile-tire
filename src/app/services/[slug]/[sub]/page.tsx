@@ -109,6 +109,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
       <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-label={`About ${item.name}`}>
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="max-w-3xl text-xl leading-relaxed text-[var(--color-body)]">{item.summary}</p>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--color-body)]">{item.details}</p>
           <TrustBadges className="mt-10 border-t border-[var(--color-border)] pt-8" />
           <div className="mt-14 max-w-2xl">
             <h2 className="font-bold text-2xl text-[var(--color-heading)]">What we do</h2>

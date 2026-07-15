@@ -15,7 +15,7 @@ export const BUSINESS = {
     locality: "North York",
     region: "ON",
     postalCode: "M2J 3B5",
-    country: "Canada",
+    country: "CA", // ISO 3166-1 alpha-2 — Google's PostalAddress guidance; JSON-LD only, never rendered
   },
   socials: {
     tiktok: "https://www.tiktok.com/@goldennorthmobiletires",

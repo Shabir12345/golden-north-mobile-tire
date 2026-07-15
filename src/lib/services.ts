@@ -18,6 +18,7 @@ export interface SubService {
   seoTitle: string; // ≤60 chars
   seoDescription: string; // 120–165 chars
   summary: string;
+  details: string; // one substantive paragraph with a distinct angle — keeps the page from being thin/templated (SEO audit, Stage 4)
   included: string[];
   keywords: string[];
   faqs: Faq[];
@@ -108,6 +109,8 @@ export const SERVICES: Service[] = [
           "Ran out of gas in Toronto or the GTA? 24/7 emergency fuel delivery — enough fuel to reach a station, in as little as 20–30 minutes. Call (416) 558-5915.",
         summary:
           "The gauge said you'd make it; the car disagreed. GoldenNorth brings fuel to you anywhere in Toronto and the GTA, 24/7 — in as little as 20–30 minutes. We pour safely, make sure the car starts, and you drive to the nearest station instead of walking to it. Fair, upfront price quoted on the call — no membership, no hidden fees.",
+        details:
+          "A few things help while you wait. Put your hazards on, and if you're on a highway shoulder, stay in the car with your seatbelt fastened unless you can wait safely behind a barrier. Resist the urge to keep cranking: a fuel-starved engine that's cranked over and over can flood and drain the battery, turning one problem into two. And if the car died in a live lane and won't coast to the shoulder, say so on the call — we'll plan a safe approach before we arrive.",
         included: [
           "Gasoline or diesel brought to your location",
           "Enough fuel to reach the nearest station comfortably",
@@ -145,6 +148,8 @@ export const SERVICES: Service[] = [
           "If your car can't be fixed at the roadside, GoldenNorth helps arrange the tow and points you to a trustworthy GTA shop. 24/7 honest triage. (416) 558-5915.",
         summary:
           "Most calls we fix on the spot — that's the point of mobile service. When the problem is genuinely beyond a roadside repair, we say so, help arrange a tow, and point you toward a shop we'd send our own cars to. You get a straight answer instead of a tow bill you didn't need. 24/7, anywhere in Toronto and the GTA.",
+        details:
+          "A rough rule from years of triage calls: if the problem lives at a wheel, the battery, the fuel tank, or a door lock, it can usually be solved where the car sits. If it lives inside the engine, the transmission, or the brake hydraulics, it usually can't. That's the split we're listening for when we ask what you saw, heard, and smelled before the car stopped — and it's why the most common tow we prevent is the one called for a car that never needed one.",
         included: [
           "Roadside triage first — most problems don't need a tow",
           "Tow arrangement when the repair genuinely needs a shop",
@@ -240,6 +245,8 @@ export const SERVICES: Service[] = [
           "Flat tire in Toronto or the GTA? 24/7 mobile flat tire repair and change at your location, in as little as 20–30 minutes. Fair quote on the call. (416) 558-5915.",
         summary:
           "A flat doesn't wait for a convenient moment. GoldenNorth comes to you anywhere in Toronto and the GTA, 24/7 — in as little as 20–30 minutes. We assess the puncture, repair it on the spot when it's safe to, install your spare, or fit a replacement tire if the damage is beyond saving. You get a fair, upfront price quoted on the call — no membership, no hidden fees.",
+        details:
+          "Whether a flat can be repaired is often decided before we even arrive — by how far it was driven after losing pressure. Even a few hundred metres on a fully deflated tire grinds the sidewall's inner structure against the rim, and that can turn a plug-able nail hole into a tire that's finished. If you feel the car go soft, pull over as soon as it's safe and let the repair come to you: it protects the tire, the rim, and often the difference between a patch and a replacement.",
         included: [
           "Puncture assessment — repair vs. replace, explained plainly",
           "Plug or patch repair where the damage allows it",
@@ -278,6 +285,8 @@ export const SERVICES: Service[] = [
           "Can't change your own spare? 24/7 mobile spare tire installation across Toronto & the GTA, in as little as 20–30 minutes. Fair quote on the call. (416) 558-5915.",
         summary:
           "You have the spare; the highway shoulder is no place to learn to use it. GoldenNorth comes to you 24/7 anywhere in Toronto and the GTA — in as little as 20–30 minutes — jacks the car safely, fits your spare, torques it to spec, and checks the pressure so it's actually drivable. Fair, upfront price quoted on the call.",
+        details:
+          "Modern cars have complicated what used to be a simple job. Many hide their jack points behind plastic sill covers that crack if the car is lifted in the wrong spot, some ship with a foam-sealant kit instead of a spare, and lug nuts run on by a shop's impact gun can be beyond hand-tool strength entirely. We arrive with the right jack, the leverage, and a torque wrench — and if your trunk turns out to hold a sealant kit rather than a spare, we can repair the flat or bring a tire in your size instead.",
         included: [
           "Safe jacking on level ground — no scraped rockers, no guesswork",
           "Spare fitted and torqued to OEM spec",
@@ -314,6 +323,8 @@ export const SERVICES: Service[] = [
           "New and quality used tires sourced in your size and installed at your home, office, or roadside anywhere in the GTA. Most sizes within 24 hours. (416) 558-5915.",
         summary:
           "GoldenNorth sources new and quality used tires and installs them at your location anywhere in Toronto and the GTA — no hauling rims to a shop, no waiting room. Touring, all-season, winter, and all-terrain options in the sizes most common on GTA roads, from compact sedans to full-size pickups, at a fair, upfront price quoted on the call — without chain-store upsell pressure.",
+        details:
+          "Every tire carries its birth date moulded into the sidewall: the last four digits of the DOT code read week and year, so 3523 means the 35th week of 2023. We check it on every tire we source, because rubber ages even sitting in storage — a decade-old tire with generous tread is still past its safe working life. It's exactly the detail a parking-lot private sale never mentions, and one of the strongest reasons to buy a used tire from someone who inspects them for a living.",
         included: [
           "Tire sourcing in your exact size — new or quality used",
           "Most sizes available within 24 hours",
@@ -334,7 +345,7 @@ export const SERVICES: Service[] = [
           },
           {
             q: "Can I buy just one tire instead of a full set?",
-            a: "Yes. If one tire is damaged beyond repair, we source a matching used tire close in tread depth to your remaining three. For all-wheel-drive vehicles we measure your existing tread first, since large differences can strain the drivetrain.",
+            a: "Absolutely — matching a single damaged tire is one of the most common used-tire calls we get. We pick a tire whose tread depth sits close to your other three so the rolling diameters agree; on all-wheel-drive vehicles we measure your remaining tread first, because a mismatched corner can stress the drivetrain.",
           },
           {
             q: "Should I buy new or used?",
@@ -356,6 +367,8 @@ export const SERVICES: Service[] = [
           "24/7 mobile seasonal tire change across Toronto & the GTA. We come to your driveway or condo garage for winter and summer swaps. Call (416) 558-5915.",
         summary:
           "GoldenNorth swaps your seasonal tires at your driveway, office lot, or condo garage anywhere in Toronto and the GTA — mounted, torqued to spec, pressures set. Switch to winters before the first snowfall or back to summers in spring without burning a Saturday in a tire-shop waiting room. Fair, upfront price quoted on the call — no membership, no hidden fees.",
+        details:
+          "One habit makes every future swap better: when the wheels come off, we mark each tire's position — FR, RL, and so on — so the next changeover can rotate them properly instead of guessing, which evens out wear across the set. Store the off-season set somewhere cool and dark: stacked flat or on rims in a garage or basement is ideal, while a sunny balcony bakes the rubber and quietly steals seasons from its life.",
         included: [
           "On-rim seasonal changeover (winter ↔ summer / all-season)",
           "Torque-wrench tightened to OEM spec",
@@ -455,6 +468,8 @@ export const SERVICES: Service[] = [
           "Dead battery? We test, then install a fresh warranted battery on the spot — home, work, or roadside across the GTA, 24/7. Call (416) 558-5915.",
         summary:
           "A dead battery in a Toronto winter shouldn't mean waiting hours for a tow. GoldenNorth installs a fresh, warranted battery right where your car sits — home, workplace, parking garage, or roadside, anywhere in Toronto and the GTA, 24/7. We load-test first so you're not buying a battery you don't need, and you get a fair, upfront price quoted on the call.",
+        details:
+          "On many vehicles from the last decade, a battery isn't just swapped — it's registered. Cars with start-stop systems and smart charging need the new battery's type and capacity coded to the body computer so the alternator charges it correctly; skip that step and even a brand-new AGM unit can end up chronically undercharged or cooked within a year. We bring the registration tools along with the battery, which is what makes a driveway replacement the equal of a dealer visit rather than a shortcut.",
         included: [
           "Load test first — you only replace what's actually dead",
           "Fresh, warranted battery installed from the van",
@@ -470,11 +485,11 @@ export const SERVICES: Service[] = [
         faqs: [
           {
             q: "What battery brands and sizes do you carry?",
-            a: "Trusted replacement brands in the most common group sizes (35, 47, 48, 65, 94R), covering most Honda, Toyota, Ford, GM, and Nissan vehicles on Toronto roads. Unusual size? Call ahead and we'll source it.",
+            a: "The van is stocked with reputable replacement batteries in the group sizes that fit the large majority of vehicles on GTA roads, including AGM units for cars with start-stop systems. Driving something less common? Mention it on the call and we'll bring the right one.",
           },
           {
             q: "Will replacing the battery reset my car's settings?",
-            a: "Modern vehicles can lose some memory settings when the battery is swapped. We use a memory saver during replacement to minimise this, and we'll flag beforehand if your vehicle has known sensitivities.",
+            a: "On some vehicles, clock, radio presets, and driver-profile memory can drop when power is cut. We connect a memory saver before disconnecting the old battery so those settings survive the swap, and if your make is one of the finicky ones, we'll tell you before we start.",
           },
           {
             q: "How long does a car battery last in Canadian winters?",
@@ -492,6 +507,8 @@ export const SERVICES: Service[] = [
           "Slow cranks or a battery you don't trust? Mobile battery load testing and charging-system checks at your location across Toronto & the GTA. (416) 558-5915.",
         summary:
           "Slow cranking on cold mornings is a battery telling you something. GoldenNorth comes to your home or workplace anywhere in Toronto and the GTA and runs a proper load test plus a charging-system check — so you know whether the battery is ageing, the alternator is undercharging, or something is draining it. You see the test result yourself, and there's no pressure to replace what still passes.",
+        details:
+          "The right time to test a battery is before the season that kills it — in the GTA, that means October. A battery that passes a load test with headroom at 10°C has reserves for January's mornings; one that barely scrapes through in the fall almost never survives the first deep freeze. If your battery is heading into its fourth winter, a ten-minute driveway test lets you pick the day it gets replaced, instead of letting a -20°C morning in an underground garage pick it for you.",
         included: [
           "Battery load test with the result shown to you",
           "Charging system / alternator output check",
@@ -641,6 +658,8 @@ export const SERVICES: Service[] = [
           "Check-engine light on in Toronto or the GTA? A mobile mechanic scans and diagnoses at your home or work, and explains it plainly. Call (416) 558-5915.",
         summary:
           "A warning light without an explanation is just anxiety on a dashboard. GoldenNorth comes to your home, office, or roadside anywhere in Toronto and the GTA, reads the fault codes with a professional scan tool, verifies the actual cause — a code alone isn't a diagnosis — and explains it in plain language, with a quote for the fix before any work starts.",
+        details:
+          "A professional scan captures more than a code. Freeze-frame data records what the engine was doing the instant the fault tripped — speed, temperature, load — which is how an intermittent problem gets caught without waiting for it to misbehave again. It's also why “the light went off by itself” doesn't mean the problem left: the code and its snapshot stay stored, and reading them before they're overwritten is the quickest route to the real cause.",
         included: [
           "Professional OBD scan for check-engine and warning lights",
           "Verification of the real cause behind the code",
@@ -677,6 +696,8 @@ export const SERVICES: Service[] = [
           "Grinding or squealing brakes? A mobile mechanic replaces pads and rotors at your home or office across Toronto & the GTA. Fair quote first. (416) 558-5915.",
         summary:
           "Grinding brakes don't book appointments. GoldenNorth replaces brake pads and rotors at your home, office, or wherever the car sits, anywhere in Toronto and the GTA — quality parts, torqued to spec, road-checked before we hand the keys back. You get a fair, upfront price quoted on the call, and a straight answer if what you actually need is less than a full brake job.",
+        details:
+          "GTA winters are hard on brakes in a specific way: road salt corrodes the caliper slide pins, and a sticking slider drags one pad against the rotor full-time — wearing it to the backing plate while its partner still looks new. That's why we check and lubricate the sliders and hardware every time a wheel is off rather than just swapping pads; a brake job that ignores a seized slider eats the new pads within months. One wheel running hotter or dustier than the others is the classic giveaway.",
         included: [
           "Brake inspection with the findings shown to you",
           "Pad and rotor replacement with quality parts",
@@ -713,6 +734,8 @@ export const SERVICES: Service[] = [
           "Mobile oil change across Toronto & the GTA — the right oil and filter for your vehicle, done at your home or office, old oil disposed of. (416) 558-5915.",
         summary:
           "An oil change shouldn't cost you a morning. GoldenNorth comes to your driveway, office lot, or condo garage anywhere in Toronto and the GTA with the right oil and filter for your vehicle, does the job while you get on with your day, and takes the old oil away for proper disposal. Fair, upfront price quoted on the call.",
+        details:
+          "“Manufacturer-spec” does real work in that sentence. Turbocharged engines — common on newer compacts and SUVs — typically demand a full synthetic that stands up to higher heat; many recent engines require thin 0W-20 or 0W-16 grades that didn't exist a generation ago; and European makes often need oil certified to their own standards, not just the right viscosity. While the oil drains we also look over what's visible under the hood — belt condition, coolant level, air filter — and tell you what we see, with no pressure to act on any of it that day.",
         included: [
           "Manufacturer-spec oil (conventional, synthetic blend, or full synthetic)",
           "New oil filter",
@@ -749,6 +772,8 @@ export const SERVICES: Service[] = [
           "Mobile car repairs across Toronto & the GTA: alternators, starters, belts, hoses & sensors fixed at your home or work. Fair upfront quote. (416) 558-5915.",
         summary:
           "Not every repair needs a hoist. Alternators, starters, belts, hoses, sensors, and batteries can all be replaced where the car sits — and GoldenNorth does exactly that, at your home, office, or roadside anywhere in Toronto and the GTA. We diagnose first, quote a fair, upfront price on the call, and tell you honestly when a job genuinely belongs in a shop.",
+        details:
+          "Some real examples of driveway fixes: a car that clicks once but won't crank is usually a starter or a corroded battery cable — both replaceable where it sits. A squeal that rises and falls with engine speed points to a drive belt or a seizing pulley, an hour's work when caught early. A car stuck in limp mode after a sensor fault can often be diagnosed, have the sensor replaced, and be cleared on-site. None of those need a hoist, and all of them end with the car driving away instead of being towed.",
         included: [
           "Alternators, starters, and batteries",
           "Belts and hoses",

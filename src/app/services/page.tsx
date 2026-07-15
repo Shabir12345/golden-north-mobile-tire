@@ -10,6 +10,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { CallButton, Button } from "@/components/ui/Button";
 import { SERVICES_FAQS } from "@/lib/faqs";
+import { BreadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata = buildMetadata({
   title: "24/7 Roadside & Mobile Services — Toronto & the GTA",
@@ -20,6 +21,12 @@ export const metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ]}
+      />
       <PageHeader
         title={
           <>
@@ -36,9 +43,12 @@ export default function ServicesPage() {
         </Button>
       </PageHeader>
 
-      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-label="Our services">
+      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="services-grid-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <ServiceGrid />
+          <h2 id="services-grid-heading" className="sr-only">
+            Our services
+          </h2>
+          <ServiceGrid detailed />
         </div>
       </section>
 

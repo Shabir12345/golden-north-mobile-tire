@@ -13,7 +13,7 @@ export function LocalBusinessJsonLd() {
     telephone: BUSINESS.phoneRaw,
     email: BUSINESS.email,
     image: `${BUSINESS.url}/photos/hero-night-tech.webp`,
-    logo: `${BUSINESS.url}/icon.svg`,
+    logo: `${BUSINESS.url}/logo.png`, // raster required — Google's logo guidance doesn't accept SVG
     priceRange: "$$",
     slogan: BUSINESS.tagline,
     // Registered base address — strengthens local SEO even though service is mobile.
@@ -67,7 +67,7 @@ export function ArticleJsonLd({
       "@type": "Organization",
       "@id": `${BUSINESS.url}/#business`,
       name: BUSINESS.name,
-      logo: { "@type": "ImageObject", url: `${BUSINESS.url}/icon.svg` },
+      logo: { "@type": "ImageObject", url: `${BUSINESS.url}/logo.png` },
     },
     image: `${BUSINESS.url}/opengraph-image`,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },

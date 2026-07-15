@@ -19,7 +19,7 @@ import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "24/7 Roadside Assistance Toronto & GTA — 20–30 Min",
-  description: `Stranded? 24/7 roadside assistance, mobile tire service, jump starts, lockouts & mobile mechanics across Toronto & the GTA — in as little as 20–30 minutes. Call ${BUSINESS.phoneDisplay}.`,
+  description: `Stranded? 24/7 roadside assistance across Toronto & the GTA — tires, jump starts, lockouts, mobile mechanics — in as little as 20–30 minutes. Call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
 
