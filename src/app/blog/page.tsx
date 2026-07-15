@@ -12,8 +12,8 @@ import { CTABand } from "@/components/sections/CTABand";
 import { BreadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Mobile Tire & Roadside Tips — GoldenNorth Blog",
-  description: `Practical winter-tire, roadside, and car-battery advice for Toronto & GTA drivers from ${BUSINESS.shortName} — when to swap, what to do, and how mobile service saves the shop trip.`,
+  title: "GoldenNorth Blog: Mobile Tire & Roadside Tips",
+  description: `Practical winter-tire, roadside, and car-battery advice for Toronto & GTA drivers from ${BUSINESS.shortName}: when to swap, what to do, and how mobile service saves the shop trip.`,
   path: "/blog",
 });
 
@@ -41,7 +41,7 @@ export default function BlogIndexPage() {
             Tips from the <span className="text-[var(--color-accent)]">roadside.</span>
           </>
         }
-        intro="Straight answers on winter tires, flats, and dead batteries for GTA drivers — from the crew that comes to you."
+        intro="Straight answers on winter tires, flats, and dead batteries for GTA drivers, from the crew that comes to you."
       />
 
       <section className="bg-[var(--color-page)] py-16 lg:py-24" aria-label="Blog posts">

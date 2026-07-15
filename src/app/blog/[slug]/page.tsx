@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-body)]">{service.blurb}</p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <CallButton />
-                <Button variant="ghost" href={`/services/${service.slug}`} aria-label={`${service.name} — view service`}>
+                <Button variant="ghost" href={`/services/${service.slug}`} aria-label={`${service.name}, view service`}>
                   View {service.shortName}
                 </Button>
               </div>

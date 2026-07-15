@@ -29,7 +29,7 @@ describe("Service detail", () => {
 
   it("builds keyword-first metadata from the service SEO fields", async () => {
     const m = await generateMetadata({ params: Promise.resolve({ slug: "mobile-tire-service" }) });
-    expect(m.title).toBe("Mobile Tire Service Toronto — Flats, Swaps, New & Used");
+    expect(m.title).toBe("Mobile Tire Service Toronto: Flats, Swaps, New & Used");
     expect(m.description).toContain("(416) 558-5915");
   });
 
@@ -48,7 +48,7 @@ describe("Service detail", () => {
     render(await Page({ params: Promise.resolve({ slug: "car-lockout" }) }));
     const h1 = screen.getByRole("heading", { level: 1 });
     expect(h1).toHaveTextContent("Locked out of your car?");
-    expect(h1).toHaveTextContent("Back inside without a scratch — in as little as 20–30 minutes.");
+    expect(h1).toHaveTextContent("Back inside without a scratch, in as little as 20-30 minutes.");
   });
 
   it("links each sub-service as a pill", async () => {

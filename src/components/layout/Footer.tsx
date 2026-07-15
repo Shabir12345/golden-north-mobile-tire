@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
 ] as const;
 
 function TikTokIcon() {

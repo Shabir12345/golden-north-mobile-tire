@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: BUSINESS.name,
     short_name: BUSINESS.shortName,
     description:
-      "24/7 emergency roadside assistance — mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs — across the Greater Toronto Area.",
+      "24/7 emergency roadside assistance: mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs across the Greater Toronto Area.",
     start_url: "/",
     display: "standalone",
     background_color: "#151D2E",

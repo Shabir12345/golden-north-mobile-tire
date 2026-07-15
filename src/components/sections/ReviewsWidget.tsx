@@ -1,5 +1,6 @@
 // ─── ReviewsWidget ────────────────────────────────────────────────────────────
-// Featurable Google-reviews embed. Featured on the home and contact pages only.
+// Featurable Google-reviews embed. Rendered on the home, contact, services
+// overview, and every service / sub-service landing page.
 // Featurable's bundle.js scans the DOM for `[data-featurable-async]` containers
 // and renders the carousel into them. Because the App Router mounts/unmounts the
 // container on client-side navigation, we (re)load the bundle on each mount so a

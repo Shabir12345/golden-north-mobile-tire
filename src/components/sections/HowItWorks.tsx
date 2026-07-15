@@ -8,9 +8,9 @@ import { BUSINESS } from "@/lib/business";
 
 export function HowItWorks() {
   const steps = [
-    { n: "01", heading: "Call.", body: `One number — ${BUSINESS.phoneDisplay} — connects you straight to us. No app, no queue, no chatbot. You'll have a straight quote and an honest ETA before we hang up.` },
-    { n: "02", heading: "We head out.", body: "Tell us where you are — a Vaughan driveway, a Markham office lot, a highway shoulder. We're dispatched and on our way, anywhere in the GTA, in as little as 20–30 minutes." },
-    { n: "03", heading: "Back on the road.", body: "We handle it on the spot — tire changed, battery swapped, lockout cleared, or mechanical issue fixed — and you carry on with your day." },
+    { n: "01", heading: "Call.", body: `One number, ${BUSINESS.phoneDisplay}, connects you straight to us. No app, no queue, no chatbot. You'll have a straight quote and an honest ETA before we hang up.` },
+    { n: "02", heading: "We head out.", body: "Tell us where you are: a Vaughan driveway, a Markham office lot, a highway shoulder. We're dispatched and on our way, anywhere in the GTA, in as little as 20-30 minutes." },
+    { n: "03", heading: "Back on the road.", body: "We handle it on the spot: tire changed, battery swapped, lockout cleared, or mechanical issue fixed. Then you carry on with your day." },
   ] as const;
 
   return (

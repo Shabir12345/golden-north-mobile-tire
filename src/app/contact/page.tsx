@@ -17,8 +17,8 @@ import { CONTACT_FAQS } from "@/lib/faqs";
 import { BreadcrumbJsonLd } from "@/lib/jsonld";
 
 export const metadata = buildMetadata({
-  title: "Contact — 24/7 Emergency Roadside Help in the GTA",
-  description: `Reach ${BUSINESS.name} 24/7 for roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic help anywhere in the GTA. Call ${BUSINESS.phoneDisplay} — or send a message.`,
+  title: "Contact Us: 24/7 Emergency Roadside Help in the GTA",
+  description: `Reach ${BUSINESS.name} 24/7 for roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic help anywhere in the GTA. Call ${BUSINESS.phoneDisplay} or send a message.`,
   path: "/contact",
 });
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
             We pick up. <span className="text-[var(--color-accent)]">Day or night.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-footer-fg)]">
-            The fastest way to get help moving is to call. One number, a real person, no queue —
+            The fastest way to get help moving is to call. One number, a real person, no queue,
             and you&rsquo;ll have an upfront quote and an honest ETA before we hang up.
           </p>
 

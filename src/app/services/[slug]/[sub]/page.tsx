@@ -17,6 +17,7 @@ import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CTABand } from "@/components/sections/CTABand";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { TrustBadges } from "@/components/ui/TrustBadges";
+import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
 type Params = { slug: string; sub: string };
 
@@ -90,7 +91,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
               <span className="mt-2 block text-[var(--color-accent)]">{item.solution}</span>
             </h1>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              Fair, upfront price quoted on the call — no membership, no hidden fees.
+              Fair, upfront price quoted on the call: no membership, no hidden fees.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
@@ -137,7 +138,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
             <Link
               href={`/services/${service.slug}`}
               className="group card-lift flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
-              aria-label={`${service.name} — view service`}
+              aria-label={`${service.name}, view service`}
             >
               <span className="font-bold text-lg text-[var(--color-heading)]">{service.name}</span>
               <span aria-hidden="true" className="text-[var(--color-accent-deep)] transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -147,7 +148,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
                 key={x.slug}
                 href={`/services/${service.slug}/${x.slug}`}
                 className="group card-lift flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
-                aria-label={`${x.name} — view service`}
+                aria-label={`${x.name}, view service`}
               >
                 <span className="font-bold text-lg text-[var(--color-heading)]">{x.name}</span>
                 <span aria-hidden="true" className="text-[var(--color-accent-deep)] transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -157,6 +158,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
         </div>
       </section>
 
+      <ReviewsWidget />
       <CTABand />
     </>
   );

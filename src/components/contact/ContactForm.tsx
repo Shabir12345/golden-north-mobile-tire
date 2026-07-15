@@ -7,6 +7,7 @@
 // own message is surfaced when a submit is rejected.
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Status = "idle" | "sending" | "sent" | "error";
 type FieldErrors = Partial<Record<"name" | "phone" | "email" | "message", string>>;
@@ -78,7 +79,7 @@ export function ContactForm() {
   if (status === "sent") {
     return (
       <div role="status" className="rounded-lg border border-[var(--color-border)] bg-[var(--color-accent-soft)] p-6 text-center">
-        <p className="text-xl font-bold text-[var(--color-accent-deep)]">Thanks — message received.</p>
+        <p className="text-xl font-bold text-[var(--color-accent-deep)]">Thanks, message received.</p>
         <p className="mt-2 text-sm text-[var(--color-body)]">
           We&rsquo;ll reply shortly. Need help right now? Calling is always fastest.
         </p>
@@ -149,6 +150,17 @@ export function ContactForm() {
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>
+
+      <p className="text-xs leading-relaxed text-[var(--color-muted)]">
+        We only use these details to reply to you. See our{" "}
+        <Link
+          href="/privacy"
+          className="font-semibold underline underline-offset-2 text-[var(--color-body)] hover:text-[var(--color-heading)] rounded-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+        >
+          privacy policy
+        </Link>
+        .
+      </p>
 
       <p aria-live="polite" className="sr-only">
         {status === "sending" ? "Sending your message" : ""}

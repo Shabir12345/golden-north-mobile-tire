@@ -13,7 +13,7 @@ describe("Hero", () => {
     render(<Hero />);
     const h1 = screen.getByRole("heading", { level: 1 });
     expect(h1).toHaveTextContent("Stranded in the GTA?");
-    expect(h1).toHaveTextContent("in as little as 20–30 minutes");
+    expect(h1).toHaveTextContent("in as little as 20-30 minutes");
   });
 
   it("shows the live-dispatch line and the review badge slot", () => {
