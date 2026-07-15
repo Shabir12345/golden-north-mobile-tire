@@ -35,7 +35,7 @@ const base = [
 ].join(" ");
 
 const sizeMap: Record<ButtonSize, string> = {
-  md: "text-sm px-5 py-3",
+  md: "text-sm px-5 py-3 min-h-11", // min-h-11 = 44px tap-target floor (stranded-on-mobile-first)
   lg: "text-base px-7 py-4",
 };
 

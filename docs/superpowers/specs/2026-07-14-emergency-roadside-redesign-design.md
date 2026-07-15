@@ -1,7 +1,7 @@
 # Emergency Roadside Repositioning — Design
 
 **Date:** 2026-07-14
-**Status:** Approved pending user review
+**Status:** Implemented (Stages 1–4 complete, 2026-07-15)
 
 ## Goal
 
@@ -184,3 +184,34 @@ updated for renamed routes and hero copy.
 - No new photography (reuse existing gallery/hero shots).
 - Blog content unchanged (internal links updated only if they point at
   redirected URLs).
+
+---
+
+## Implementation deviations (recorded at Stage 4 close, 2026-07-15)
+
+- **Blog content:** spec said "unchanged (internal links updated only)". Stage 4
+  additionally swept owner-banned words from blog copy ("cheap tires gta"
+  keyword, "cheap certainty", "cheapest", "cheaper", "best performance" — all
+  carry-forward items) and diverged the new-vs-used-tires FAQ answer for "How do
+  I find my tire size?" so its FAQPage schema is distinct from the sub-service
+  page's (SEO audit dedupe finding).
+- **Repeating-motion anchors:** the third infinite animation is the ambient
+  compass-rose spin (predates the redesign), not a review-badge animation as
+  Stage 4's plan text assumed. PRODUCT.md principle 6 records reality.
+- **PRODUCT.md identity references:** stale "trust-blue / Inter" wording
+  corrected to the shipped navy + gold / Barlow system (this spec: "Existing
+  navy + gold stays").
+- **Tap targets:** `md` buttons gained a 44px min-height — the header compact
+  call button and sticky mobile-bar call button measured 40px in the Stage 4
+  walkthrough.
+- **Sub-service catalog:** `SubService` gained a required `details` paragraph
+  (thin-content audit finding); /services renders each service's `included`
+  list via a `detailed` ServiceGrid variant plus an sr-only H2.
+- **Ledger's "known 10px overflow at 390px" did not reproduce** on the final
+  build (measured 360px and 390px across 9 routes) — Header.tsx untouched.
+- **Deferred for owner decision** (logged in commit 73bd409): title template
+  `%s | GoldenNorth` renders 65–69-char titles on non-home pages; reviews
+  widget on /services + sub-pages; privacy-policy page (contact form collects
+  PII with no policy); Service.areaServed GeoCircle refactor; WebSite JSON-LD;
+  per-post article images; AggregateRating (only via getReviewStats() with
+  null-guard + on-page reviews).
