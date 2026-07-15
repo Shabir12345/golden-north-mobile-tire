@@ -1,6 +1,6 @@
 // ─── ServiceGrid ─────────────────────────────────────────────────────────────
 // The 5 main services as compact problem→solution cards with sub-service pill
-// links. Replaces the tall editorial ServiceRow layout — a stranded visitor
+// links. Replaces the tall editorial row layout — a stranded visitor
 // sees the full catalog in one screen. Card hover uses the ambient card-lift;
 // pills are real links so ad/search visitors can deep-dive in one tap.
 

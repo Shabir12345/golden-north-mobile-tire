@@ -7,7 +7,7 @@ describe("Header", () => {
   it("always shows the call CTA and 24/7 badge", () => {
     render(<Header />);
     expect(screen.getByRole("link", { name: /call/i })).toHaveAttribute("href", "tel:+14165585915");
-    expect(screen.getByText(/24\/7/i)).toBeInTheDocument();
+    expect(screen.getByRole("status")).toHaveTextContent(/24\/7/i);
   });
   it("links to all primary nav destinations", () => {
     render(<Header />);
