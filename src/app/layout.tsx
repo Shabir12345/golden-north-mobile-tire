@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   // that crawlers and social scrapers can't resolve.
   metadataBase: new URL(BUSINESS.url),
   title: {
-    default: "GoldenNorth Mobile Tire Services",
+    default: "GoldenNorth — 24/7 Roadside Assistance & Mobile Tire Service, Toronto & GTA",
     template: `%s | ${BUSINESS.shortName}`,
   },
   description:
-    "24/7 mobile tire change, new & used tires, battery replacement, and roadside assistance across the Greater Toronto Area.",
+    "24/7 emergency roadside assistance across Toronto & the GTA — mobile tire service, battery jump starts, car lockouts, and mobile mechanics. We come to you.",
   applicationName: BUSINESS.name,
   // Lets the owner verify ownership in Google Search Console without a code
   // change: drop the token into GOOGLE_SITE_VERIFICATION in .env.local.

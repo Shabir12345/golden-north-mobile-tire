@@ -4,7 +4,7 @@ import type { Service } from "@/lib/services";
 export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "AutoRepair"],
+    "@type": ["LocalBusiness", "AutoRepair", "EmergencyService"],
     // Stable node id so other JSON-LD (Service.provider, breadcrumbs) can point
     // back to this single business entity.
     "@id": `${BUSINESS.url}/#business`,

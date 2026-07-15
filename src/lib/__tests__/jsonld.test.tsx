@@ -12,6 +12,11 @@ describe("jsonld", () => {
     expect(d["@type"]).toContain("LocalBusiness");
     expect(d.telephone).toBe("+14165585915");
   });
+  it("declares the business as an EmergencyService", () => {
+    const { container } = render(<LocalBusinessJsonLd />);
+    const data = JSON.parse(container.querySelector("script")!.innerHTML);
+    expect(data["@type"]).toEqual(["LocalBusiness", "AutoRepair", "EmergencyService"]);
+  });
   it("emits FAQPage", () => {
     const { container } = render(<FaqJsonLd faqs={[{ q: "Q?", a: "A." }]} />);
     const d = parse(container);
