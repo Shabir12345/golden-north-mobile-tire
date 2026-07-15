@@ -30,10 +30,10 @@ export const metadata = buildMetadata({
 
 const TEASER = GALLERY.slice(0, 6);
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
-      {await Hero()}
+      <Hero />
 
       <ReviewsWidget />
 

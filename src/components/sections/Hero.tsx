@@ -10,16 +10,7 @@ import { CompassRose } from "@/components/ui/CompassRose";
 import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { BUSINESS } from "@/lib/business";
 
-export async function Hero() {
-  // Resolved here (rather than left as a `<ReviewBadge onDark />` element)
-  // because this Vitest setup — plain @vitejs/plugin-react + jsdom, not the
-  // Next.js RSC runtime — can't render a nested async component that's still
-  // unresolved when this component's own tree is returned: "Since `async`
-  // Server Components are new to the React ecosystem, Vitest currently does
-  // not support them" (node_modules/next/dist/docs/01-app/02-guides/testing/vitest.md).
-  // Resolving it to a plain element keeps `render(await Hero())` working.
-  const reviewBadge = await ReviewBadge({ onDark: true });
-
+export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-label="Hero — 24/7 emergency roadside assistance">
       <CompassRose className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 text-[var(--color-accent)] opacity-[0.06]" />
@@ -55,7 +46,9 @@ export async function Hero() {
             </div>
 
             {/* Attention anchor 3 — live reviews */}
-            <div className="mt-6">{reviewBadge}</div>
+            <div className="mt-6 empty:mt-0">
+              <ReviewBadge onDark />
+            </div>
 
             <p className="mt-7 text-xs uppercase tracking-[0.08em] text-[var(--color-footer-fg)]">
               {BUSINESS.areaServed}
