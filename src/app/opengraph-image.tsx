@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/business";
 // next/og renders this at build time; system fonts are used (no custom font).
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${BUSINESS.name} — 24/7 mobile tire & roadside service in the GTA`;
+export const alt = `${BUSINESS.name}: 24/7 mobile tire & roadside service in the GTA`;
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -51,7 +51,7 @@ export default function OpengraphImage() {
             We come to you.
           </div>
           <div style={{ display: "flex", color: "#C7CEDC", fontSize: 32, marginTop: 24 }}>
-            Mobile tire change · tires · battery · roadside — across the GTA
+            Mobile tire change · tires · battery · roadside · across the GTA
           </div>
         </div>
 

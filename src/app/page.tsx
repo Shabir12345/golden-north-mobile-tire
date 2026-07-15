@@ -18,8 +18,8 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "24/7 Roadside Assistance Toronto & GTA — 20–30 Min",
-  description: `Stranded? 24/7 roadside assistance across Toronto & the GTA — tires, jump starts, lockouts, mobile mechanics — in as little as 20–30 minutes. Call ${BUSINESS.phoneDisplay}.`,
+  title: "24/7 Roadside Assistance Toronto & GTA in 20-30 Min",
+  description: `Stranded? 24/7 roadside assistance across Toronto & the GTA: tires, jump starts, lockouts, mobile mechanics, in as little as 20-30 minutes. Call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
 
@@ -34,7 +34,7 @@ export default function Home() {
           <StatStrip
             items={[
               { value: "24/7", label: "Live dispatch" },
-              { value: "20–30 min", label: "We can be on our way" },
+              { value: "20-30 min", label: "We can be on our way" },
               { value: "GTA-wide", label: "We come to you" },
               { value: "Upfront", label: "Fair pricing, no membership" },
             ]}
@@ -51,8 +51,8 @@ export default function Home() {
               Whatever stopped you, <span className="text-[var(--color-accent-deep)]">we fix it where you stand.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--color-body)]">
-              Roadside emergencies, tires, batteries, lockouts, and driveway repairs — one call sends
-              help anywhere in Toronto &amp; the GTA, in as little as 20–30 minutes.
+              Roadside emergencies, tires, batteries, lockouts, and driveway repairs. One call sends
+              help anywhere in Toronto &amp; the GTA, in as little as 20-30 minutes.
             </p>
           </div>
 

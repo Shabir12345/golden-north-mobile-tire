@@ -11,10 +11,11 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { CallButton, Button } from "@/components/ui/Button";
 import { SERVICES_FAQS } from "@/lib/faqs";
 import { BreadcrumbJsonLd } from "@/lib/jsonld";
+import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
 export const metadata = buildMetadata({
-  title: "24/7 Roadside & Mobile Services — Toronto & the GTA",
-  description: `Roadside assistance, mobile tire service, battery jump starts, car lockouts & mobile mechanics across Toronto & the GTA. We come to you — call ${BUSINESS.phoneDisplay}.`,
+  title: "24/7 Roadside & Mobile Services in Toronto & the GTA",
+  description: `Roadside assistance, mobile tire service, battery jump starts, car lockouts & mobile mechanics across Toronto & the GTA. We come to you. Call ${BUSINESS.phoneDisplay}.`,
   path: "/services",
 });
 
@@ -35,7 +36,7 @@ export default function ServicesPage() {
             <span className="text-[var(--color-accent)]">we come fix it.</span>
           </>
         }
-        intro={`Roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs — everywhere in Toronto & the GTA, 24/7, in as little as 20–30 minutes. Pick what stopped you, or just call and tell us.`}
+        intro={`Roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs, everywhere in Toronto & the GTA, 24/7, in as little as 20-30 minutes. Pick what stopped you, or just call and tell us.`}
       >
         <CallButton size="lg" />
         <Button variant="ghost" size="lg" href="/contact" aria-label="Contact GoldenNorth">
@@ -54,6 +55,7 @@ export default function ServicesPage() {
 
       <FaqSection heading="Service questions, answered" faqs={SERVICES_FAQS} emitJsonLd />
 
+      <ReviewsWidget />
       <CTABand />
     </>
   );

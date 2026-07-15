@@ -23,7 +23,7 @@ export function CoverageMap() {
             <p className="mt-6 max-w-md text-base leading-relaxed text-[var(--color-body)]">
               {BUSINESS.shortName} runs mobile tire and roadside service across the full{" "}
               {BUSINESS.areaServed}. A Vaughan driveway, a Markham condo garage, the shoulder of
-              the 401 through Etobicoke — one call reaches us.
+              the 401 through Etobicoke: one call reaches us.
             </p>
 
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5" aria-label="Areas served">

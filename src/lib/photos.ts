@@ -51,7 +51,7 @@ export const GALLERY: (CatalogPhoto & { ratio: string })[] = [
   { src: "/photos/van-interior-balancer.webp", alt: "Inside the van: a tire on the balancing machine with hoses, tools and a fire extinguisher", ratio: "3 / 4" },
   { src: "/photos/tires-warehouse.webp", alt: "Warehouse racks of new and used tires for GTA mobile installation", ratio: "3 / 4" },
   { src: "/photos/van-residential-driveway.webp", alt: "Van in a residential driveway, side door open, servicing a black SUV", ratio: "3 / 4" },
-  { src: "/photos/tire-puncture.webp", alt: "Punctured winter tire — the kind of flat tire GoldenNorth replaces on the spot", ratio: "3 / 4" },
+  { src: "/photos/tire-puncture.webp", alt: "Punctured winter tire, the kind of flat tire GoldenNorth replaces on the spot", ratio: "3 / 4" },
   { src: "/photos/night-mini-station.webp", alt: "24/7 night mobile battery service for a MINI at a lit gas station", ratio: "4 / 3" },
   { src: "/photos/van-loadingdock-bmw.webp", alt: "Servicing a gray BMW beside the van at a loading dock", ratio: "4 / 3" },
   { src: "/photos/rim-on-machine.jpg", alt: "An alloy wheel mounted on the van's tire machine for balancing", ratio: "3 / 4" },

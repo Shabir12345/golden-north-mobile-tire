@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/gallery"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: url("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: url("/contact"), lastModified: now, changeFrequency: "yearly", priority: 0.7 },
+    { url: url("/privacy"), lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({

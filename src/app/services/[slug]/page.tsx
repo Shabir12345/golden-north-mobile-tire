@@ -75,7 +75,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
               <span className="mt-2 block text-[var(--color-accent)]">{service.solution}</span>
             </h1>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              Fair, upfront price quoted on the call — no membership, no hidden fees.
+              Fair, upfront price quoted on the call: no membership, no hidden fees.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
@@ -161,7 +161,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
                 key={s.slug}
                 href={`/services/${s.slug}`}
                 className="group card-lift flex items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
-                aria-label={`${s.name} — view service`}
+                aria-label={`${s.name}, view service`}
               >
                 <span className="font-bold text-lg text-[var(--color-heading)]">{s.shortName}</span>
                 <span aria-hidden="true" className="text-[var(--color-accent-deep)] transition-transform duration-200 group-hover:translate-x-1">→</span>

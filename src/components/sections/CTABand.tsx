@@ -24,7 +24,7 @@ export function CTABand() {
 
         <p className="mx-auto mt-5 mb-9 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
           Tell us where you are and what happened. You&rsquo;ll get a fair, upfront price quoted
-          on the call — no membership, no hidden fees — then a {BUSINESS.shortName} technician is
+          on the call, with no membership and no hidden fees. Then a {BUSINESS.shortName} technician is
           dispatched and you&rsquo;re back on the road, anywhere in the GTA. Day, night, weekends,
           holidays.
         </p>

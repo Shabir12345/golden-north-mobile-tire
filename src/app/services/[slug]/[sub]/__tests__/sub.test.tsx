@@ -18,7 +18,7 @@ describe("sub-service page", () => {
     );
     const h1 = screen.getByRole("heading", { level: 1 });
     expect(h1).toHaveTextContent("Out of gas?");
-    expect(h1).toHaveTextContent("in as little as 20–30 minutes");
+    expect(h1).toHaveTextContent("in as little as 20-30 minutes");
     // The ghost button's aria-label is "See all 24/7 Roadside Assistance services";
     // the cross-link card would also match a looser regex — target the button.
     expect(

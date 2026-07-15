@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { SERVICES, SERVICE_SLUGS, getService, getSubService } from "@/lib/services";
 
 const BANNED = [/\bcheap\b/i, /\baffordable\b/i, /\bbest\b/i, /\bpremier\b/i, /#1/];
-const ETA = "in as little as 20–30 minutes";
+const ETA = "in as little as 20-30 minutes";
 
 describe("service catalog", () => {
   it("has the five main services in display order", () => {
@@ -41,8 +41,8 @@ describe("service catalog", () => {
   it("uses the exact ETA phrase wherever an arrival time is promised", () => {
     for (const s of SERVICES) {
       const text = [s.solution, s.summary, ...s.faqs.map((f) => f.a)].join(" ");
-      if (/20–30/.test(text)) expect(text).toContain(ETA);
-      expect(text).not.toMatch(/45–90/);
+      if (/20-30/.test(text)) expect(text).toContain(ETA);
+      expect(text).not.toMatch(/45-90/);
     }
   });
 
@@ -81,7 +81,7 @@ describe("service catalog", () => {
       expect(x.seoTitle.length).toBeLessThanOrEqual(60);
       expect(x.seoDescription.length).toBeGreaterThanOrEqual(120);
       expect(x.seoDescription.length).toBeLessThanOrEqual(165);
-      expect(JSON.stringify(x)).not.toMatch(/\b(cheap|affordable|best|premier)\b|#1|45–90/i);
+      expect(JSON.stringify(x)).not.toMatch(/\b(cheap|affordable|best|premier)\b|#1|45-90/i);
     }
   });
 });
