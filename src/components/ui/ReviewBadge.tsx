@@ -1,8 +1,7 @@
 // ─── ReviewBadge ─────────────────────────────────────────────────────────────
 // Live Google rating + count for the hero trust anchor. Data comes from
 // getReviewStats(); when that's null this renders nothing — never a made-up
-// number. Gentle one-time fade-in via the existing .reveal CSS is skipped:
-// the badge is server-rendered and static; motion here is a single sweep.
+// number. This component is server-rendered and static — it has no motion.
 
 import { getReviewStats } from "@/lib/reviews";
 

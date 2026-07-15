@@ -18,7 +18,7 @@ export function ServiceGrid() {
           delay={i * 60}
           className={i === SERVICES.length - 1 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.625rem)]" : ""}
         >
-          <article className="card-lift flex h-full flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm">
+          <article className="card-lift relative flex h-full flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm">
             <div className="flex items-start gap-4">
               <span className="rounded-lg bg-[var(--color-accent-soft)] p-2.5 text-[var(--color-accent-deep)]">
                 <ServiceIcon name={service.icon} />
@@ -27,7 +27,7 @@ export function ServiceGrid() {
                 <h3 className="font-bold text-2xl leading-tight text-[var(--color-heading)]">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-card)] hover:text-[var(--color-accent-deep)] transition-colors duration-150"
+                    className="rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-card)] hover:text-[var(--color-accent-deep)] transition-colors duration-150 after:absolute after:inset-0"
                   >
                     {service.name}
                   </Link>
@@ -39,7 +39,7 @@ export function ServiceGrid() {
             {service.subServices.length > 0 && (
               <ul className="mt-5 flex flex-wrap gap-2 border-t border-[var(--color-border)] pt-4" aria-label={`${service.name} services`}>
                 {service.subServices.map((x) => (
-                  <li key={x.slug}>
+                  <li key={x.slug} className="relative">
                     <Link
                       href={`/services/${service.slug}/${x.slug}`}
                       className="inline-block rounded-full border border-[var(--color-border)] bg-[var(--color-page)] px-3.5 py-1.5 text-xs font-semibold text-[var(--color-heading)] transition-colors duration-150 hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1"

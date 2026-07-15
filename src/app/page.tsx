@@ -18,7 +18,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "24/7 Roadside Assistance Toronto & GTA — 20–30 Min Arrival",
+  title: "24/7 Roadside Assistance Toronto & GTA — 20–30 Min",
   description: `Stranded? 24/7 roadside assistance, mobile tire service, jump starts, lockouts & mobile mechanics across Toronto & the GTA — in as little as 20–30 minutes. Call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
@@ -36,7 +36,7 @@ export default function Home() {
               { value: "24/7", label: "Live dispatch" },
               { value: "20–30 min", label: "We can be on our way" },
               { value: "GTA-wide", label: "We come to you" },
-              { value: "No membership", label: "Fair upfront pricing" },
+              { value: "Upfront", label: "Fair pricing, no membership" },
             ]}
           />
           <TrustBadges className="mt-10" />
