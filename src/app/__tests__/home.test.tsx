@@ -1,6 +1,12 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
+
+vi.mock("@/components/ui/ReviewBadge", () => ({
+  ReviewBadge: ({ onDark }: { onDark?: boolean }) => (
+    <p data-testid="review-badge-stub" data-on-dark={String(!!onDark)}>stub review badge</p>
+  ),
+}));
 
 describe("Home", () => {
   it("renders all five service cards", () => {
@@ -20,5 +26,13 @@ describe("Home", () => {
     render(<Home />);
     expect(screen.getByText("Licensed & insured")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /questions drivers ask us/i })).toBeInTheDocument();
+  });
+
+  it("renders the emergency flow: hero → trust strip → service grid", () => {
+    render(<Home />);
+    // getAllByText: the hero's "in as little as 20–30 minutes" also matches.
+    expect(screen.getAllByText(/20–30 min/).length).toBeGreaterThanOrEqual(2); // hero + trust strip
+    expect(screen.getAllByRole("heading", { level: 3 }).length).toBeGreaterThanOrEqual(5); // grid
+    expect(screen.queryByRole("link", { name: /view the full photo gallery/i })).toBeNull(); // teaser gone
   });
 });

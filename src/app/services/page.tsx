@@ -1,12 +1,11 @@
 // ─── Services overview (/services) ────────────────────────────────────────────
-// Intro header + the five service rows (reusing the home ServiceRow) + the
-// drenched CTA band. Each row links to its SEO detail page.
+// Intro header + the ServiceGrid (shared with the home page) + the drenched
+// CTA band. Each card and pill links to its SEO detail page.
 
 import { buildMetadata } from "@/lib/seo";
 import { BUSINESS } from "@/lib/business";
-import { SERVICES } from "@/lib/services";
 import { PageHeader } from "@/components/sections/PageHeader";
-import { ServiceRow } from "@/components/sections/ServiceRow";
+import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { CTABand } from "@/components/sections/CTABand";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { CallButton, Button } from "@/components/ui/Button";
@@ -39,11 +38,7 @@ export default function ServicesPage() {
 
       <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-label="Our services">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="space-y-20 lg:space-y-28">
-            {SERVICES.map((service, i) => (
-              <ServiceRow key={service.slug} service={service} index={i} />
-            ))}
-          </div>
+          <ServiceGrid />
         </div>
       </section>
 

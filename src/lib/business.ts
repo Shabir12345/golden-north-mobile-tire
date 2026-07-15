@@ -6,7 +6,7 @@ export const BUSINESS = {
   email: "info.goldennorth@gmail.com",
   areaServed: "Greater Toronto Area, Ontario, Canada",
   hours: "Open 24/7",
-  tagline: "The best waiting room is the living room.",
+  tagline: "Your living room is the waiting room.",
   url: "https://www.goldennorthmobiletires.com",
   // Mobile service — we come to the customer — but a registered base address
   // helps local SEO and gives people a real place on the map.

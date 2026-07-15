@@ -30,6 +30,9 @@
   --color-footer-fg: #C7CEDC;   /* body text on navy                          */
   --color-on-navy: #E8EBF2;     /* brighter text on navy                      */
 
+  /* ── Status ── */
+  --color-live: #35C46F;        /* live-dispatch breathing dot — reads "live" */
+
   /* ── Type: Barlow (body) + Barlow Condensed (display) ── */
   --font-sans: var(--font-barlow), system-ui, sans-serif;
   --font-display: var(--font-barlow-condensed), var(--font-barlow), system-ui, sans-serif;
@@ -162,6 +165,36 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 24px -12px rgba(16, 32, 63, 0.18);
   border-color: var(--color-accent);
+}
+
+/* ── Attention tier (repeating — reserved for the 3 conversion anchors) ─────
+   1. .btn-pulse  — soft gold pulse ring on primary call buttons (~3s loop)
+   2. .live-dot   — breathing green dot for the 24/7 live-dispatch line
+   Both are killed by the prefers-reduced-motion override below. */
+
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0.45); }
+  60%  { box-shadow: 0 0 0 14px rgba(240, 165, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0); }
+}
+/* Animates box-shadow at the Animation origin, which beats author-normal
+   declarations for the life of the animation — so this MUST be applied to a
+   WRAPPER element, never directly to something using ring/shadow utilities
+   (focus-visible:ring-*, shadow-sm, etc. all compile to box-shadow and would
+   be silently overridden for as long as this loops). See Hero.tsx. */
+.btn-pulse { animation: pulseRing 3s var(--ease-out-quart) 1.6s infinite; }
+
+@keyframes dotBreathe {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.8); }
+}
+.live-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-live); /* decorative — text carries meaning */
+  animation: dotBreathe 2.4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

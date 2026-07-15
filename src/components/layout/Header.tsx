@@ -76,7 +76,7 @@ export function Header() {
               {BUSINESS.shortName}
             </span>
             <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
-              Mobile Tire Services
+              24/7 Roadside Assistance
             </span>
           </span>
         </Link>

@@ -10,8 +10,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FEATURABLE_WIDGET_ID } from "@/lib/reviews";
 
-const WIDGET_ID = "featurable-98741542-19aa-4991-9281-32fab2ebcb3f";
+const WIDGET_ID = `featurable-${FEATURABLE_WIDGET_ID}`;
 const SCRIPT_SRC = "https://featurable.com/assets/bundle.js";
 
 export function ReviewsWidget() {

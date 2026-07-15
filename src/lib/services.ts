@@ -30,7 +30,7 @@ export interface Service {
   icon: "roadside" | "tire" | "battery" | "lockout" | "mechanic";
   problem: string;
   solution: string;
-  blurb: string; // 1–2 line card blurb (grid cards, ServiceRow)
+  blurb: string; // 1–2 line card blurb (grid cards)
   seoTitle: string;
   seoDescription: string;
   summary: string;

@@ -1,21 +1,16 @@
 // ─── Home page ────────────────────────────────────────────────────────────────
-// Assembly with deliberate sectional rhythm (page → surface trust bar →
-// page service rows → surface process → page coverage → surface gallery teaser
-// → soft-blue CTA). The root layout renders Header/Footer/MobileCallBar.
+// Emergency-first assembly: Hero (problem→solution + live dispatch) → trust
+// strip → ServiceGrid (all 5 services, one screen) → HowItWorks → ReviewsWidget
+// → CoverageMap → FAQs → soft-blue CTA. The root layout renders
+// Header/Footer/MobileCallBar.
 
-import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { BUSINESS } from "@/lib/business";
-import { SERVICES } from "@/lib/services";
-import { GALLERY } from "@/lib/photos";
 import { StatStrip } from "@/components/ui/StatStrip";
-import { Photo } from "@/components/ui/Photo";
-import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { Hero } from "@/components/sections/Hero";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
-import { ServiceRow } from "@/components/sections/ServiceRow";
+import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 import { CTABand } from "@/components/sections/CTABand";
@@ -23,36 +18,32 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { HOME_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "Mobile Tire Service Toronto & GTA — 24/7",
-  description: `24/7 mobile tire change, new & used tires, batteries & roadside help across Toronto & the GTA. Upfront pricing, no membership. We come to you — call ${BUSINESS.phoneDisplay}.`,
+  title: "24/7 Roadside Assistance Toronto & GTA — 20–30 Min",
+  description: `Stranded? 24/7 roadside assistance, mobile tire service, jump starts, lockouts & mobile mechanics across Toronto & the GTA — in as little as 20–30 minutes. Call ${BUSINESS.phoneDisplay}.`,
   path: "/",
 });
-
-const TEASER = GALLERY.slice(0, 6);
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      <ReviewsWidget />
-
       {/* Trust bar */}
       <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call GoldenNorth">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <StatStrip
             items={[
-              { value: "24/7", label: "Always open" },
-              { value: "GTA-wide", label: "We come to you" },
+              { value: "24/7", label: "Live dispatch" },
               { value: "20–30 min", label: "We can be on our way" },
-              { value: "No tow", label: "Fixed on the spot" },
+              { value: "GTA-wide", label: "We come to you" },
+              { value: "Upfront", label: "Fair pricing, no membership" },
             ]}
           />
           <TrustBadges className="mt-10" />
         </div>
       </section>
 
-      {/* Services — numbered editorial rows */}
+      {/* Services — problem→solution cards */}
       <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="services-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 max-w-2xl">
@@ -65,45 +56,15 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-20 lg:space-y-28">
-            {SERVICES.map((service, i) => (
-              <ServiceRow key={service.slug} service={service} index={i} />
-            ))}
-          </div>
+          <ServiceGrid />
         </div>
       </section>
 
       <HowItWorks />
 
+      <ReviewsWidget />
+
       <CoverageMap />
-
-      {/* Gallery teaser — real photos */}
-      <section className="bg-[var(--color-surface)] py-20 lg:py-28" aria-labelledby="gallery-teaser-heading">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-            <h2 id="gallery-teaser-heading" className="font-bold text-3xl leading-tight text-[var(--color-heading)] lg:text-4xl">
-              On the job, <span className="text-[var(--color-accent-deep)]">GTA-wide.</span>
-            </h2>
-            <Button variant="ghost" href="/gallery" aria-label="View the full photo gallery">
-              View gallery
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {TEASER.map((photo, i) => (
-              <Reveal key={photo.src} delay={i * 60}>
-                <Link
-                  href="/gallery"
-                  className="block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
-                  aria-label="View the full photo gallery"
-                >
-                  <Photo src={photo.src} alt={photo.alt} ratio="1 / 1" sizes="(max-width: 640px) 50vw, 33vw" />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <FaqSection heading="Questions drivers ask us" faqs={HOME_FAQS} emitJsonLd />
 
