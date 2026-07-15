@@ -75,7 +75,10 @@ export function Header() {
             <span className="font-bold tracking-tight text-white text-base">
               {BUSINESS.shortName}
             </span>
-            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
+            {/* Phones can't afford this line: the header row needs 356px at 360px
+                wide but only has 328px, and this descriptor is the 28px over.
+                Below sm the hero's "24/7 Emergency Dispatch" carries the message. */}
+            <span className="mt-1 hidden sm:block text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
               24/7 Roadside Assistance
             </span>
           </span>
