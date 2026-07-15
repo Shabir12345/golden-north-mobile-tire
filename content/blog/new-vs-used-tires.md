@@ -7,7 +7,7 @@ keywords:
   - new vs used tires
   - used tires toronto
   - should i buy used tires
-  - cheap tires gta
+  - used tires gta
 date: "2026-07-02"
 updated: "2026-07-03"
 relatedService: mobile-tire-service

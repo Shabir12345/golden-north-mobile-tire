@@ -16,8 +16,8 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { CONTACT_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
-  title: "Contact — 24/7 Mobile Tire & Roadside Help in the GTA",
-  description: `Reach ${BUSINESS.name} 24/7 for mobile tire change, battery, and roadside help anywhere in the GTA. Call ${BUSINESS.phoneDisplay} — or send a message.`,
+  title: "Contact — 24/7 Emergency Roadside Help in the GTA",
+  description: `Reach ${BUSINESS.name} 24/7 for roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic help anywhere in the GTA. Call ${BUSINESS.phoneDisplay} — or send a message.`,
   path: "/contact",
 });
 

@@ -36,7 +36,7 @@ A car battery is a chemistry set: lead plates in acid, producing current through
 - **Near -18°C** — an ordinary January morning in the GTA — it's producing **about half** its cranking power.
 - Meanwhile the engine has gotten harder to start. Cold oil is thicker, so the starter motor needs *more* current to spin the engine, right when the battery has less to offer.
 
-Add the winter accessory load — rear defroster, heated seats, headlights on for the dark commute, fan on full — and the battery is being asked for its best performance under its worst conditions.
+Add the winter accessory load — rear defroster, heated seats, headlights on for the dark commute, fan on full — and the battery is being asked for peak performance under its worst conditions.
 
 ## The counterintuitive part: summer killed it, winter just found out
 
@@ -64,7 +64,7 @@ Batteries almost always telegraph the failure. In the weeks before a no-start, w
 - **The battery warning light** flickering on, which can also point to the alternator
 - **Visible trouble under the hood**: crusty blue-white corrosion on the terminals, or a battery case that looks swollen
 
-Any one of these in November is worth a load test. A test takes minutes and tells you exactly how much strength the battery has left — cheap certainty against a no-start in an underground garage at -20°C.
+Any one of these in November is worth a load test. A test takes minutes and tells you exactly how much strength the battery has left — quick certainty against a no-start in an underground garage at -20°C.
 
 ## How to help your battery survive the winter
 

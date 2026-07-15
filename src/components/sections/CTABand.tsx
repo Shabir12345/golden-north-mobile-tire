@@ -23,9 +23,10 @@ export function CTABand() {
         </h2>
 
         <p className="mx-auto mt-5 mb-9 max-w-md text-lg leading-relaxed text-[var(--color-body)]">
-          Tell us where you are and what happened. You&rsquo;ll get an upfront quote and an
-          honest ETA on the call — then a {BUSINESS.shortName} technician is on the way, anywhere
-          in the GTA. Day, night, weekends, holidays.
+          Tell us where you are and what happened. You&rsquo;ll get a fair, upfront price quoted
+          on the call — no membership, no hidden fees — then a {BUSINESS.shortName} technician is
+          dispatched and you&rsquo;re back on the road, anywhere in the GTA. Day, night, weekends,
+          holidays.
         </p>
 
         <div className="flex justify-center">

@@ -68,7 +68,7 @@ All-weathers deserve an honest word: for a downtown driver who parks in a condo 
 
 The busiest week of the year for every tire installer in the GTA is the week after the first real snowfall. Booking in late October means choosing your time slot; booking after the first storm means taking whatever's left.
 
-One decision that pays off every year: **keep your winter tires mounted on their own set of rims.** The seasonal swap becomes a straightforward wheel change instead of dismounting and remounting rubber twice a year — faster, gentler on the tires, and cheaper over the life of the set. Steel rims are the budget-friendly route, and they take winter's salt and potholes so your alloys don't have to.
+One decision that pays off every year: **keep your winter tires mounted on their own set of rims.** The seasonal swap becomes a straightforward wheel change instead of dismounting and remounting rubber twice a year — faster, gentler on the tires, and less expensive over the life of the set. Steel rims are the budget-friendly route, and they take winter's salt and potholes so your alloys don't have to.
 
 ## The changeover, without the shop
 

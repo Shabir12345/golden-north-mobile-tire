@@ -35,11 +35,11 @@ export const HOME_FAQS: Faq[] = [
 export const SERVICES_FAQS: Faq[] = [
   {
     q: "I'm not sure which service I need — can you help?",
-    a: "Yes. Call (416) 558-5915 and describe what happened; we'll tell you whether it's a tire change, a new or used tire, a battery, or general roadside help, and give you an upfront quote.",
+    a: "Yes. Call (416) 558-5915 and describe what happened; we'll tell you whether it's roadside assistance, mobile tire service, a battery jump start, a car lockout, or mobile mechanic repairs, and give you an upfront quote.",
   },
   {
     q: "Do I have to bring my car to a shop for any of these?",
-    a: "No. Every service we offer is mobile — tire changes, new and used tires, battery replacement, and roadside assistance all happen at your location across the GTA.",
+    a: "No. Every service we offer is mobile — roadside assistance, mobile tire service, battery jump starts, car lockouts, and mobile mechanic repairs all happen at your location across the GTA.",
   },
   {
     q: "Do you carry my tire size?",

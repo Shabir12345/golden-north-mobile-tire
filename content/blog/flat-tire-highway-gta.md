@@ -100,7 +100,7 @@ GoldenNorth handles [24/7 roadside assistance](/services/roadside-assistance) on
 
 ## Lower the odds of the next one
 
-Most highway flats start days earlier as slow leaks. A monthly two-minute check is the cheapest roadside assistance there is:
+Most highway flats start days earlier as slow leaks. A monthly two-minute check is the simplest roadside assistance there is:
 
 - **Check pressures monthly** (including the spare) when the tires are cold — the correct numbers are on the sticker inside the driver's door jamb, not on the tire.
 - **Do the quarter test**: insert a quarter into the tread with the caribou's nose pointing down. If you can see the tip of its nose, the tread is getting thin.
