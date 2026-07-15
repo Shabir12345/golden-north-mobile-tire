@@ -25,7 +25,7 @@ export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
       className={`inline-flex items-center gap-2.5 text-sm font-semibold ${
         onDark ? "text-[var(--color-on-navy)]" : "text-[var(--color-body)]"
       }`}
-      aria-label={`Rated ${stats.rating} out of 5 from ${stats.count} Google reviews`}
+      aria-label={`Rated ${stats.rating.toFixed(1)} out of 5 from ${stats.count} Google reviews`}
     >
       <span aria-hidden="true" className={`flex items-center gap-0.5 ${iconColor}`}>
         {Array.from({ length: 5 }, (_, i) => (

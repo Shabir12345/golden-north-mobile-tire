@@ -4,8 +4,8 @@
 // Google rating/count. ANY failure returns null — the badge renders nothing
 // rather than a wrong or stale-looking number.
 
-const WIDGET_ID = "98741542-19aa-4991-9281-32fab2ebcb3f";
-const API_URL = `https://featurable.com/api/v1/widgets/${WIDGET_ID}`;
+export const FEATURABLE_WIDGET_ID = "98741542-19aa-4991-9281-32fab2ebcb3f";
+const API_URL = `https://api.featurable.com/v1/widgets/${FEATURABLE_WIDGET_ID}`;
 
 export interface ReviewStats {
   rating: number; // e.g. 4.9 (one decimal)

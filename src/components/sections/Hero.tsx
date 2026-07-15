@@ -39,7 +39,9 @@ export function Hero() {
 
             {/* Attention anchor 2 — the call */}
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <CallButton size="lg" className="btn-pulse" />
+              <span className="btn-pulse inline-flex rounded-lg">
+                <CallButton size="lg" />
+              </span>
               <Button variant="ghost" size="lg" href="/services" aria-label="See all services">
                 See services
               </Button>

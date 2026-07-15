@@ -3,7 +3,9 @@ import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
 
 vi.mock("@/components/ui/ReviewBadge", () => ({
-  ReviewBadge: () => <p data-testid="review-badge-stub">stub review badge</p>,
+  ReviewBadge: ({ onDark }: { onDark?: boolean }) => (
+    <p data-testid="review-badge-stub" data-on-dark={String(!!onDark)}>stub review badge</p>
+  ),
 }));
 
 describe("Home", () => {

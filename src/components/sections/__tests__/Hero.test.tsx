@@ -3,7 +3,9 @@ import { render, screen } from "@testing-library/react";
 import { Hero } from "@/components/sections/Hero";
 
 vi.mock("@/components/ui/ReviewBadge", () => ({
-  ReviewBadge: () => <p data-testid="review-badge-stub">stub review badge</p>,
+  ReviewBadge: ({ onDark }: { onDark?: boolean }) => (
+    <p data-testid="review-badge-stub" data-on-dark={String(!!onDark)}>stub review badge</p>
+  ),
 }));
 
 describe("Hero", () => {
@@ -18,5 +20,10 @@ describe("Hero", () => {
     render(<Hero />);
     expect(screen.getByText(/24\/7 emergency dispatch/i)).toBeInTheDocument();
     expect(screen.getByTestId("review-badge-stub")).toBeInTheDocument();
+  });
+
+  it("passes onDark to the review badge so it stays AA-contrast on the navy hero", () => {
+    render(<Hero />);
+    expect(screen.getByTestId("review-badge-stub")).toHaveAttribute("data-on-dark", "true");
   });
 });

@@ -30,6 +30,9 @@
   --color-footer-fg: #C7CEDC;   /* body text on navy                          */
   --color-on-navy: #E8EBF2;     /* brighter text on navy                      */
 
+  /* ── Status ── */
+  --color-live: #35C46F;        /* live-dispatch breathing dot — reads "live" */
+
   /* ── Type: Barlow (body) + Barlow Condensed (display) ── */
   --font-sans: var(--font-barlow), system-ui, sans-serif;
   --font-display: var(--font-barlow-condensed), var(--font-barlow), system-ui, sans-serif;
@@ -176,6 +179,11 @@
   60%  { box-shadow: 0 0 0 14px rgba(240, 165, 0, 0); }
   100% { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0); }
 }
+/* Animates box-shadow at the Animation origin, which beats author-normal
+   declarations for the life of the animation — so this MUST be applied to a
+   WRAPPER element, never directly to something using ring/shadow utilities
+   (focus-visible:ring-*, shadow-sm, etc. all compile to box-shadow and would
+   be silently overridden for as long as this loops). See Hero.tsx. */
 .btn-pulse { animation: pulseRing 3s var(--ease-out-quart) 1.6s infinite; }
 
 @keyframes dotBreathe {
@@ -187,7 +195,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background: #35C46F; /* green reads "live"; decorative — text carries meaning */
+  background: var(--color-live); /* decorative — text carries meaning */
   animation: dotBreathe 2.4s ease-in-out infinite;
 }
 
