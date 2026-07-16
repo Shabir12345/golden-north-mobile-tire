@@ -56,10 +56,19 @@ export function Header() {
       className="sticky top-0 border-b border-white/10 bg-[#151D2Ee6] shadow-sm backdrop-blur-md"
       style={{ zIndex: "var(--z-sticky)" }}
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center gap-3 sm:gap-4">
+      {/* gutter-safe, not px-4: the sticky bar spans the full width, so under
+          viewport-fit: cover its contents would sit beneath the notch in
+          landscape. */}
+      <div className="gutter-safe mx-auto max-w-6xl h-16 flex items-center gap-2 sm:gap-4">
+        {/* min-w-0 + truncate rather than flex-shrink-0: at 320px the row
+            (mark + wordmark + Call + hamburger) is ~5px wider than the viewport
+            and an unshrinkable logo pushed the whole document into horizontal
+            scroll. The tighter gap and wordmark buy back more than that, so the
+            name doesn't actually clip — truncate is the guarantee that no font
+            or locale can bring the sideways scroll back. */}
         <Link
           href="/"
-          className="flex items-center flex-shrink-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
+          className="flex min-w-0 items-center rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy)]"
           aria-label="GoldenNorth home"
         >
           <Image
@@ -69,10 +78,10 @@ export function Header() {
             width={40}
             height={40}
             priority
-            className="h-10 w-10"
+            className="h-10 w-10 shrink-0"
           />
-          <span className="ml-2.5 flex flex-col leading-none">
-            <span className="font-bold tracking-tight text-white text-base">
+          <span className="ml-2 flex min-w-0 flex-col leading-none sm:ml-2.5">
+            <span className="truncate font-bold tracking-tight text-white text-sm sm:text-base">
               {BUSINESS.shortName}
             </span>
             {/* Phones can't afford this line: the header row needs 356px at 360px

@@ -9,7 +9,7 @@ import { BUSINESS } from "@/lib/business";
 export function CTABand() {
   return (
     <section className="bg-[var(--color-accent-soft)]" aria-labelledby="cta-band-heading">
-      <div className="mx-auto max-w-3xl px-6 py-20 text-center lg:py-28">
+      <div className="mx-auto max-w-3xl px-6 py-14 text-center sm:py-20 lg:py-28">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--color-accent-deep)]">
           24/7 · GTA-wide · we come to you
         </p>

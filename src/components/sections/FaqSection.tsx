@@ -18,7 +18,7 @@ export function FaqSection({
   faqs,
   id = "faq-heading",
   emitJsonLd = false,
-  className = "bg-[var(--color-surface)] py-20 lg:py-28",
+  className = "bg-[var(--color-surface)] py-14 sm:py-20 lg:py-28",
 }: FaqSectionProps) {
   return (
     <section className={className} aria-labelledby={id}>

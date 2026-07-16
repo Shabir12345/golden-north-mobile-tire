@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import { BUSINESS } from "@/lib/business";
@@ -19,6 +19,15 @@ const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
   display: "swap",
 });
+
+// `viewport-fit: cover` is what makes env(safe-area-inset-*) resolve to real
+// values; under the default (`auto`) every inset is 0, so MobileCallBar's
+// safe-area padding never clears the iPhone home indicator. themeColor paints
+// the browser chrome navy so the header doesn't end in a white seam.
+export const viewport: Viewport = {
+  themeColor: "#151D2E",
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   // Absolute base for every relative URL Next generates (OG images, icons,

@@ -39,9 +39,10 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[var(--color-footer)] text-[var(--color-footer-fg)]" aria-label="Site footer">
       <CompassRose className="pointer-events-none absolute -left-24 -bottom-28 h-96 w-96 text-[var(--color-accent)] opacity-[0.05]" />
-      {/* pb-36 below md: clears the fixed MobileCallBar (+ safe-area inset) at
-          full scroll depth so the last footer row is never covered. */}
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 pt-14 sm:pt-16 pb-36 md:pb-16">
+      {/* Below md the last row sits under the fixed MobileCallBar: reserve the
+          bar's height plus the home-indicator inset, which now that
+          viewport-fit: cover is set actually resolves to a real value. */}
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 pt-12 sm:pt-16 pb-[calc(8rem+env(safe-area-inset-bottom))] md:pb-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between pb-10 border-b border-white/15">
           <div className="space-y-4">
             <Image
@@ -86,12 +87,14 @@ export function Footer() {
         <TrustBadges variant="compact" onDark className="pt-8 pb-6 border-b border-white/10" />
 
         <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2">
+          {/* min-h-11 = the 44px tap floor: these sit at the very bottom of the
+              page, thumb-reach territory, and were 36px tall. */}
+          <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-1">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="link-grow inline-block py-2 text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
+                className="link-grow inline-flex min-h-11 items-center text-sm font-medium text-white/70 hover:text-[var(--color-accent)] rounded-md transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 focus-visible:ring-offset-[var(--color-footer)]"
               >
                 {label}
               </Link>

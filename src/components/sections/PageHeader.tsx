@@ -17,7 +17,7 @@ export function PageHeader({ title, intro, children, showStatus = true }: PageHe
   return (
     <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-labelledby="page-heading">
       <CompassRose className="pointer-events-none absolute -right-20 -bottom-24 h-80 w-80 text-[var(--color-accent)] opacity-[0.06]" />
-      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <div className="relative mx-auto max-w-7xl px-6 py-14 sm:py-20 lg:px-10 lg:py-28">
         {showStatus && <AvailabilityBadge variant="line" onDark className="mb-6" />}
         <h1
           id="page-heading"

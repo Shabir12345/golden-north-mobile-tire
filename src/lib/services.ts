@@ -44,142 +44,6 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
-    slug: "roadside-assistance",
-    name: "24/7 Roadside Assistance",
-    shortName: "Roadside",
-    icon: "roadside",
-    problem: "Stranded at the roadside?",
-    solution: "Help is on the way, in as little as 20-30 minutes.",
-    blurb:
-      "Stuck on the 401 or a side street? One call and a technician is on the way to you, 24/7.",
-    seoTitle: "24/7 Roadside Assistance Toronto & GTA, No Membership",
-    seoDescription:
-      "Stranded? 24/7 roadside assistance across Toronto & the GTA. Help in as little as 20-30 minutes, no membership. Fair quote on the call. (416) 558-5915.",
-    summary:
-      "You're stranded and need help now. GoldenNorth answers 24/7 and sends a roadside technician to you anywhere in Toronto and the GTA, in as little as 20-30 minutes. Flat tire, dead battery, empty tank, keys locked inside: we fix it at the roadside so you skip the tow truck and the shop. No membership, and you get a fair, upfront price on the call before we roll.",
-    included: [
-      "Flat tire change with your spare or a replacement tire",
-      "Battery boost, jump start, or on-site replacement",
-      "Emergency fuel delivery, enough to reach a station",
-      "Roadside triage: we assess and fix what we can on the spot",
-      "Tow coordination and honest advice when a roadside fix isn't possible",
-    ],
-    whenYouNeed: [
-      "You're stranded with a flat and no roadside plan, or your plan's ETA is two hours",
-      "Your car won't start in a parking garage or on a highway shoulder",
-      "It's 2 a.m. in January and you need someone who actually picks up",
-    ],
-    keywords: [
-      "roadside assistance Toronto",
-      "24/7 roadside assistance GTA no membership",
-      "emergency roadside assistance Toronto",
-      "highway 401 roadside assistance",
-      "emergency roadside Etobicoke",
-    ],
-    faqs: [
-      {
-        q: "How fast can you reach me in the GTA?",
-        a: "We aim to reach most Toronto and GTA locations in as little as 20-30 minutes, depending on where you are and traffic. You get an honest ETA the moment you call (416) 558-5915, and we call again when we're close.",
-      },
-      {
-        q: "Do you cover highways like the 401, 427, or the DVP?",
-        a: "Yes. We service highway shoulders across the GTA corridor. Pull as far onto the shoulder as safely possible, turn on your hazards, and call us. We'll coordinate a safe approach.",
-      },
-      {
-        q: "What if my car needs a repair you can't do roadside?",
-        a: "We'll tell you straight. If the problem is beyond a roadside fix, like a broken axle, seized brakes, or engine failure, we help you arrange a tow and point you toward a trustworthy shop rather than charge you for a call we can't resolve.",
-      },
-      {
-        q: "Do I need a membership or subscription?",
-        a: "No. GoldenNorth is pay-per-call: you pay for the help you actually use, with no annual fee and no coverage limits. You get a fair, upfront price quoted on the call: no membership, no hidden fees.",
-      },
-      {
-        q: "What information should I have ready when I call?",
-        a: "Your location (a highway marker, exit, intersection, or nearest address), your vehicle's make, model, and colour, and what happened. Not sure what's wrong? Describe what you see and hear and we'll triage on arrival.",
-      },
-    ],
-    subServices: [
-      {
-        slug: "fuel-delivery",
-        name: "Emergency Fuel Delivery",
-        problem: "Out of gas?",
-        solution: "Fuel comes to you, in as little as 20-30 minutes.",
-        seoTitle: "Emergency Fuel Delivery Toronto: 24/7 Gas to Your Car",
-        seoDescription:
-          "Ran out of gas in Toronto or the GTA? 24/7 emergency fuel delivery brings enough fuel to reach a station, in as little as 20-30 minutes. Call (416) 558-5915.",
-        summary:
-          "The gauge said you'd make it; the car disagreed. GoldenNorth brings fuel to you anywhere in Toronto and the GTA, 24/7, in as little as 20-30 minutes. We pour safely, make sure the car starts, and you drive to the nearest station instead of walking to it. Fair, upfront price quoted on the call: no membership, no hidden fees.",
-        details:
-          "A few things help while you wait. Put your hazards on, and if you're on a highway shoulder, stay in the car with your seatbelt fastened unless you can wait safely behind a barrier. Resist the urge to keep cranking: a fuel-starved engine that's cranked over and over can flood and drain the battery, turning one problem into two. And if the car died in a live lane and won't coast to the shoulder, say so on the call and we'll plan a safe approach before we arrive.",
-        included: [
-          "Gasoline or diesel brought to your location",
-          "Enough fuel to reach the nearest station comfortably",
-          "Safe pour and a start check before we leave",
-          "Highway shoulders, parking garages, and side streets covered",
-        ],
-        keywords: [
-          "emergency fuel delivery Toronto",
-          "out of gas GTA",
-          "gas delivery to car Toronto",
-          "roadside fuel delivery 401",
-        ],
-        faqs: [
-          {
-            q: "How much fuel do you bring?",
-            a: "Enough to get you comfortably to the nearest station, typically several litres. Tell us your vehicle and location when you call and we'll confirm.",
-          },
-          {
-            q: "Do you deliver diesel too?",
-            a: "Yes. Tell us gasoline or diesel when you call so we load the right fuel. If you're not sure, the fuel door or owner's manual says.",
-          },
-          {
-            q: "What if the car still won't start after refuelling?",
-            a: "Some vehicles need a few extra cranks after running dry, and we know the tricks. If it's genuinely not fuel (a failed pump, a dead battery), we can triage that on the spot, since we're already there.",
-          },
-        ],
-      },
-      {
-        slug: "tow-coordination",
-        name: "Tow Coordination",
-        problem: "Need a tow after all?",
-        solution: "We assess first, arrange the tow if it's truly needed, and point you to a shop you can trust.",
-        seoTitle: "Tow Coordination Toronto & GTA: When It Can't Be Fixed",
-        seoDescription:
-          "If your car can't be fixed at the roadside, GoldenNorth helps arrange the tow and points you to a trustworthy GTA shop. 24/7 honest triage. (416) 558-5915.",
-        summary:
-          "Most calls we fix on the spot. That's the point of mobile service. When the problem is genuinely beyond a roadside repair, we say so, help arrange a tow, and point you toward a shop we'd send our own cars to. You get a straight answer instead of a tow bill you didn't need. 24/7, anywhere in Toronto and the GTA.",
-        details:
-          "A rough rule from years of triage calls: if the problem lives at a wheel, the battery, the fuel tank, or a door lock, it can usually be solved where the car sits. If it lives inside the engine, the transmission, or the brake hydraulics, it usually can't. That's the split we're listening for when we ask what you saw, heard, and smelled before the car stopped, and it's why the most common tow we prevent is the one called for a car that never needed one.",
-        included: [
-          "Roadside triage first: most problems don't need a tow",
-          "Tow arrangement when the repair genuinely needs a shop",
-          "A recommendation for a trustworthy repair shop",
-          "Honest advice on what the repair likely involves",
-        ],
-        keywords: [
-          "tow coordination Toronto",
-          "do I need a tow GTA",
-          "roadside triage Toronto",
-          "car breakdown help Toronto",
-        ],
-        faqs: [
-          {
-            q: "Do you run your own tow trucks?",
-            a: "Our job is fixing your car where it stands. When a tow is genuinely required, we coordinate one for you rather than leaving you to search from the shoulder.",
-          },
-          {
-            q: "How do you decide if my car needs a tow?",
-            a: "We triage first. Flat tires, dead batteries, lockouts, and empty tanks get fixed on the spot. Broken axles, seized brakes, and engine failures need a shop, and we tell you which one you're dealing with, plainly.",
-          },
-          {
-            q: "What does this cost me?",
-            a: "You get a fair, upfront price quoted on the call: no membership, no hidden fees. If it turns out you need a tow instead of a roadside fix, we tell you straight rather than charge you for work that won't solve it.",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "mobile-tire-service",
     name: "Mobile Tire Service",
     shortName: "Tires",
@@ -231,7 +95,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "What areas do you serve for tire work?",
-        a: "Toronto and across the GTA: Scarborough, North York, Etobicoke, Vaughan, Markham, Richmond Hill, Oakville, and surrounding areas. Call to confirm availability at your address.",
+        a: "Toronto and across the GTA: Scarborough, North York, Etobicoke, Vaughan, Markham, Richmond Hill, Aurora, Newmarket, Stouffville, Pickering, Ajax, Whitby, Oshawa, and surrounding areas. Call to confirm availability at your address.",
       },
     ],
     subServices: [
@@ -592,6 +456,142 @@ export const SERVICES: Service[] = [
       },
     ],
     subServices: [], // no sub-services
+  },
+  {
+    slug: "roadside-assistance",
+    name: "24/7 Roadside Assistance",
+    shortName: "Roadside",
+    icon: "roadside",
+    problem: "Stranded at the roadside?",
+    solution: "Help is on the way, in as little as 20-30 minutes.",
+    blurb:
+      "Stuck on the 401 or a side street? One call and a technician is on the way to you, 24/7.",
+    seoTitle: "24/7 Roadside Assistance Toronto & GTA, No Membership",
+    seoDescription:
+      "Stranded? 24/7 roadside assistance across Toronto & the GTA. Help in as little as 20-30 minutes, no membership. Fair quote on the call. (416) 558-5915.",
+    summary:
+      "You're stranded and need help now. GoldenNorth answers 24/7 and sends a roadside technician to you anywhere in Toronto and the GTA, in as little as 20-30 minutes. Flat tire, dead battery, empty tank, keys locked inside: we fix it at the roadside so you skip the tow truck and the shop. No membership, and you get a fair, upfront price on the call before we roll.",
+    included: [
+      "Flat tire change with your spare or a replacement tire",
+      "Battery boost, jump start, or on-site replacement",
+      "Emergency fuel delivery, enough to reach a station",
+      "Roadside triage: we assess and fix what we can on the spot",
+      "Tow coordination and honest advice when a roadside fix isn't possible",
+    ],
+    whenYouNeed: [
+      "You're stranded with a flat and no roadside plan, or your plan's ETA is two hours",
+      "Your car won't start in a parking garage or on a highway shoulder",
+      "It's 2 a.m. in January and you need someone who actually picks up",
+    ],
+    keywords: [
+      "roadside assistance Toronto",
+      "24/7 roadside assistance GTA no membership",
+      "emergency roadside assistance Toronto",
+      "highway 401 roadside assistance",
+      "emergency roadside Etobicoke",
+    ],
+    faqs: [
+      {
+        q: "How fast can you reach me in the GTA?",
+        a: "We aim to reach most Toronto and GTA locations in as little as 20-30 minutes, depending on where you are and traffic. You get an honest ETA the moment you call (416) 558-5915, and we call again when we're close.",
+      },
+      {
+        q: "Do you cover highways like the 401, 427, or the DVP?",
+        a: "Yes. We service highway shoulders across the GTA corridor. Pull as far onto the shoulder as safely possible, turn on your hazards, and call us. We'll coordinate a safe approach.",
+      },
+      {
+        q: "What if my car needs a repair you can't do roadside?",
+        a: "We'll tell you straight. If the problem is beyond a roadside fix, like a broken axle, seized brakes, or engine failure, we help you arrange a tow and point you toward a trustworthy shop rather than charge you for a call we can't resolve.",
+      },
+      {
+        q: "Do I need a membership or subscription?",
+        a: "No. GoldenNorth is pay-per-call: you pay for the help you actually use, with no annual fee and no coverage limits. You get a fair, upfront price quoted on the call: no membership, no hidden fees.",
+      },
+      {
+        q: "What information should I have ready when I call?",
+        a: "Your location (a highway marker, exit, intersection, or nearest address), your vehicle's make, model, and colour, and what happened. Not sure what's wrong? Describe what you see and hear and we'll triage on arrival.",
+      },
+    ],
+    subServices: [
+      {
+        slug: "fuel-delivery",
+        name: "Emergency Fuel Delivery",
+        problem: "Out of gas?",
+        solution: "Fuel comes to you, in as little as 20-30 minutes.",
+        seoTitle: "Emergency Fuel Delivery Toronto: 24/7 Gas to Your Car",
+        seoDescription:
+          "Ran out of gas in Toronto or the GTA? 24/7 emergency fuel delivery brings enough fuel to reach a station, in as little as 20-30 minutes. Call (416) 558-5915.",
+        summary:
+          "The gauge said you'd make it; the car disagreed. GoldenNorth brings fuel to you anywhere in Toronto and the GTA, 24/7, in as little as 20-30 minutes. We pour safely, make sure the car starts, and you drive to the nearest station instead of walking to it. Fair, upfront price quoted on the call: no membership, no hidden fees.",
+        details:
+          "A few things help while you wait. Put your hazards on, and if you're on a highway shoulder, stay in the car with your seatbelt fastened unless you can wait safely behind a barrier. Resist the urge to keep cranking: a fuel-starved engine that's cranked over and over can flood and drain the battery, turning one problem into two. And if the car died in a live lane and won't coast to the shoulder, say so on the call and we'll plan a safe approach before we arrive.",
+        included: [
+          "Gasoline or diesel brought to your location",
+          "Enough fuel to reach the nearest station comfortably",
+          "Safe pour and a start check before we leave",
+          "Highway shoulders, parking garages, and side streets covered",
+        ],
+        keywords: [
+          "emergency fuel delivery Toronto",
+          "out of gas GTA",
+          "gas delivery to car Toronto",
+          "roadside fuel delivery 401",
+        ],
+        faqs: [
+          {
+            q: "How much fuel do you bring?",
+            a: "Enough to get you comfortably to the nearest station, typically several litres. Tell us your vehicle and location when you call and we'll confirm.",
+          },
+          {
+            q: "Do you deliver diesel too?",
+            a: "Yes. Tell us gasoline or diesel when you call so we load the right fuel. If you're not sure, the fuel door or owner's manual says.",
+          },
+          {
+            q: "What if the car still won't start after refuelling?",
+            a: "Some vehicles need a few extra cranks after running dry, and we know the tricks. If it's genuinely not fuel (a failed pump, a dead battery), we can triage that on the spot, since we're already there.",
+          },
+        ],
+      },
+      {
+        slug: "tow-coordination",
+        name: "Tow Coordination",
+        problem: "Need a tow after all?",
+        solution: "We assess first, arrange the tow if it's truly needed, and point you to a shop you can trust.",
+        seoTitle: "Tow Coordination Toronto & GTA: When It Can't Be Fixed",
+        seoDescription:
+          "If your car can't be fixed at the roadside, GoldenNorth helps arrange the tow and points you to a trustworthy GTA shop. 24/7 honest triage. (416) 558-5915.",
+        summary:
+          "Most calls we fix on the spot. That's the point of mobile service. When the problem is genuinely beyond a roadside repair, we say so, help arrange a tow, and point you toward a shop we'd send our own cars to. You get a straight answer instead of a tow bill you didn't need. 24/7, anywhere in Toronto and the GTA.",
+        details:
+          "A rough rule from years of triage calls: if the problem lives at a wheel, the battery, the fuel tank, or a door lock, it can usually be solved where the car sits. If it lives inside the engine, the transmission, or the brake hydraulics, it usually can't. That's the split we're listening for when we ask what you saw, heard, and smelled before the car stopped, and it's why the most common tow we prevent is the one called for a car that never needed one.",
+        included: [
+          "Roadside triage first: most problems don't need a tow",
+          "Tow arrangement when the repair genuinely needs a shop",
+          "A recommendation for a trustworthy repair shop",
+          "Honest advice on what the repair likely involves",
+        ],
+        keywords: [
+          "tow coordination Toronto",
+          "do I need a tow GTA",
+          "roadside triage Toronto",
+          "car breakdown help Toronto",
+        ],
+        faqs: [
+          {
+            q: "Do you run your own tow trucks?",
+            a: "Our job is fixing your car where it stands. When a tow is genuinely required, we coordinate one for you rather than leaving you to search from the shoulder.",
+          },
+          {
+            q: "How do you decide if my car needs a tow?",
+            a: "We triage first. Flat tires, dead batteries, lockouts, and empty tanks get fixed on the spot. Broken axles, seized brakes, and engine failures need a shop, and we tell you which one you're dealing with, plainly.",
+          },
+          {
+            q: "What does this cost me?",
+            a: "You get a fair, upfront price quoted on the call: no membership, no hidden fees. If it turns out you need a tow instead of a roadside fix, we tell you straight rather than charge you for work that won't solve it.",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "mobile-mechanic",

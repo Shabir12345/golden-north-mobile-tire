@@ -50,13 +50,16 @@ export function ServiceGrid({ detailed = false }: { detailed?: boolean } = {}) {
               </ul>
             )}
 
+            {/* The pills are 30px tall under a mouse, which is fine to click and
+                tight to thumb. pointer-coarse grows the target on touch only, so
+                the desktop card keeps its compact pill row. */}
             {service.subServices.length > 0 && (
-              <ul className="mt-5 flex flex-wrap gap-2 border-t border-[var(--color-border)] pt-4" aria-label={`${service.name} services`}>
+              <ul className="mt-5 flex flex-wrap gap-2 border-t border-[var(--color-border)] pt-4 pointer-coarse:gap-2.5" aria-label={`${service.name} services`}>
                 {service.subServices.map((x) => (
                   <li key={x.slug} className="relative">
                     <Link
                       href={`/services/${service.slug}/${x.slug}`}
-                      className="inline-block rounded-full border border-[var(--color-border)] bg-[var(--color-page)] px-3.5 py-1.5 text-xs font-semibold text-[var(--color-heading)] transition-colors duration-150 hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1"
+                      className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-page)] px-3.5 py-1.5 text-xs font-semibold text-[var(--color-heading)] transition-colors duration-150 hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-1 pointer-coarse:min-h-10 pointer-coarse:px-4"
                     >
                       {x.name}
                     </Link>

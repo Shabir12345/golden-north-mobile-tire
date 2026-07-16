@@ -6,16 +6,19 @@
 
 import { BUSINESS, addressDisplay, mapsEmbedSrc, mapsLinkHref } from "@/lib/business";
 
+// Toronto core → York Region → Durham, reading down the two columns.
 const AREAS = [
-  "Toronto", "Vaughan", "Markham", "Scarborough",
-  "Etobicoke", "North York", "Oakville", "Richmond Hill",
+  "Toronto", "North York", "Scarborough", "Etobicoke",
+  "Vaughan", "Markham", "Richmond Hill", "Aurora",
+  "Newmarket", "Stouffville", "Pickering", "Ajax",
+  "Whitby", "Oshawa",
 ] as const;
 
 export function CoverageMap() {
   return (
-    <section className="bg-[var(--color-page)] py-24 lg:py-32" aria-labelledby="coverage-heading">
+    <section className="bg-[var(--color-page)] py-16 sm:py-20 lg:py-32" aria-labelledby="coverage-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
           <div>
             <h2 id="coverage-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
               The whole GTA, <span className="text-[var(--color-accent-deep)]">not just downtown.</span>

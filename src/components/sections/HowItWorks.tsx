@@ -14,9 +14,9 @@ export function HowItWorks() {
   ] as const;
 
   return (
-    <section className="bg-[var(--color-navy)] py-24 lg:py-32" aria-labelledby="how-it-works-heading">
+    <section className="bg-[var(--color-navy)] py-16 sm:py-20 lg:py-32" aria-labelledby="how-it-works-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-14 max-w-xl">
+        <div className="mb-10 max-w-xl sm:mb-14">
           <h2 id="how-it-works-heading" className="font-bold text-4xl leading-[1.05] text-white lg:text-5xl">
             Three steps to <span className="text-[var(--color-accent)]">moving again.</span>
           </h2>

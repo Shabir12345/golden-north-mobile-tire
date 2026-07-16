@@ -1,7 +1,7 @@
 // ─── Home page ────────────────────────────────────────────────────────────────
-// Emergency-first assembly: Hero (problem→solution + live dispatch) → trust
-// strip → ServiceGrid (all 5 services, one screen) → HowItWorks → ReviewsWidget
-// → CoverageMap → FAQs → soft-blue CTA. The root layout renders
+// Emergency-first assembly: Hero (problem→solution + live dispatch) →
+// ReviewsWidget → trust strip → ServiceGrid (all 5 services, one screen) →
+// HowItWorks → CoverageMap → FAQs → soft-blue CTA. The root layout renders
 // Header/Footer/MobileCallBar.
 
 import { buildMetadata } from "@/lib/seo";
@@ -28,8 +28,10 @@ export default function Home() {
     <>
       <Hero />
 
+      <ReviewsWidget />
+
       {/* Trust bar */}
-      <section className="bg-[var(--color-surface)] py-14" aria-label="Why drivers call GoldenNorth">
+      <section className="bg-[var(--color-surface)] py-10 sm:py-14" aria-label="Why drivers call GoldenNorth">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <StatStrip
             items={[
@@ -39,14 +41,14 @@ export default function Home() {
               { value: "Upfront", label: "Fair pricing, no membership" },
             ]}
           />
-          <TrustBadges className="mt-10" />
+          <TrustBadges className="mt-7 sm:mt-10" />
         </div>
       </section>
 
       {/* Services — problem→solution cards */}
-      <section className="bg-[var(--color-page)] py-20 lg:py-28" aria-labelledby="services-heading">
+      <section className="bg-[var(--color-page)] py-14 sm:py-20 lg:py-28" aria-labelledby="services-heading">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-10 max-w-2xl sm:mb-16">
             <h2 id="services-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
               Whatever stopped you, <span className="text-[var(--color-accent-deep)]">we fix it where you stand.</span>
             </h2>
@@ -61,8 +63,6 @@ export default function Home() {
       </section>
 
       <HowItWorks />
-
-      <ReviewsWidget />
 
       <CoverageMap />
 

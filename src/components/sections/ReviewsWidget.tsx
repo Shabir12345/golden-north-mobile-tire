@@ -52,11 +52,18 @@ export function ReviewsWidget() {
       className="bg-[var(--color-page)] border-y border-[var(--color-border)]"
       aria-label="Customer reviews"
     >
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
+      <div className="mx-auto max-w-7xl px-6 py-10 sm:py-12 lg:px-10 lg:py-16">
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.1em] text-[var(--color-accent-deep)]">
           Reviews from drivers across the GTA
         </p>
-        <div id={WIDGET_ID} data-featurable-async ref={containerRef} />
+        {/* Featurable injects a tree with a ~344px min-width, which drags the
+            whole document into horizontal scroll on 320px phones. Let the
+            widget scroll inside its own box instead; the body never does.
+            Wrapper rather than a class on the mount node, which the widget
+            script owns. */}
+        <div className="overflow-x-auto">
+          <div id={WIDGET_ID} data-featurable-async ref={containerRef} />
+        </div>
       </div>
     </section>
   );

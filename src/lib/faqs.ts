@@ -28,7 +28,7 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     q: "What areas do you cover?",
-    a: "We serve Toronto and across the Greater Toronto Area: Vaughan, Markham, Scarborough, Etobicoke, North York, Oakville, Richmond Hill, and surrounding areas. Call to confirm your address.",
+    a: "We serve Toronto and across the Greater Toronto Area: North York, Scarborough, Etobicoke, Vaughan, Markham, Richmond Hill, Aurora, Newmarket, Stouffville, Pickering, Ajax, Whitby, Oshawa, and surrounding areas. Call to confirm your address.",
   },
 ];
 

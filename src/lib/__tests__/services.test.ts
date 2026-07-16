@@ -7,10 +7,10 @@ const ETA = "in as little as 20-30 minutes";
 describe("service catalog", () => {
   it("has the five main services in display order", () => {
     expect(SERVICE_SLUGS).toEqual([
-      "roadside-assistance",
       "mobile-tire-service",
       "battery-jump-start",
       "car-lockout",
+      "roadside-assistance",
       "mobile-mechanic",
     ]);
   });

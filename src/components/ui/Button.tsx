@@ -34,9 +34,12 @@ const base = [
   "focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]",
 ].join(" ");
 
+// Heights are held by min-h rather than padding so the gold call button and the
+// ghost beside it always line up. 44px is the tap-target floor; we sit above it
+// on both sizes because the primary use is a stranded thumb on a cold phone.
 const sizeMap: Record<ButtonSize, string> = {
-  md: "text-sm px-5 py-3 min-h-11", // min-h-11 = 44px tap-target floor (stranded-on-mobile-first)
-  lg: "text-base px-7 py-4",
+  md: "text-sm px-5 py-3 min-h-12", // 48px
+  lg: "text-lg px-8 py-4 min-h-14 sm:min-h-15", // 56px phone → 60px desktop
 };
 
 // Primary: navy-on-gold. AA: #151D2E on #F0A500 ≈ 8:1 (hover gold ≈ 6.6:1).

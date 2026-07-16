@@ -142,6 +142,22 @@
   transform-origin: 50% 50%;
 }
 
+/* Horizontal gutters for full-bleed sticky/fixed bars. layout.tsx sets
+   viewport-fit: cover so the navy bands bleed under the home indicator, which
+   also means edge content can land under the notch in landscape. max() keeps
+   the normal gutter upright and only grows on the side that has an inset.
+   Mirrors the px-4 sm:px-6 the header used before. */
+.gutter-safe {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+@media (min-width: 40rem) {
+  .gutter-safe {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}
+
 /* Underline-grow for text links (uses currentColor so it inherits the
    link's hover color). */
 .link-grow {

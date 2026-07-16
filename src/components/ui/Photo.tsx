@@ -29,7 +29,11 @@ export function Photo({
   return (
     <div
       className={`group relative overflow-hidden rounded-xl bg-[var(--color-surface)] ring-1 ring-[var(--color-border)] ${className}`}
-      style={{ aspectRatio: ratio }}
+      // Read through a custom property so callers can vary the crop per
+      // breakpoint (`[--photo-ratio:4/3] lg:[--photo-ratio:3/4]`); `ratio` stays
+      // the default for the callers that don't. An inline aspectRatio would
+      // otherwise beat any utility class trying to override it.
+      style={{ aspectRatio: `var(--photo-ratio, ${ratio})` }}
     >
       <Image
         src={src}
