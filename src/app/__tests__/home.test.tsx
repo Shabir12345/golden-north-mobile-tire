@@ -28,11 +28,19 @@ describe("Home", () => {
     expect(screen.getByRole("heading", { name: /questions drivers ask us/i })).toBeInTheDocument();
   });
 
-  it("renders the emergency flow: hero → trust strip → service grid", () => {
+  it("renders the emergency flow: hero → credentials → service grid", () => {
     render(<Home />);
-    // getAllByText: the hero's "in as little as 20-30 minutes" also matches.
-    expect(screen.getAllByText(/20-30 min/).length).toBeGreaterThanOrEqual(2); // hero + trust strip
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/20-30 minutes/);
     expect(screen.getAllByRole("heading", { level: 3 }).length).toBeGreaterThanOrEqual(5); // grid
     expect(screen.queryByRole("link", { name: /view the full photo gallery/i })).toBeNull(); // teaser gone
+  });
+
+  // The credentials row used to sit under a stat strip that restated the hero's
+  // 24/7 / 20-30 min / GTA-wide / no-membership claims a third time.
+  it("states the hero's promises once, not twice", () => {
+    render(<Home />);
+    expect(screen.queryByText("Live dispatch")).toBeNull();
+    expect(screen.queryByText("We can be on our way")).toBeNull();
+    expect(screen.queryByText("Fair pricing, no membership")).toBeNull();
   });
 });

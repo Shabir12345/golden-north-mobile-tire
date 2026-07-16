@@ -1,12 +1,11 @@
 // ─── Home page ────────────────────────────────────────────────────────────────
 // Emergency-first assembly: Hero (problem→solution + live dispatch) →
-// ReviewsWidget → trust strip → ServiceGrid (all 5 services, one screen) →
+// ReviewsWidget → credentials row → ServiceGrid (all 5 services, one screen) →
 // HowItWorks → CoverageMap → FAQs → soft-blue CTA. The root layout renders
 // Header/Footer/MobileCallBar.
 
 import { buildMetadata } from "@/lib/seo";
 import { BUSINESS } from "@/lib/business";
-import { StatStrip } from "@/components/ui/StatStrip";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { Hero } from "@/components/sections/Hero";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
@@ -33,15 +32,10 @@ export default function Home() {
       {/* Trust bar */}
       <section className="bg-[var(--color-surface)] py-10 sm:py-14" aria-label="Why drivers call GoldenNorth">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <StatStrip
-            items={[
-              { value: "24/7", label: "Live dispatch" },
-              { value: "20-30 min", label: "We can be on our way" },
-              { value: "GTA-wide", label: "We come to you" },
-              { value: "Upfront", label: "Fair pricing, no membership" },
-            ]}
-          />
-          <TrustBadges className="mt-7 sm:mt-10" />
+          {/* Credentials only. The stat cards that used to sit above this row
+              restated the hero (24/7, 20-30 min, GTA, no membership) a third
+              time; these four claims are the ones the hero can't make. */}
+          <TrustBadges />
         </div>
       </section>
 
