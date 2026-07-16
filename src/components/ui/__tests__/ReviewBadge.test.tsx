@@ -12,7 +12,9 @@ describe("ReviewBadge", () => {
     vi.mocked(getReviewStats).mockResolvedValue({ rating: 4.9, count: 87 });
     render(await ReviewBadge({ onDark: true }));
     expect(screen.getByLabelText(/4\.9 out of 5 from 87 google reviews/i)).toBeInTheDocument();
-    expect(screen.getByText(/4\.9 · 87 google reviews/i)).toBeInTheDocument();
+    // Rating and count are separate nodes so each can carry its own weight.
+    expect(screen.getByText("4.9")).toBeInTheDocument();
+    expect(screen.getByText(/87 google reviews/i)).toBeInTheDocument();
   });
 
   it("renders nothing when getReviewStats resolves null — never a made-up number", async () => {

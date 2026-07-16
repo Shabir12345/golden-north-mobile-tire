@@ -44,7 +44,7 @@ export function Hero() {
             <h1 className="font-bold leading-[1.02] text-white" style={{ fontSize: "clamp(2.25rem, 7vw, 5rem)" }}>
               Stranded in the GTA?
               <span className="mt-3 block text-[var(--color-accent)]">
-                We&rsquo;re on our way in as little as 20-30 minutes.
+                We come to you in as little as 20-30 minutes.
               </span>
             </h1>
 
