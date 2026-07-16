@@ -26,4 +26,17 @@ describe("Hero", () => {
     render(<Hero />);
     expect(screen.getByTestId("review-badge-stub")).toHaveAttribute("data-on-dark", "true");
   });
+
+  it("lists the five emergencies as scannable items, not prose", () => {
+    render(<Hero />);
+    const items = screen.getAllByRole("listitem").map((li) => li.textContent);
+    expect(items).toEqual(
+      expect.arrayContaining(["Flat tire", "Dead battery", "Locked out", "Out of gas", "Breakdown"]),
+    );
+  });
+
+  it("keeps the no-membership promise alongside the list", () => {
+    render(<Hero />);
+    expect(screen.getByText(/no membership, no hidden fees/i)).toBeInTheDocument();
+  });
 });

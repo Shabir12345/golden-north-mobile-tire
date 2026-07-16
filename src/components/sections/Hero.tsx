@@ -1,14 +1,27 @@
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 // The emergency conversion stage. Problem→solution H1 with the ETA promise,
-// a live-dispatch line (breathing dot), the pulsing gold call CTA, and the
-// live Google review badge. Exactly three attention anchors move; nothing
-// else in the hero animates. Navy stage + real van photo retained.
+// a live-dispatch line (breathing dot), the scannable "we handle this" service
+// list, the pulsing gold call CTA, and the live Google review badge. Exactly
+// three attention anchors move; nothing else in the hero animates. Navy stage
+// + real van photo retained.
 
 import { Photo } from "@/components/ui/Photo";
 import { CallButton, Button } from "@/components/ui/Button";
 import { CompassRose } from "@/components/ui/CompassRose";
 import { ReviewBadge } from "@/components/ui/ReviewBadge";
+import { ServiceIcon } from "@/components/ui/ServiceIcon";
+import type { Service } from "@/lib/services";
 import { BUSINESS } from "@/lib/business";
+
+// The visitor's problem in their words, not the catalog's service names — this
+// list is the "is my emergency one you handle?" scan, so it stays symptom-side.
+const HERO_SERVICES: { icon: Service["icon"]; label: string }[] = [
+  { icon: "tire", label: "Flat tire" },
+  { icon: "battery", label: "Dead battery" },
+  { icon: "lockout", label: "Locked out" },
+  { icon: "roadside", label: "Out of gas" },
+  { icon: "mechanic", label: "Breakdown" },
+];
 
 export function Hero() {
   return (
@@ -35,9 +48,21 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--color-footer-fg)] sm:mt-6 sm:text-lg">
-              Flat tire, dead battery, locked out, out of gas, or a breakdown. One call sends a
-              roadside technician to you, anywhere in Toronto &amp; the GTA. Fair price quoted
+            {/* Two columns even on the narrowest phone: five stacked rows would
+                cost ~60px of fold and push the call button off screen. */}
+            <ul className="mt-5 grid max-w-md grid-cols-2 gap-x-4 gap-y-2.5 sm:mt-6 sm:gap-y-3">
+              {HERO_SERVICES.map(({ icon, label }) => (
+                <li key={label} className="flex items-center gap-2.5 text-base text-[var(--color-on-navy)] sm:text-lg">
+                  <ServiceIcon name={icon} className="h-5 w-5 shrink-0 text-[var(--color-accent)]" />
+                  {label}
+                </li>
+              ))}
+            </ul>
+
+            {/* The list above already carries what we fix, so this keeps only
+                what it can't: the promise, and the price objection. */}
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--color-footer-fg)] sm:mt-5 sm:text-lg">
+              One call sends a technician anywhere in Toronto &amp; the GTA. Fair price quoted
               before we roll: no membership, no hidden fees.
             </p>
 
