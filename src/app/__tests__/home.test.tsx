@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import Home from "@/app/page";
 
 vi.mock("@/components/ui/ReviewBadge", () => ({
@@ -24,7 +24,11 @@ describe("Home", () => {
 
   it("shows trust signals and a FAQ section", () => {
     render(<Home />);
-    expect(screen.getByText("Licensed & insured")).toBeInTheDocument();
+    // "Licensed & insured" appears twice by design: once as a hero green-check
+    // credential, once in the fuller trust band below. Scope this to the band's
+    // labelled section so it can't pass on the hero copy alone.
+    const trustBand = screen.getByRole("region", { name: /why drivers call goldennorth/i });
+    expect(within(trustBand).getByText("Licensed & insured")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /questions drivers ask us/i })).toBeInTheDocument();
   });
 

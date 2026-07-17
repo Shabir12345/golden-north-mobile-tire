@@ -3,11 +3,14 @@
 // getReviewStats(); when that's null this renders nothing — never a made-up
 // number. This component is server-rendered and static — it has no motion.
 //
-// Shape is the card-on-navy plate (rounded-lg + hairline border), deliberately
-// NOT the rounded-full chip the hero's live-dispatch line uses — two pills
-// bracketing the same column would read as one repeated object. It stays
-// quieter than the gold CallButton directly above it: the border and the
-// rating's weight carry it, not fill or color.
+// Two shapes:
+//   "plate" (default) — rounded-lg + hairline border, for a badge standing alone
+//     in a column. Stays quieter than a gold CallButton near it: the border and
+//     the rating's weight carry it, not fill or color.
+//   "chip" — rounded-full, for sitting *beside* the hero's live-dispatch pill.
+//     Two pills bracketing the same column (top and bottom, content between)
+//     would read as one repeated object — but adjacent in a single row they
+//     read as one credibility cluster, which is why the hero pairs them.
 
 import { getReviewStats } from "@/lib/reviews";
 
@@ -19,11 +22,18 @@ function Star({ className = "" }: { className?: string }) {
   );
 }
 
-export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
+export async function ReviewBadge({
+  onDark = false,
+  variant = "plate",
+}: {
+  onDark?: boolean;
+  variant?: "plate" | "chip";
+}) {
   const stats = await getReviewStats();
   if (!stats) return null;
 
   const full = Math.round(stats.rating);
+  const isChip = variant === "chip";
 
   const plate = onDark
     ? "border-white/15 bg-white/[0.06]"
@@ -35,7 +45,9 @@ export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
 
   return (
     <p
-      className={`inline-flex items-center gap-3 rounded-lg border px-4 py-2.5 ${plate}`}
+      className={`inline-flex items-center border ${
+        isChip ? "gap-2 rounded-full px-3.5 py-2" : "gap-3 rounded-lg px-4 py-2.5"
+      } ${plate}`}
       aria-label={`Rated ${stats.rating.toFixed(1)} out of 5 from ${stats.count} Google reviews`}
     >
       <span aria-hidden="true" className={`flex items-center gap-0.5 ${starColor}`}>
@@ -45,11 +57,11 @@ export async function ReviewBadge({ onDark = false }: { onDark?: boolean }) {
       </span>
       {/* The rating is the fact worth reading; the count is the corroboration.
           Flat one-weight text was why this vanished under the CTA. */}
-      <span aria-hidden="true" className={`text-base font-bold leading-none ${ratingColor}`}>
+      <span aria-hidden="true" className={`font-bold leading-none ${isChip ? "text-sm" : "text-base"} ${ratingColor}`}>
         {stats.rating.toFixed(1)}
       </span>
-      <span aria-hidden="true" className={`h-4 w-px shrink-0 ${ruleColor}`} />
-      <span aria-hidden="true" className={`text-sm font-medium leading-none ${countColor}`}>
+      <span aria-hidden="true" className={`w-px shrink-0 ${isChip ? "h-3.5" : "h-4"} ${ruleColor}`} />
+      <span aria-hidden="true" className={`font-medium leading-none ${isChip ? "text-xs" : "text-sm"} ${countColor}`}>
         {stats.count} Google reviews
       </span>
     </p>

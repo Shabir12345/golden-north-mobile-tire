@@ -3,8 +3,10 @@ import { render, screen } from "@testing-library/react";
 import { Hero } from "@/components/sections/Hero";
 
 vi.mock("@/components/ui/ReviewBadge", () => ({
-  ReviewBadge: ({ onDark }: { onDark?: boolean }) => (
-    <p data-testid="review-badge-stub" data-on-dark={String(!!onDark)}>stub review badge</p>
+  ReviewBadge: ({ onDark, variant }: { onDark?: boolean; variant?: string }) => (
+    <p data-testid="review-badge-stub" data-on-dark={String(!!onDark)} data-variant={variant ?? "plate"}>
+      stub review badge
+    </p>
   ),
 }));
 
@@ -38,5 +40,26 @@ describe("Hero", () => {
   it("keeps the no-membership promise alongside the list", () => {
     render(<Hero />);
     expect(screen.getByText(/no membership, no hidden fees/i)).toBeInTheDocument();
+  });
+
+  it("renders the review badge as a chip so it pairs with the live-dispatch pill", () => {
+    render(<Hero />);
+    expect(screen.getByTestId("review-badge-stub")).toHaveAttribute("data-variant", "chip");
+  });
+
+  it("opens with the credibility row rather than burying reviews under the CTA", () => {
+    render(<Hero />);
+    const badge = screen.getByTestId("review-badge-stub");
+    const h1 = screen.getByRole("heading", { level: 1 });
+    // Node.compareDocumentPosition: badge must precede the headline in the DOM.
+    expect(badge.compareDocumentPosition(h1) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it("carries the credentials that the ETA promise and service list can't", () => {
+    render(<Hero />);
+    const trust = screen.getByRole("list", { name: /why drivers trust/i });
+    expect(trust).toHaveTextContent("Licensed & insured");
+    expect(trust).toHaveTextContent("Warranty-backed parts");
+    expect(trust).toHaveTextContent("No membership, no hidden fees");
   });
 });

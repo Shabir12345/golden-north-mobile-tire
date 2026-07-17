@@ -188,9 +188,16 @@
    2. .live-dot   — breathing green dot for the 24/7 live-dispatch line
    Both are killed by the prefers-reduced-motion override below. */
 
+/* Tuned louder deliberately: the stranded visitor is scanning a phone one-handed
+   in the dark, and this ring is the only thing telling them where the call is.
+   Ring starts at 0.7 (was 0.45) and travels to 18px (was 14px) so it's legible
+   against the navy hero rather than a hint; the cycle is 2s with a 0.6s lead-in
+   (was 3s / 1.6s) so a visitor who lands and reads for 4s sees it twice, not
+   once. Still one soft ring, no second hue and no glow — DESIGN.md's "premium,
+   not alarm" line holds. */
 @keyframes pulseRing {
-  0%   { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0.45); }
-  60%  { box-shadow: 0 0 0 14px rgba(240, 165, 0, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0.7); }
+  70%  { box-shadow: 0 0 0 18px rgba(240, 165, 0, 0); }
   100% { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0); }
 }
 /* Animates box-shadow at the Animation origin, which beats author-normal
@@ -198,7 +205,7 @@
    WRAPPER element, never directly to something using ring/shadow utilities
    (focus-visible:ring-*, shadow-sm, etc. all compile to box-shadow and would
    be silently overridden for as long as this loops). See Hero.tsx. */
-.btn-pulse { animation: pulseRing 3s var(--ease-out-quart) 1.6s infinite; }
+.btn-pulse { animation: pulseRing 2s var(--ease-out-quart) 0.6s infinite; }
 
 @keyframes dotBreathe {
   0%, 100% { opacity: 1; transform: scale(1); }
