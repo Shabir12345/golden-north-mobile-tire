@@ -82,13 +82,13 @@ export function Header() {
           />
           <span className="ml-2 flex min-w-0 flex-col leading-none sm:ml-2.5">
             <span className="truncate font-bold tracking-tight text-white text-sm sm:text-base">
-              {BUSINESS.shortName}
+              GoldenNorth Mobile Tire Services &amp; Roadside Assistance
             </span>
             {/* Phones can't afford this line: the header row needs 356px at 360px
                 wide but only has 328px, and this descriptor is the 28px over.
                 Below sm the hero's "24/7 Emergency Dispatch" carries the message. */}
             <span className="mt-1 hidden sm:block text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
-              24/7 Roadside Assistance
+              Mobile Tire Service &amp; Roadside Assistance
             </span>
           </span>
         </Link>
