@@ -1,15 +1,17 @@
 ---
 title: "New vs. Used Tires: Which Should You Buy?"
 seoTitle: "New vs. Used Tires: Which Should You Buy?"
-description: "Buy new for a full set you'll run for years, or choose a used tire to match one damaged tire. GoldenNorth sells both and installs at your door across the GTA."
+description: "Buy new for a full set you'll run for years, or used to match one damaged tire. Compare cost, tread, warranty and returns, and what to ask a seller. (416) 558-5915."
 excerpt: "Buy new when you need a full set you'll run for years; choose a quality used tire when you're matching a single damaged one."
 keywords:
   - new vs used tires
   - used tires toronto
   - should i buy used tires
   - used tires gta
+  - questions to ask when buying used tires
+  - used tire warranty
 date: "2026-07-02"
-updated: "2026-07-03"
+updated: "2026-08-11"
 relatedService: mobile-tire-service
 faqs:
   - q: Are used tires safe?
@@ -20,6 +22,12 @@ faqs:
     a: "Rubber degrades with age regardless of tread. Check the DOT date code on the sidewall. The last four digits are the week and year it was made (3524 means week 35 of 2024). Past six years or so, a tire is a pass even if the tread looks generous."
   - q: How do I find my tire size?
     a: Check the sticker inside the driver's door jamb first. It lists the size the carmaker fitted, as a code like 225/65R17. The sidewall shows what's on the car right now, which isn't always the same thing if a previous owner changed sizes. When the two disagree, trust the door jamb.
+  - q: Do used tires come with a warranty?
+    a: "No. The manufacturer's warranty stayed with the original buyer, so the only protection on a used tire is what the seller agrees to in writing. Ask what happens if it fails in the first month and get the answer on the invoice. A new tire, by contrast, carries the manufacturer's defect and treadwear coverage starting from your purchase date."
+  - q: Is it worth buying used all-season tires instead of new?
+    a: "It depends on how many you need. For one tire matched to three good ones, used all-seasons are usually the sensible buy, and on an all-wheel-drive car a tread-matched used tire is actually better than a new one. For a full set you plan to run for years, new wins: you start at full depth with a warranty, which costs less per season once you use all the seasons."
+  - q: What should I ask a seller before buying a used tire?
+    a: "Six things: the DOT date code (last four digits, week and year), the measured tread depth in 32nds, whether it has ever been repaired and where, why it came off the original car, whether you can see the inner liner, and what happens if it fails in the first month. A seller who inspects tires for a living answers all six without hesitating."
 ---
 
 It's a familiar Toronto moment: one tire picks up a drywall screw on the Gardiner, the puncture is in the sidewall so it can't be repaired, and the first quote you get is for a full set of four, for a car with three perfectly good tires on it.
@@ -27,6 +35,17 @@ It's a familiar Toronto moment: one tire picks up a drywall screw on the Gardine
 This is exactly the situation the new-versus-used question exists for, so here's the short answer up front: **buy new when you're replacing a full set you'll run for years: you get maximum tread life, current rubber technology, and a warranty. Choose a quality used tire when you're matching a single damaged one, the vehicle is near the end of its life, or the budget needs a bridge, not a mortgage.**
 
 Both answers are right in different situations. The rest of this guide is about knowing which situation you're in, and how to tell a good used tire from a liability, because both absolutely exist.
+
+| | New tire | Quality used tire |
+|---|---|---|
+| **Upfront cost** | Highest | Usually a fraction of new |
+| **Tread you start with** | Full depth | 4/32" at minimum, often more |
+| **Manufacturer warranty** | Yes, and it starts with you | No. It stayed with the original buyer |
+| **If it fails early** | Warranty or road-hazard claim | Only what the seller put in writing |
+| **Known history** | Complete | Only as good as the inspection behind it |
+| **Best for** | A full set you'll run for years | Matching one damaged tire |
+
+The row that catches people out is the fourth one, so it's worth being blunt about it before you shop.
 
 ## The honest case against used tires
 
@@ -62,6 +81,29 @@ Every used tire we sell is inspected against exactly that bar before it goes any
 - **It's a winter set you'll run for years.** Winter tires live or die by tread depth and compound freshness; starting at full tread means more seasons per dollar, and current winter compounds genuinely outperform what was on the market even a handful of years ago.
 - **You keep your cars a long time.** Tread life, warranty coverage, and known history all pay out over years of ownership. Used tires save money up front; new tires cost less per season when you'll actually use all the seasons.
 - **You want the warranty and the certainty.** A new tire's history starts with you. For some drivers that peace of mind alone settles the question, and that's a perfectly good reason.
+
+## Warranties and returns: what actually covers you
+
+This is the part of the decision that gets skipped, and it's the part that costs money later.
+
+**A new tire comes with the manufacturer's warranty, and it starts with you.** That typically covers manufacturing defects and, on many lines, a treadwear rating: if the tire wears out well before its rated mileage under normal use, you get a prorated credit. Some makers add limited road-hazard coverage for the first portion of tread life. Keep the invoice, because a warranty claim starts with proof of purchase date and mileage.
+
+**A used tire carries none of that.** The manufacturer's coverage effectively ended with the original owner, so the only protection you have is what the seller agrees to in writing. That is not a reason to avoid used tires. It is a reason to ask, before you pay, rather than after.
+
+Ontario's consumer protection rules cover outright misrepresentation, so a seller who knowingly describes a damaged tire as sound is not off the hook. But those rules are slow, and they are no substitute for a written term you can point at the same week. Get it on the invoice.
+
+## What to ask before you hand over money
+
+Whether the seller is a shop, a marketplace listing, or someone in a driveway, these six questions separate a real answer from a shrug. A seller who inspects tires for a living will answer all of them without hesitating:
+
+1. **What is the DOT date code?** Ask for the last four digits, not "it's recent." Week and year, so 3524 is week 35 of 2024. Past roughly six years, walk away regardless of tread.
+2. **What is the measured tread depth, in 32nds?** A number from a gauge, not "lots of tread left." Under 4/32" is not worth buying.
+3. **Has it ever been repaired, and where?** A proper plug-patch in the centre tread is fine. Anything in the shoulder or sidewall is a no.
+4. **Why did it come off the original car?** Lease return, upsized wheels and a write-off after a light collision are all fine answers. "No idea" is itself an answer.
+5. **Can I see it off the rim, or at least see the inside?** Some of the worst damage, from running flat or underinflated, only shows on the inner liner.
+6. **What happens if it fails in the first month?** Whatever the answer is, ask for it on the invoice.
+
+If you're buying from a marketplace listing, add a seventh: **ask for a photo of the DOT code and the tread gauge reading before you drive anywhere.** Two photos will save you an evening.
 
 ## Before you call anyone: two things on your sidewall
 
