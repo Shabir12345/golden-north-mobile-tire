@@ -17,6 +17,15 @@ describe("jsonld", () => {
     const data = JSON.parse(container.querySelector("script")!.innerHTML);
     expect(data["@type"]).toEqual(["LocalBusiness", "AutoRepair", "EmergencyService"]);
   });
+  // sameAs is how a search or AI system binds this site to the verified Google
+  // entity carrying the reviews and hours. The CID URL is the only stable
+  // identifier for that listing — an address search string can resolve to a
+  // neighbouring business, so it does not belong here.
+  it("links the verified Google Business Profile entity via sameAs", () => {
+    const { container } = render(<LocalBusinessJsonLd />);
+    const d = parse(container);
+    expect(d.sameAs).toContain("https://www.google.com/maps?cid=588943323144302394");
+  });
   it("emits FAQPage", () => {
     const { container } = render(<FaqJsonLd faqs={[{ q: "Q?", a: "A." }]} />);
     const d = parse(container);

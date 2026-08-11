@@ -21,6 +21,11 @@ export const BUSINESS = {
     tiktok: "https://www.tiktok.com/@goldennorthmobiletires",
     instagram: "https://www.instagram.com/goldennorthmobiletires",
   },
+  // The verified Google listing, addressed by CID — the stable identifier for
+  // the entity holding the reviews, hours and service area. Prefer this over an
+  // address search URL, which can resolve to a neighbouring business at the same
+  // plaza. Place ID ChIJmSu73l_T1IkROq_aANVYLAg refers to the same listing.
+  googleBusinessProfile: "https://www.google.com/maps?cid=588943323144302394",
 } as const;
 
 export const telHref = `tel:${BUSINESS.phoneRaw}`;

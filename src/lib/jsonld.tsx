@@ -39,7 +39,11 @@ export function LocalBusinessJsonLd() {
       opens: "00:00",
       closes: "23:59",
     },
-    sameAs: [BUSINESS.socials.tiktok, BUSINESS.socials.instagram],
+    sameAs: [
+      BUSINESS.googleBusinessProfile,
+      BUSINESS.socials.tiktok,
+      BUSINESS.socials.instagram,
+    ],
   };
   return (
     <script
