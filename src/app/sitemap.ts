@@ -14,8 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // The blog index changes when its newest post does.
   const newestPost = POSTS.reduce((a, p) => (p.updated > a ? p.updated : a), POSTS[0].updated);
 
+  // The home page renders the service grid and the guides block, so it is as
+  // fresh as whichever of the two changed last — the same "parent inherits its
+  // freshest child" rule used for /blog and the service pages below.
+  const homeDate = newestPost > CATALOG_UPDATED ? day(newestPost) : catalogDate;
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: url("/"), lastModified: catalogDate, changeFrequency: "weekly", priority: 1 },
+    { url: url("/"), lastModified: homeDate, changeFrequency: "weekly", priority: 1 },
     { url: url("/services"), lastModified: catalogDate, changeFrequency: "monthly", priority: 0.9 },
     { url: url("/gallery"), lastModified: catalogDate, changeFrequency: "monthly", priority: 0.6 },
     { url: url("/blog"), lastModified: day(newestPost), changeFrequency: "weekly", priority: 0.7 },
