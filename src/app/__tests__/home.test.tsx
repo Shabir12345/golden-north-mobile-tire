@@ -1,6 +1,11 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import Home from "@/app/page";
+import { POSTS } from "@/lib/blog";
+
+// Post titles carry regex metacharacters ("New vs. Used Tires: Which Should
+// You Buy?"), so they can't go into a RegExp raw.
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 vi.mock("@/components/ui/ReviewBadge", () => ({
   ReviewBadge: ({ onDark }: { onDark?: boolean }) => (
@@ -46,5 +51,19 @@ describe("Home", () => {
     expect(screen.queryByText("Live dispatch")).toBeNull();
     expect(screen.queryByText("We can be on our way")).toBeNull();
     expect(screen.queryByText("Fair pricing, no membership")).toBeNull();
+  });
+
+  // Crawl priority follows internal links. The home page takes ~73% of the
+  // site's impressions and used to link only to service hubs, which left every
+  // post two hops away behind /blog and going weeks between crawls. Assert the
+  // path exists rather than the specific posts, so publishing doesn't fail this.
+  it("gives every guide a link from the home page", () => {
+    render(<Home />);
+    for (const post of POSTS) {
+      expect(screen.getByRole("link", { name: new RegExp(escapeRe(post.title)) })).toHaveAttribute(
+        "href",
+        `/blog/${post.slug}`,
+      );
+    }
   });
 });

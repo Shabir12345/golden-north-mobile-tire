@@ -14,7 +14,9 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CoverageMap } from "@/components/sections/CoverageMap";
 import { CTABand } from "@/components/sections/CTABand";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { GuideLinks } from "@/components/sections/GuideLinks";
 import { HOME_FAQS } from "@/lib/faqs";
+import { POSTS } from "@/lib/blog";
 
 export const metadata = buildMetadata({
   title: "24/7 Roadside Assistance Toronto & GTA in 20-30 Min",
@@ -59,6 +61,26 @@ export default function Home() {
       <HowItWorks />
 
       <CoverageMap />
+
+      {/* Guides. Placed here for crawl reach as much as for readers: this page
+          takes ~73% of the site's impressions and linked only to service hubs,
+          so posts sat two hops away behind /blog and went weeks between crawls.
+          POSTS is newest-first, which currently leads with the winter changeover
+          guide — the right order going into the November peak. */}
+      <section className="bg-[var(--color-surface)] py-14 sm:py-20" aria-labelledby="guides-heading">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mb-8 max-w-2xl">
+            <h2 id="guides-heading" className="font-bold text-4xl leading-[1.05] text-[var(--color-heading)] lg:text-5xl">
+              Advice from <span className="text-[var(--color-accent-deep)]">the road.</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-[var(--color-body)]">
+              What we tell drivers when they call. Worth reading before you need us.
+            </p>
+          </div>
+
+          <GuideLinks posts={POSTS} />
+        </div>
+      </section>
 
       <FaqSection heading="Questions drivers ask us" faqs={HOME_FAQS} emitJsonLd />
 
