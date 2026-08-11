@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Page, { generateStaticParams, generateMetadata } from "@/app/services/[slug]/page";
+import { getService } from "@/lib/services";
 
 describe("Service detail", () => {
   it("pre-generates all five slugs", async () => {
@@ -28,9 +29,12 @@ describe("Service detail", () => {
   });
 
   it("builds keyword-first metadata from the service SEO fields", async () => {
+    // Assert the wiring, not the wording: pinning the literal title here made
+    // this a change-detector that failed on every deliberate retarget.
+    const service = getService("mobile-tire-service")!;
     const m = await generateMetadata({ params: Promise.resolve({ slug: "mobile-tire-service" }) });
-    expect(m.title).toBe("Mobile Tire Service Toronto: Flats, Swaps, New & Used");
-    expect(m.description).toContain("(416) 558-5915");
+    expect(m.title).toBe(service.seoTitle);
+    expect(m.description).toBe(service.seoDescription);
   });
 
   it("wires the service's keywords array into page metadata", async () => {
