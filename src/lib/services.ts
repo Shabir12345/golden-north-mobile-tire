@@ -223,7 +223,7 @@ export const SERVICES: Service[] = [
       },
       {
         slug: "seasonal-tire-change",
-        name: "Winter Tire Change & Seasonal Swaps",
+        name: "Winter Tire Change",
         problem: "Winters still in the garage?",
         solution: "We swap them in your driveway: no shop, no Saturday lost.",
         seoTitle: "Winter Tire Change at Your Door | Mobile Tire Swap Toronto",
