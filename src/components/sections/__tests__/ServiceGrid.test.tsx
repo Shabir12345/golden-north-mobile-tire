@@ -12,7 +12,7 @@ describe("ServiceGrid", () => {
 
   it("renders sub-service pill links", () => {
     render(<ServiceGrid />);
-    expect(screen.getByRole("link", { name: /seasonal tire change/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /winter tire change/i })).toHaveAttribute(
       "href", "/services/mobile-tire-service/seasonal-tire-change");
     expect(screen.getByRole("link", { name: /oil change/i })).toHaveAttribute(
       "href", "/services/mobile-mechanic/oil-change");
@@ -29,7 +29,7 @@ describe("ServiceGrid", () => {
   it("keeps a sub-service pill resolving to its own href, not the parent card's", () => {
     render(<ServiceGrid />);
     const cardLink = screen.getByRole("link", { name: /24\/7 roadside assistance/i });
-    const pillLink = screen.getByRole("link", { name: /seasonal tire change/i });
+    const pillLink = screen.getByRole("link", { name: /winter tire change/i });
 
     expect(pillLink).toHaveAttribute("href", "/services/mobile-tire-service/seasonal-tire-change");
     expect(pillLink.getAttribute("href")).not.toBe(cardLink.getAttribute("href"));
