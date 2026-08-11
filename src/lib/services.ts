@@ -223,14 +223,14 @@ export const SERVICES: Service[] = [
       },
       {
         slug: "seasonal-tire-change",
-        name: "Seasonal Tire Change",
+        name: "Winter Tire Change & Seasonal Swaps",
         problem: "Winters still in the garage?",
-        solution: "On-rim swaps at your door: no shop, no Saturday lost.",
-        seoTitle: "Mobile Seasonal Tire Change Toronto: Swaps at Your Door",
+        solution: "We swap them in your driveway: no shop, no Saturday lost.",
+        seoTitle: "Winter Tire Change at Your Door | Mobile Tire Swap Toronto",
         seoDescription:
-          "24/7 mobile seasonal tire change across Toronto & the GTA. We come to your driveway or condo garage for winter and summer swaps. Call (416) 558-5915.",
+          "24/7 mobile winter tire change across Toronto & the GTA. We come to your driveway, condo garage, or office lot. Book before the November rush: (416) 558-5915.",
         summary:
-          "GoldenNorth swaps your seasonal tires at your driveway, office lot, or condo garage anywhere in Toronto and the GTA: mounted, torqued to spec, pressures set. Switch to winters before the first snowfall or back to summers in spring without burning a Saturday in a tire-shop waiting room. Fair, upfront price quoted on the call: no membership, no hidden fees.",
+          "GoldenNorth changes your winter tires at your driveway, office lot, or condo garage anywhere in Toronto and the GTA: mounted, torqued to spec, pressures set on all four. Book the changeover early and you pick the time. Leave it until the first snowfall and the whole GTA is calling the same week, which is when every shop in the city runs a waiting list. Spring swaps back to summers work exactly the same way, and we come to you for both.",
         details:
           "One habit makes every future swap better: when the wheels come off, we mark each tire's position (FR, RL, and so on) so the next changeover can rotate them properly instead of guessing, which evens out wear across the set. Store the off-season set somewhere cool and dark: stacked flat or on rims in a garage or basement is ideal, while a sunny balcony bakes the rubber and quietly steals seasons from its life.",
         included: [
@@ -240,10 +240,11 @@ export const SERVICES: Service[] = [
           "Pressures set to door-jamb spec on all four",
         ],
         keywords: [
-          "seasonal tire swap at home GTA",
-          "winter tire changeover Toronto",
+          "winter tire change",
+          "tire swap toronto",
+          "mobile winter tire change",
+          "seasonal tire changeover GTA",
           "on-rim tire change North York",
-          "mobile tire swap Vaughan",
         ],
         faqs: [
           {
@@ -261,6 +262,14 @@ export const SERVICES: Service[] = [
           {
             q: "My winters aren't on rims. Can you still swap them?",
             a: "Yes, tires that need mounting and balancing on your rims take longer than an on-rim swap, and we'll quote a realistic time and price when you book.",
+          },
+          {
+            q: "How early should I book the winter changeover?",
+            a: "Late October is the comfortable window. Demand across the GTA climbs through October and peaks in November, usually the week the first real snow lands, and that is when every shop and mobile service in the city is booked out. Booking in October means you choose the day and time rather than waiting for one.",
+          },
+          {
+            q: "Is it worth changing over if I only drive occasionally?",
+            a: "Yes. The 7°C threshold is about the rubber compound, not the snow. All-season tires stiffen and lose grip in the cold whether you drive daily or twice a week, and the difference shows up in braking distance on a cold, dry road long before the first storm.",
           },
         ],
       },
