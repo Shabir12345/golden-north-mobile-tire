@@ -9,7 +9,7 @@ keywords:
   - dead battery help gta
   - mobile battery replacement
 date: "2026-06-30"
-updated: "2026-07-03"
+updated: "2026-08-10"
 relatedService: battery-jump-start
 faqs:
   - q: Why does my car battery die in winter?
@@ -80,12 +80,14 @@ None of this is complicated, and all of it works:
 
 An honest answer, because they solve different problems. **A boost fixes a flat battery; it doesn't fix a bad one.** If the battery drained because a door sat ajar overnight, a boost and a proper drive may be the end of the story. But if a healthy-looking morning still produced a slow crank, or the battery is four-plus years old, a boost only postpones the same failure to a colder, less convenient morning.
 
-The way to know is to test rather than guess: check the battery's actual output under load, and check that the charging system is refilling it properly. That's exactly how we approach every battery call.
+The way to know is to test rather than guess: check the battery's actual output under load, and check that the charging system is refilling it properly. That's exactly how we approach every battery call, and it's why [battery testing](/services/battery-jump-start/battery-testing) comes before we quote a [replacement](/services/battery-jump-start/battery-replacement).
 
 ## Tested and replaced right where the car sits
 
 GoldenNorth does [mobile battery service](/services/battery-jump-start) across Toronto and the GTA, 24/7. We come to the car (your driveway, your office lot, the third level of a condo garage, or a highway shoulder), load-test the battery and charging system first, and give you a straight answer. If a boost genuinely solves it, that's what you get. If the battery is done, we install a fresh, warranted replacement on the spot and make sure the car starts strong before we leave.
 
 No waiting for a tow, no losing a morning to a waiting room, and no membership required.
+
+One more piece of the same job: the cold that exposes a weak battery is the cold that hardens all-season rubber. If the winters aren't on yet, we can handle the [winter tire changeover](/services/mobile-tire-service/seasonal-tire-change) at the same address on the same visit.
 
 Car won't start? Call **(416) 558-5915** and we'll get you moving.

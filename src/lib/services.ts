@@ -19,6 +19,8 @@ export interface SubService {
   seoDescription: string; // 120–165 chars
   summary: string;
   details: string; // one substantive paragraph with a distinct angle — keeps the page from being thin/templated (SEO audit, Stage 4)
+  heroNote?: string; // overrides the default hero subline; set where the "price on the call" framing is the wrong pitch
+  updated?: string; // YYYY-MM-DD — real content-change date for the sitemap; omit to inherit CATALOG_UPDATED
   included: string[];
   keywords: string[];
   faqs: Faq[];
@@ -39,8 +41,16 @@ export interface Service {
   whenYouNeed: string[];
   keywords: string[];
   faqs: Faq[];
+  updated?: string; // YYYY-MM-DD — see SubService.updated
   subServices: SubService[]; // [] in Stage 1; filled in Stage 2
 }
+
+// Baseline content date for catalog pages that have not been individually
+// revised since the July emergency-roadside repositioning. The sitemap used to
+// stamp every route with build time, which told Google all 17 service pages
+// changed on every deploy and made a genuine revision indistinguishable from
+// noise. Pages set their own `updated` when their copy actually changes.
+export const CATALOG_UPDATED = "2026-07-14";
 
 export const SERVICES: Service[] = [
   {
@@ -233,6 +243,9 @@ export const SERVICES: Service[] = [
           "GoldenNorth changes your winter tires at your driveway, office lot, or condo garage anywhere in Toronto and the GTA: mounted, torqued to spec, pressures set on all four. Book the changeover early and you pick the time. Leave it until the first snowfall and the whole GTA is calling the same week, which is when every shop in the city runs a waiting list. Spring swaps back to summers work exactly the same way, and we come to you for both.",
         details:
           "One habit makes every future swap better: when the wheels come off, we mark each tire's position (FR, RL, and so on) so the next changeover can rotate them properly instead of guessing, which evens out wear across the set. Store the off-season set somewhere cool and dark: stacked flat or on rims in a garage or basement is ideal, while a sunny balcony bakes the rubber and quietly steals seasons from its life.",
+        heroNote:
+          "Book before the November rush and you pick the day and time. We come to you: no shop, no waiting room, no membership.",
+        updated: "2026-08-10",
         included: [
           "On-rim seasonal changeover (winter ↔ summer / all-season)",
           "Torque-wrench tightened to OEM spec",

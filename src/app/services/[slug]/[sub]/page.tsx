@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { BUSINESS } from "@/lib/business";
 import { SERVICES, getService, getSubService } from "@/lib/services";
+import { POSTS } from "@/lib/blog";
 import { SERVICE_PHOTO } from "@/lib/photos";
 import { BreadcrumbJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
@@ -45,6 +46,8 @@ export default async function SubServicePage({ params }: { params: Promise<Param
 
   const photo = SERVICE_PHOTO[service.slug];
   const siblings = service.subServices.filter((x) => x.slug !== item.slug);
+  // Posts are tagged to a top-level service, so a sub-service inherits its parent's guides.
+  const guides = POSTS.filter((p) => p.relatedService === service.slug);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -91,7 +94,7 @@ export default async function SubServicePage({ params }: { params: Promise<Param
               <span className="mt-2 block text-[var(--color-accent)]">{item.solution}</span>
             </h1>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--color-footer-fg)]">
-              Fair, upfront price quoted on the call: no membership, no hidden fees.
+              {item.heroNote ?? "Fair, upfront price quoted on the call: no membership, no hidden fees."}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <CallButton size="lg" />
@@ -155,6 +158,26 @@ export default async function SubServicePage({ params }: { params: Promise<Param
               </Link>
             ))}
           </div>
+
+          {guides.length > 0 && (
+            <div className="mt-12 border-t border-[var(--color-border)] pt-8">
+              <h3 className="mb-5 font-bold text-lg text-[var(--color-heading)]">Worth reading first</h3>
+              <ul className="space-y-3">
+                {guides.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="group inline-flex items-baseline gap-2 text-base font-semibold text-[var(--color-accent-deep)] underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+                    >
+                      {post.title}
+                      <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                    </Link>
+                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[var(--color-body)]">{post.excerpt}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
 
