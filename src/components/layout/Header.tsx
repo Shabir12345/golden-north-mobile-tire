@@ -81,8 +81,11 @@ export function Header() {
             className="h-10 w-10 shrink-0"
           />
           <span className="ml-2 flex min-w-0 flex-col leading-none sm:ml-2.5">
+            {/* Wordmark only. The full registered name repeated the descriptor
+                below it, so on desktop the lockup read "…Mobile Tire Services &
+                Roadside Assistance" twice. The gold line owns that phrase. */}
             <span className="truncate font-bold tracking-tight text-white text-sm sm:text-base">
-              GoldenNorth Mobile Tire Services &amp; Roadside Assistance
+              {BUSINESS.shortName}
             </span>
             {/* Phones can't afford this line: the header row needs 356px at 360px
                 wide but only has 328px, and this descriptor is the 28px over.
