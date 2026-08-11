@@ -267,3 +267,27 @@
   color: var(--color-muted);
   font-style: italic;
 }
+/* Comparison tables. `marked` emits a bare <table>, so the scroll container has
+   to be the table itself — display:block lets it overflow on narrow screens
+   without the page body scrolling sideways with it. */
+.article table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.article th,
+.article td {
+  border: 1px solid var(--color-border);
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  vertical-align: top;
+}
+.article th {
+  background: var(--color-surface);
+  color: var(--color-heading);
+  font-weight: 700;
+}
+.article tbody tr:nth-child(even) td { background: var(--color-surface); }
