@@ -38,6 +38,18 @@ describe("service catalog", () => {
     }
   });
 
+  it("puts the phone number in every meta description", () => {
+    // A tappable number in the SERP snippet is the point of a call-first site.
+    // All 17 service and sub-service descriptions carry it; a retarget that
+    // rewrites a description must not quietly drop it.
+    for (const s of SERVICES) {
+      expect(s.seoDescription, `${s.slug} meta description`).toContain("(416) 558-5915");
+      for (const x of s.subServices) {
+        expect(x.seoDescription, `${s.slug}/${x.slug} meta description`).toContain("(416) 558-5915");
+      }
+    }
+  });
+
   it("uses the exact ETA phrase wherever an arrival time is promised", () => {
     for (const s of SERVICES) {
       const text = [s.solution, s.summary, ...s.faqs.map((f) => f.a)].join(" ");

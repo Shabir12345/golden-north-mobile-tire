@@ -58,15 +58,15 @@ export const SERVICES: Service[] = [
     name: "Mobile Tire Service",
     shortName: "Tires",
     icon: "tire",
-    problem: "Flat tire or worn rubber?",
-    solution: "The tire shop drives to you, fixed where you're parked.",
+    problem: "Flat tire, day or night?",
+    solution: "The 24 hour tire shop that drives to you, anywhere in the GTA.",
     blurb:
-      "Flat, worn, or wrong season: flats fixed, spares installed, new and used tires mounted at your door.",
-    seoTitle: "Mobile Tire Service Toronto: Flats, Swaps, New & Used",
+      "Flat, worn, or wrong season: flats fixed, spares installed, new and used tires mounted at your door, 24 hours a day.",
+    seoTitle: "24 Hour Mobile Tire Service & Repair Toronto",
     seoDescription:
-      "24/7 mobile tire service in Toronto & the GTA: flat tire repair, spare installs, seasonal swaps, new & used tires installed where you're parked. (416) 558-5915.",
+      "24 hour mobile tire service across Toronto & the GTA: flat tire repair, spare installs, seasonal swaps, new & used tires at your door. (416) 558-5915.",
     summary:
-      "A flat on the way to work, a worn tire that won't pass another winter, seasonals still stacked in the garage: GoldenNorth brings the tire shop to your driveway, office lot, or roadside anywhere in Toronto and the GTA, 24/7. We repair flats, install spares, mount new and used tires, and handle seasonal changeovers on the spot, with a fair, upfront price quoted on the call.",
+      "A flat at 2 a.m. on the 401, a worn tire that won't pass another winter, seasonals still stacked in the garage: GoldenNorth brings the tire shop to your driveway, office lot, or roadside anywhere in Toronto and the GTA, 24 hours a day, seven days a week. Most tire shops close at six and none of them open at midnight, which is the whole reason this service exists. We repair flats, install spares, mount new and used tires, and handle seasonal changeovers on the spot.",
     included: [
       "Flat tire repair or replacement at your location",
       "Spare tire installation with torque to OEM spec",
@@ -77,16 +77,29 @@ export const SERVICES: Service[] = [
     whenYouNeed: [
       "You pick up a nail and your spare is buried under the trunk floor",
       "One tire is beyond repair and you need a match today, not next week",
+      "It's the middle of the night and every tire shop in the city is shut",
       "The first frost advisory hits and your winters are still in the garage",
     ],
     keywords: [
+      "24 hour mobile tire service Toronto",
+      "24 hour tire repair Toronto",
+      "24/7 mobile tire repair GTA",
       "mobile tire service Toronto",
       "mobile tire change GTA",
       "flat tire help Toronto",
       "used tires Toronto",
       "seasonal tire swap at home GTA",
     ],
+    updated: "2026-08-10",
     faqs: [
+      {
+        q: "Are you really open 24 hours?",
+        a: "Yes. The phone is answered around the clock, every day of the year, and overnight calls are a normal part of the work rather than an exception. A flat at 3 a.m. on the 401 or the DVP is exactly the call this service exists for, and you are not waiting until a shop opens in the morning.",
+      },
+      {
+        q: "Can you come out at night, or only during the day?",
+        a: "Either. We work through the night across Toronto and the GTA: highway shoulders, driveways, condo garages, and office lots. We bring a portable compressor and cordless tools, so we are not depending on anything at your location to get the job done.",
+      },
       {
         q: "How much does mobile tire service cost in Toronto?",
         a: "It depends on the job (a spare install, a flat repair, a seasonal swap, or new rubber) plus your vehicle type and location. Call (416) 558-5915 with your vehicle and location and you'll have a fair, upfront quote in under a minute: no membership, no hidden fees.",
