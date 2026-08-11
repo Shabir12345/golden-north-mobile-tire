@@ -17,6 +17,7 @@ import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { CompassRose } from "@/components/ui/CompassRose";
 import { CTABand } from "@/components/sections/CTABand";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { GuideLinks } from "@/components/sections/GuideLinks";
 import { TrustBadges } from "@/components/ui/TrustBadges";
 import { ReviewsWidget } from "@/components/sections/ReviewsWidget";
 
@@ -57,7 +58,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
           { name: service.name, path: `/services/${service.slug}` },
         ]}
       />
-
 
       {/* Focused header */}
       <section className="relative overflow-hidden bg-[var(--color-navy)]" aria-labelledby="service-heading">
@@ -173,21 +173,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
 
           {guides.length > 0 && (
             <div className="mt-12 border-t border-[var(--color-border)] pt-8">
-              <h3 className="mb-5 font-bold text-lg text-[var(--color-heading)]">Worth reading first</h3>
-              <ul className="space-y-3">
-                {guides.map((post) => (
-                  <li key={post.slug}>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="group inline-flex items-baseline gap-2 text-base font-semibold text-[var(--color-accent-deep)] underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
-                    >
-                      {post.title}
-                      <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                    </Link>
-                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[var(--color-body)]">{post.excerpt}</p>
-                  </li>
-                ))}
-              </ul>
+              <GuideLinks heading="Worth reading first" posts={guides} />
             </div>
           )}
         </div>
