@@ -8,6 +8,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { SERVICES, SERVICE_SLUGS, getService } from "@/lib/services";
+import { POSTS } from "@/lib/blog";
 import { SERVICE_PHOTO } from "@/lib/photos";
 import { ServiceJsonLd, BreadcrumbJsonLd } from "@/lib/jsonld";
 import { CallButton, Button } from "@/components/ui/Button";
@@ -44,6 +45,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
 
   const photo = SERVICE_PHOTO[service.slug];
   const others = SERVICES.filter((s) => s.slug !== service.slug);
+  const guides = POSTS.filter((p) => p.relatedService === service.slug);
 
   return (
     <>
@@ -168,6 +170,26 @@ export default async function ServiceDetailPage({ params }: { params: Promise<Pa
               </Link>
             ))}
           </div>
+
+          {guides.length > 0 && (
+            <div className="mt-12 border-t border-[var(--color-border)] pt-8">
+              <h3 className="mb-5 font-bold text-lg text-[var(--color-heading)]">Worth reading first</h3>
+              <ul className="space-y-3">
+                {guides.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="group inline-flex items-baseline gap-2 text-base font-semibold text-[var(--color-accent-deep)] underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-page)]"
+                    >
+                      {post.title}
+                      <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                    </Link>
+                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[var(--color-body)]">{post.excerpt}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
 

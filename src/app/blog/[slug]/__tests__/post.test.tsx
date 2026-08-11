@@ -16,16 +16,26 @@ describe("Blog post page", () => {
     expect(calls[0]).toHaveAttribute("href", "tel:+14165585915");
   });
 
-  it("links to the related service page", async () => {
+  it("keeps every service link inside the related service's URL space", async () => {
     render(await Page({ params: Promise.resolve({ slug: "winter-tires-ontario" }) }));
-    // Both the inline article body ("mobile tire change") and the funnel card's
-    // aria-label ("Mobile Tire Change — view service") match /tire change/i, so
-    // this asserts every matching link resolves to the service page.
+    // Body links and the funnel card's aria-label both match /tire change/i.
+    // Deep links to sub-services are intended, so assert the prefix rather than
+    // an exact hub URL — this still catches a typo'd or foreign service path.
     const links = screen.getAllByRole("link", { name: /tire change/i });
     expect(links.length).toBeGreaterThan(0);
     for (const link of links) {
-      expect(link).toHaveAttribute("href", "/services/mobile-tire-service");
+      expect(link.getAttribute("href")).toMatch(/^\/services\/mobile-tire-service(\/|$)/);
     }
+  });
+
+  it("deep-links the winter post to the seasonal changeover page", async () => {
+    // The changeover page is the November money page; the post is its main
+    // internal referrer. Losing this link silently is the regression to catch.
+    render(await Page({ params: Promise.resolve({ slug: "winter-tires-ontario" }) }));
+    const deep = screen
+      .getAllByRole("link")
+      .filter((l) => l.getAttribute("href") === "/services/mobile-tire-service/seasonal-tire-change");
+    expect(deep.length).toBeGreaterThan(0);
   });
 
   it("builds keyword-first metadata from frontmatter", async () => {
